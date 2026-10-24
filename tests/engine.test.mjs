@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createGame,step,choicePool,rollChoices,choose,evolve,reroll,damagePlayer,spawnEnemy,weaponStats,passiveMultiplier,playerStats,revive,declineRevive,spawnProfile,enemyCost} from '../engine.js';
+import {createGame,step,choicePool,rollChoices,choose,evolve,reroll,damagePlayer,spawnEnemy,weaponStats,passiveMultiplier,playerStats,revive,declineRevive,spawnProfile,enemyCost,beakShape,beakPose,foxSpeed} from '../engine.js';
 const weapon=(level=1,effect=null)=>({level,effect,cd:0,volley:0,ammo:20,reload:0});
 function stationaryTarget(s,x=700,y=400,hp=100000){const e=spawnEnemy(s,'bear');Object.assign(e,{x,y,hp,maxHp:hp,speed:0});s.spawnTimer=10000;return e;}
 test('character stats, exclusive weapon and three slots',()=>{const s=createGame();assert.equal(s.player.hp,3);assert(!choicePool(s).some(c=>c.id==='ak'));s.weapons={egg:weapon(),beak:weapon(),feather:weapon()};assert(choicePool(s).filter(c=>c.kind==='weapon').every(c=>s.weapons[c.id]));const r=createGame('rambo');assert.equal(r.player.hp,2);assert(r.weapons.ak);r.weapons={ak:weapon(),egg:weapon(),beak:weapon()};assert(!choicePool(r).some(c=>c.id==='feather'));});
@@ -43,9 +43,9 @@ test('projectiles and HP grow by fixed integers, health preserves lost HP',()=>{
 test('size changes the actual collision radius, not just projectile artwork',()=>{
   const s=createGame();s.spawnTimer=100;s.weapons.egg.cd=0;s.passives.size=3;stationaryTarget(s,900,400);
   step(s,.001);assert(Math.abs(s.bullets[0].r-6*(1+.10*3))<1e-9);
-  s.weapons={beak:weapon()};s.fx=[];s.passives.size=1;stationaryTarget(s,730,400,100);
-  step(s,.15);assert(s.attacks.some(f=>f.type==='beak'&&Math.abs(f.r-122*1.1)<1e-9));
-  assert(s.enemies.some(e=>e.x===730&&e.hp<100));
+  s.weapons={beak:weapon()};s.fx=[];s.passives.size=1;stationaryTarget(s,675,400,100);
+  step(s,.15);assert(s.attacks.some(f=>f.type==='beak'&&Math.abs(f.r-74*1.1)<1e-9));
+  assert(s.enemies.some(e=>e.x===675&&e.hp<100));
 });
 
 test('level selection grants one-third second guard and small outward push, only on resume',()=>{
@@ -76,7 +76,7 @@ test('worm and magnet drops have independent 0.5 percent rolls',()=>{
   const s=createGame();s.weapons={beak:weapon()};stationaryTarget(s,610,400,1);
   let rolls=[.9,.004];s.random=()=>rolls.shift()??.9;step(s,.15);assert.equal(s.magnets.length,0); // immediately picked up
   assert(s.events.includes('magnet'));assert.equal(s.worms.length,0);
-  const r=createGame();r.weapons={beak:weapon()};stationaryTarget(r,700,400,1);rolls=[.004,.9];r.random=()=>rolls.shift()??.9;
+  const r=createGame();r.weapons={beak:weapon()};stationaryTarget(r,675,400,1);rolls=[.004,.9];r.random=()=>rolls.shift()??.9;
   step(r,.15);assert.equal(r.worms.length,1);assert.equal(r.magnets.length,0);
 });
 
@@ -164,4 +164,27 @@ test('spawn transitions suppress only future old types, ramp over 30 seconds and
  assert.deepEqual(Object.keys(spawnProfile(420).weights),['bear']);assert(spawnProfile(480).weights.fox>spawnProfile(480).weights.bear);
  assert(enemyCost('fox',241)<enemyCost('fox',239));assert(enemyCost('wolf',361)<enemyCost('wolf',359));
  const s=createGame();const rat=spawnEnemy(s,'rat');s.time=239.99;s.spawnTimer=100;step(s,.02);assert(s.enemies.includes(rat));
+});
+
+test('beak projectiles become sequential strikes, each retargeting on start',()=>{
+ const s=createGame();s.gems=[];s.weapons={beak:weapon()};s.passives.shots=2;const first=stationaryTarget(s,660,400,10),second=stationaryTarget(s,600,340,1000);
+ step(s,.01);assert(first.hp<=0);assert.equal(second.hp,1000);assert.equal(s.attacks.filter(a=>a.started).length,1);assert.equal(s.attacks.filter(a=>a.delay>0).length,2);
+ for(let i=0;i<66;i++)step(s,.01);assert(second.hp<1000);assert.equal(s.stats.weapons.beak.attacks,1);assert(s.weapons.beak.cd>0);
+});
+test('beak stays attached and damages late entrants once throughout its lifetime',()=>{
+ const s=createGame();s.gems=[];s.weapons={beak:weapon()};const first=stationaryTarget(s,655,400),late=stationaryTarget(s,1000,400);
+ step(s,.01);const hp=first.hp;step(s,.25,{x:0,y:1});assert.equal(first.hp,hp);assert.equal(s.attacks[0].y,s.player.y);
+ late.x=s.player.x+60;late.y=s.player.y;step(s,.10);assert(late.hp<100000);const after=late.hp;step(s,.05);assert.equal(late.hp,after);assert(s.attacks.length>0);
+});
+test('super beak is one slower strike with bounded size and projectile damage growth',()=>{
+ const s=createGame();s.weapons={beak:weapon(5,'super')};stationaryTarget(s);s.passives.shots=3;s.passives.size=20;const shape=beakShape(s);assert(shape.range<250);assert(shape.duration>.6);step(s,.01);assert.equal(s.attacks.length,1);assert(s.attacks[0].damage>weaponStats(s,'beak').damage*3.5);
+});
+test('fox dash speed is continuous at ten minutes and grows gently with a cap',()=>{
+ const a=foxSpeed(599.99,2,100),b=foxSpeed(600,2,10000),c=foxSpeed(610,2,10000),d=foxSpeed(660,2,10000);
+ assert(Math.abs(b-a)<.01);assert(c/b<1.04);assert(d/b<=1.21);assert(foxSpeed(3600,2,100000)/b<=1.600001);
+});
+test('beak thrust translates a fixed-size bill outward then returns; damage follows its tip',()=>{
+ const a={r:74,duration:.46,elapsed:0};const rest=beakPose(a);a.elapsed=.22;const extended=beakPose(a);a.elapsed=.46;const returned=beakPose(a);
+ assert.equal(rest.width,extended.width);assert.equal(extended.width,returned.width);assert(extended.x>rest.x+15);assert.equal(returned.x,rest.x);assert(extended.tip<=74);
+ const s=createGame();s.gems=[];s.weapons={beak:weapon()};const e=stationaryTarget(s,697,400);step(s,.01);assert.equal(e.hp,100000);step(s,.20);assert(e.hp<100000);
 });

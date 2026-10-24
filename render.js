@@ -1,5 +1,6 @@
+import {beakPose} from './engine.js';
 const names=['ryaba','rambo','monk','rat','fox','wolf','bear','squirrel','beak','wing','talon'];
-export const art=Object.fromEntries(names.map(id=>{const image=new Image();image.src=`assets/v5/${id}.png`;return [id,image];}));
+export const art=Object.fromEntries(names.map(id=>{const image=new Image();image.src=`assets/${['ryaba','rambo','monk'].includes(id)?'v5':'v7'}/${id}.png`;return [id,image];}));
 const ready=image=>image?.complete&&image.naturalWidth>0;
 function sprite(ctx,image,x,y,w,h){if(ready(image))ctx.drawImage(image,x,y,w,h);}
 export function creature(ctx,id,x,y,r,facing,time,moving,inv=0,flash=0){
@@ -16,13 +17,15 @@ export function creature(ctx,id,x,y,r,facing,time,moving,inv=0,flash=0){
  for(let foot=0;foot<2;foot++)ctx.drawImage(image,foot*image.naturalWidth/2,sourceCut,image.naturalWidth/2,image.naturalHeight-sourceCut,-w/2+foot*w/2+stride*(foot===0?1.3:-1.3),-h*.57+h*cut-bob+Math.max(0,stride*(foot===0?1:-1))*1.5,w/2,h*(1-cut));
  ctx.restore();
 }
+const crops=new WeakMap();
+function croppedSprite(ctx,image,x,y,w,h=null){if(!ready(image))return;let b=crops.get(image);if(!b){const c=document.createElement('canvas');c.width=image.naturalWidth;c.height=image.naturalHeight;const c2=c.getContext('2d',{willReadFrequently:true});c2.drawImage(image,0,0);const data=c2.getImageData(0,0,c.width,c.height).data;let left=c.width,top=c.height,right=0,bottom=0;for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++)if(data[(y*c.width+x)*4+3]>100){left=Math.min(left,x);top=Math.min(top,y);right=Math.max(right,x);bottom=Math.max(bottom,y);}b={x:left,y:top,w:right-left+1,h:bottom-top+1};crops.set(image,b);}const height=h??w*b.h/b.w;ctx.drawImage(image,b.x,b.y,b.w,b.h,x,y-height/2,w,height);}
 export function melee(ctx,a){
- const phase=Math.min(1,a.elapsed/a.duration),opacity=Math.min(1,phase*9,(1-phase)*7);
+ if(a.delay>0)return;
+ const phase=Math.min(1,a.elapsed/a.duration),opacity=Math.min(1,phase*12,(1-phase)*10);
  ctx.save();ctx.translate(a.x,a.y);ctx.globalAlpha=opacity;
  if(a.type==='beak'){
-  ctx.rotate(a.angle);const thrust=Math.sin(Math.PI*phase),w=a.r*.78,h=Math.max(18,a.r*.27);const x=a.r*(.04+.18*thrust);
-  sprite(ctx,art.beak,x,-h/2,w,h);
-  if(phase>.35&&phase<.7){ctx.strokeStyle='#f6df9b88';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-8,-h*.3);ctx.lineTo(x-4,-h*.2);ctx.moveTo(-8,h*.3);ctx.lineTo(x-4,h*.2);ctx.stroke();}
+  ctx.rotate(a.angle);const pose=beakPose(a);
+  croppedSprite(ctx,art.beak,pose.x,0,pose.width);
  }else if(a.type==='wing'){
   const angle=a.angle+a.side*(-1.4+2.8*phase);ctx.rotate(angle);ctx.scale(1,a.side);
   ctx.fillStyle='#edd9ac16';ctx.beginPath();ctx.moveTo(0,0);ctx.arc(0,0,a.r,Math.max(-.7,-phase*2.8),0);ctx.closePath();ctx.fill();
@@ -36,14 +39,14 @@ export function melee(ctx,a){
 }
 export function effect(ctx,f){
  const p=1-f.life/f.max;ctx.save();ctx.translate(f.x,f.y);ctx.globalAlpha=1-p;
- if(f.type==='muzzle'){
-  ctx.rotate(f.angle||0);const g=ctx.createRadialGradient(0,0,1,0,0,f.r);g.addColorStop(0,'#fff7d2');g.addColorStop(.3,'#fbd071');g.addColorStop(1,'#e9973100');ctx.fillStyle=g;ctx.beginPath();ctx.ellipse(0,0,f.r,f.r*.55,0,0,Math.PI*2);ctx.fill();
-  ctx.strokeStyle='#ffe4a0';ctx.lineWidth=1.5;for(let i=0;i<5;i++){const a=(i-2)*.4;ctx.beginPath();ctx.moveTo(Math.cos(a)*4,Math.sin(a)*4);ctx.lineTo(Math.cos(a)*f.r,Math.sin(a)*f.r);ctx.stroke();}
+ if(f.type==='muzzle'&&f.weapon!=='ak'){ctx.strokeStyle='#e4d4ad';ctx.globalAlpha=.25*(1-p);ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(0,0,3+p*8,-1.1,1.1);ctx.stroke();
+ }else if(f.type==='muzzle'){
+  ctx.rotate(f.angle||0);ctx.fillStyle='#ffe6aa';ctx.beginPath();ctx.moveTo(0,-3*(1-p));ctx.quadraticCurveTo(f.r*.6,-5*(1-p),f.r*(1-p),0);ctx.quadraticCurveTo(f.r*.6,5*(1-p),0,3*(1-p));ctx.fill();ctx.fillStyle='#c0b59b';ctx.globalAlpha=.22*(1-p);ctx.beginPath();ctx.ellipse(-p*12,-p*8,3+p*6,2+p*4,0,0,Math.PI*2);ctx.fill();
  }else if(f.type==='blast'){
   const r=f.r*(.3+p*.7),g=ctx.createRadialGradient(0,0,0,0,0,r);g.addColorStop(0,'#fff4caaa');g.addColorStop(.45,'#efb04c66');g.addColorStop(1,'#db6c1f00');ctx.fillStyle=g;ctx.beginPath();ctx.arc(0,0,r,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#f6d58b';ctx.lineWidth=3;ctx.stroke();
   for(let i=0;i<9;i++){const a=i*2.4;ctx.fillStyle=i%2?'#e9b060':'#d9c49a';ctx.beginPath();ctx.arc(Math.cos(a)*r,Math.sin(a)*r,3*(1-p),0,Math.PI*2);ctx.fill();}
  }else if(f.type==='impact'){
-  ctx.strokeStyle='#f0dba9';ctx.lineWidth=2;for(let i=0;i<5;i++){const a=i*Math.PI*2/5;ctx.beginPath();ctx.moveTo(Math.cos(a)*f.r*p*.6,Math.sin(a)*f.r*p*.6);ctx.lineTo(Math.cos(a)*f.r*p,Math.sin(a)*f.r*p);ctx.stroke();}
+  const shell=f.weapon==='egg';ctx.fillStyle=shell?'#fff0cc':'#d1ba85';for(let i=0;i<4;i++){const a=i*2.4+.5,d=f.r*(.2+p*.9);ctx.save();ctx.translate(Math.cos(a)*d,Math.sin(a)*d+p*p*9);ctx.rotate(a+p*2);ctx.beginPath();ctx.moveTo(-2,-2);ctx.lineTo(3,-1);ctx.lineTo(1,2);ctx.closePath();ctx.fill();ctx.restore();}ctx.fillStyle='#f6dfac';ctx.globalAlpha=(1-p)*.4;ctx.beginPath();ctx.ellipse(0,0,4*(1-p),3*(1-p),0,0,Math.PI*2);ctx.fill();
  }else{
   ctx.strokeStyle=f.type==='revive'?'#ffe4a0':'#b7edeb';ctx.lineWidth=f.type==='revive'?4:2;ctx.beginPath();ctx.arc(0,0,f.r*(.25+p*.75),0,Math.PI*2);ctx.stroke();
  }
