@@ -4,7 +4,7 @@ export const art=Object.fromEntries(names.map(id=>{const image=new Image();image
 const ready=image=>image?.complete&&image.naturalWidth>0;
 function sprite(ctx,image,x,y,w,h){if(ready(image))ctx.drawImage(image,x,y,w,h);}
 export function creature(ctx,id,x,y,r,facing,time,moving,inv=0,flash=0){
- const image=art[id],hero=['ryaba','rambo','monk'].includes(id),box=r*(hero?4.7:4.1);
+ const image=art[id],hero=['ryaba','rambo','monk'].includes(id),box=r*1.5*(hero?4.7:4.1);
  ctx.save();ctx.translate(x,y);ctx.fillStyle='#14220e55';ctx.beginPath();ctx.ellipse(0,r*.85,r,Math.max(3,r*.3),0,0,Math.PI*2);ctx.fill();
  if(!ready(image)){ctx.restore();return;}
  const scale=Math.min(box/image.naturalWidth,box*1.1/image.naturalHeight),w=image.naturalWidth*scale,h=image.naturalHeight*scale;
