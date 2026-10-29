@@ -41,6 +41,7 @@ function poly(points,color){ctx.fillStyle=color;ctx.beginPath();points.forEach((
 function chicken(x,y,inv=0,t=0){const id=s?.character||'ryaba';creature(ctx,id,x,y,15,s?.player.facing||1,t,!!s?.player.moving,inv);}
 function enemy(e,t){creature(ctx,e.type,e.x,e.y,e.r,e.facing,t+e.id*.173,e.moving!==false,0,e.flash);if(e.hp<e.maxHp){ctx.fillStyle='#271809';ctx.fillRect(e.x-e.r,e.y-e.r-19,e.r*2,3);ctx.fillStyle='#e6a455';ctx.fillRect(e.x-e.r,e.y-e.r-19,e.r*2*e.hp/e.maxHp,3);}if(e.type==='fox'&&e.dash%2.6>1.45&&e.dash%2.6<1.8){ctx.strokeStyle='#f8c976aa';ctx.lineWidth=2;ctx.beginPath();ctx.arc(e.x,e.y,e.r+5,0,Math.PI*2);ctx.stroke();}}
 
+const renderEnemies=[];
 const grass=Array.from({length:700},(_,i)=>({x:(i*139.31)%1200,y:(i*91.67)%800,shade:i%3}));
 function draw(){const dpr=Math.min(devicePixelRatio||1,2),w=canvas.clientWidth,h=canvas.clientHeight;if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);}ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);const scale=Math.max(w/1200,h/800);const vw=w/scale,vh=h/scale,p=s?.player||{x:600,y:400};const cx=clamp(p.x,vw/2,1200-vw/2),cy=clamp(p.y,vh/2,800-vh/2);ctx.translate(w/2-cx*scale,h/2-cy*scale);ctx.scale(scale,scale);
 if(arenaImage.complete&&arenaImage.naturalWidth){ctx.drawImage(arenaImage,0,0,1200,800);}else{ctx.fillStyle='#587447';ctx.fillRect(0,0,1200,800);const light=ctx.createRadialGradient(570,340,30,600,400,750);light.addColorStop(0,'#90a26855');light.addColorStop(1,'#213d3544');ctx.fillStyle=light;ctx.fillRect(0,0,1200,800);ellipse(280,240,150,80,'#b5a36a12');ellipse(890,610,220,100,'#c3b17715');for(const g of grass){ctx.strokeStyle=['#b0bb6e40','#2a503c45','#d2c67e25'][g.shade];ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(g.x,g.y);ctx.lineTo(g.x-3,g.y-5);ctx.moveTo(g.x,g.y);ctx.lineTo(g.x+3,g.y-7);ctx.stroke();}
@@ -48,8 +49,10 @@ ctx.strokeStyle='#493423';ctx.lineWidth=10;ctx.strokeRect(20,30,1160,740);ctx.st
 
 if(!s){chicken(600,430,0,performance.now()/1000);return;}for(const g of s.gems){ctx.fillStyle='#a4e6d3';ctx.beginPath();ctx.moveTo(g.x,g.y-5);ctx.lineTo(g.x+4,g.y);ctx.lineTo(g.x,g.y+5);ctx.lineTo(g.x-4,g.y);ctx.fill();}for(const worm of s.worms){ctx.strokeStyle='#ffadab';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(worm.x-6,worm.y);ctx.quadraticCurveTo(worm.x,worm.y-10,worm.x+6,worm.y);ctx.stroke();}
 for(const m of s.magnets){ctx.save();ctx.translate(m.x,m.y);ellipse(0,0,15,15,'#183842');ctx.strokeStyle='#b7edeb';ctx.lineWidth=5;ctx.beginPath();ctx.arc(0,-2,7,0,Math.PI);ctx.stroke();ctx.fillStyle='#ffce78';ctx.fillRect(-9,-9,5,7);ctx.fillRect(4,-9,5,7);ctx.restore();}
-for(const e of [...s.enemies].sort((a,b)=>a.y-b.y))enemy(e,s.time);chicken(p.x,p.y,p.inv,s.time);
+// Reuse the draw-order buffer instead of allocating a fresh array every frame.
+renderEnemies.length=0;for(const e of s.enemies)renderEnemies.push(e);
+renderEnemies.sort((a,b)=>a.y-b.y);for(const e of renderEnemies)enemy(e,s.time);chicken(p.x,p.y,p.inv,s.time);
 for(const b of s.bullets)projectile(ctx,b);
-for(const a of s.acorns){ellipse(a.x,a.y,5,7,'#b68b52');ellipse(a.x,a.y-4,6,3,'#624223');}for(const a of s.attacks)melee(ctx,a);for(const f of s.fx)effect(ctx,f);}
+for(const a of s.acorns){ellipse(a.x,a.y,5,7,'#937344');ellipse(a.x,a.y-4,6,3,'#543b25');}for(const a of s.attacks)melee(ctx,a);for(const f of s.fx)effect(ctx,f);}
 
 let hudTick=0;function frame(now){const dt=Math.min((now-last)/1000||0,.05);last=now;if(s){const input={x:((keys.has('KeyD')||keys.has('ArrowRight'))?1:0)-((keys.has('KeyA')||keys.has('ArrowLeft'))?1:0)+stick.x,y:((keys.has('KeyS')||keys.has('ArrowDown'))?1:0)-((keys.has('KeyW')||keys.has('ArrowUp'))?1:0)+stick.y};step(s,dt,input);for(const ev of s.events){sounds.play(ev);if(ev==='magnet')showNotice('МАГНИТ · ВЕСЬ ОПЫТ ЛЕТИТ К ТЕБЕ');if(ev==='bonus')showNotice('10:00 · ДВОР СПАСЁН! БОНУСНАЯ ВОЛНА');}s.events.length=0;if(now-hudTick>100||lastMode!==s.mode){sync();hudTick=now;}}draw();if(now>noticeUntil)$('notice').style.opacity=0;requestAnimationFrame(frame);}menu();requestAnimationFrame(frame);
