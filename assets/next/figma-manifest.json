@@ -1,0 +1,378 @@
+{
+  "assets": [
+    {
+      "id": "guinea",
+      "figmaNode": "62:2",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        351
+      ],
+      "cropBounds": [
+        14,
+        14,
+        369,
+        340
+      ],
+      "dimensions": [
+        355,
+        326
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "guinea.png",
+      "webp": "guinea.webp",
+      "exportSha256": "7cf9cfbd3d906d756023a712613fe9c8b384fe32101e2cdd1b72663ac7eb5036",
+      "type": "sprite"
+    },
+    {
+      "id": "duck",
+      "figmaNode": "62:3",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        320
+      ],
+      "cropBounds": [
+        43,
+        28,
+        356,
+        299
+      ],
+      "dimensions": [
+        313,
+        271
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "duck.png",
+      "webp": "duck.webp",
+      "exportSha256": "910e5e27d91e587a158c7aa7b41417d00b396adf2b2b5938325a1a6ab6065fca",
+      "type": "sprite"
+    },
+    {
+      "id": "turkey",
+      "figmaNode": "62:4",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        320
+      ],
+      "cropBounds": [
+        8,
+        0,
+        382,
+        318
+      ],
+      "dimensions": [
+        374,
+        318
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "turkey.png",
+      "webp": "turkey.webp",
+      "exportSha256": "e67c83a4b407ea180687a2599504a6c8e634d28ab7e4710d8e8255780e1d9321",
+      "type": "sprite"
+    },
+    {
+      "id": "goose",
+      "figmaNode": "62:5",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        256
+      ],
+      "cropBounds": [
+        26,
+        12,
+        360,
+        248
+      ],
+      "dimensions": [
+        334,
+        236
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "goose.png",
+      "webp": "goose.webp",
+      "exportSha256": "06614831caf5fb10587621a0430374000db494fc0334b5d32fe0c97e0f30edae",
+      "type": "sprite"
+    },
+    {
+      "id": "seed-large",
+      "figmaNode": "62:6",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        353
+      ],
+      "cropBounds": [
+        31,
+        26,
+        363,
+        316
+      ],
+      "dimensions": [
+        332,
+        290
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "seed-large.png",
+      "webp": "seed-large.webp",
+      "exportSha256": "beaf9d4aed85ff9190e5f6bbbb50612ccfea9f2ca270169a77d6735105c05370",
+      "type": "pickup"
+    },
+    {
+      "id": "seed-medium",
+      "figmaNode": "62:7",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        351
+      ],
+      "cropBounds": [
+        15,
+        6,
+        373,
+        342
+      ],
+      "dimensions": [
+        358,
+        336
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "seed-medium.png",
+      "webp": "seed-medium.webp",
+      "exportSha256": "3a50c0a276da4bf574dcec561de416bfb85b99ba29ca911515ebf483c8154a40",
+      "type": "pickup"
+    },
+    {
+      "id": "seed-small",
+      "figmaNode": "62:8",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        256
+      ],
+      "cropBounds": [
+        60,
+        2,
+        321,
+        249
+      ],
+      "dimensions": [
+        261,
+        247
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "seed-small.png",
+      "webp": "seed-small.webp",
+      "exportSha256": "cd005b25522d466891a474188c4516a2e239f65d18eee4eb0f2695da64362cef",
+      "type": "pickup"
+    },
+    {
+      "id": "bomb",
+      "figmaNode": "63:9",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        351
+      ],
+      "cropBounds": [
+        50,
+        24,
+        347,
+        327
+      ],
+      "dimensions": [
+        297,
+        303
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "bomb.png",
+      "webp": "bomb.webp",
+      "exportSha256": "8c4c5a5037cfe9a16406714a82480da189c42c9244994b38e7e1d761dbe852bc",
+      "type": "weapon-icon"
+    },
+    {
+      "id": "turkey-charge",
+      "figmaNode": "63:10",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        192
+      ],
+      "cropBounds": [
+        21,
+        37,
+        370,
+        162
+      ],
+      "dimensions": [
+        349,
+        125
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "turkey-charge.png",
+      "webp": "turkey-charge.webp",
+      "exportSha256": "82126afaeecedba6e198405cf3a1c803c7c5f2aacc87f693d11eb894725a947b",
+      "type": "effect"
+    },
+    {
+      "id": "turkey-stomp",
+      "figmaNode": "63:11",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        351
+      ],
+      "cropBounds": [
+        9,
+        11,
+        379,
+        333
+      ],
+      "dimensions": [
+        370,
+        322
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "turkey-stomp.png",
+      "webp": "turkey-stomp.webp",
+      "exportSha256": "98a19cdcbb68a53a0597356568f73d004d19419dd6d9684507aa174f389ed607",
+      "type": "effect"
+    },
+    {
+      "id": "orbit",
+      "figmaNode": "63:12",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        412
+      ],
+      "cropBounds": [
+        49,
+        26,
+        338,
+        388
+      ],
+      "dimensions": [
+        289,
+        362
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "orbit.png",
+      "webp": "orbit.webp",
+      "exportSha256": "8cf63ee7d407c909fdafe8dfbccb43a5306205bd25d14081eea4ba797d97fa0e",
+      "type": "weapon-icon"
+    },
+    {
+      "id": "dust",
+      "figmaNode": "63:13",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        331
+      ],
+      "cropBounds": [
+        22,
+        7,
+        361,
+        320
+      ],
+      "dimensions": [
+        339,
+        313
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "dust.png",
+      "webp": "dust.webp",
+      "exportSha256": "c097c63044a1abfb8b7907bc9200a840bec2a37e3cfab6287a30dd62390eceb4",
+      "type": "weapon-icon"
+    },
+    {
+      "id": "dust-large",
+      "figmaNode": "65:14",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        384
+      ],
+      "cropBounds": [
+        5,
+        10,
+        380,
+        375
+      ],
+      "dimensions": [
+        375,
+        365
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "dust-large.png",
+      "webp": "dust-large.webp",
+      "exportSha256": "2c3de9852c5b73db578ff51e6d3b30a1b52a608923509d61484b7076b7ea58e6",
+      "type": "effect"
+    },
+    {
+      "id": "dust-small",
+      "figmaNode": "65:15",
+      "sourceFileKey": "5CeOcsre3HC0PmRJVUxwOA",
+      "exportWidth": 384,
+      "exportDimensions": [
+        384,
+        384
+      ],
+      "cropBounds": [
+        12,
+        12,
+        379,
+        377
+      ],
+      "dimensions": [
+        367,
+        365
+      ],
+      "trueAlpha": true,
+      "backgroundRemoved": false,
+      "png": "dust-small.png",
+      "webp": "dust-small.webp",
+      "exportSha256": "91ca9eaf0e16229b37339497278be04bab219d9de2fcb3415002424386449ced",
+      "type": "effect"
+    }
+  ],
+  "animationStatus": "All imported nodes are single illustrations, not animation atlases. New bird walk/telegraph/attack/recovery poses are not supplied; procedural animation and telegraphs can support the prototype.",
+  "missingMandatoryPrototypeIllustrations": [],
+  "optionalMissingArt": [
+    "Guinea walk and attack phases",
+    "Turkey wing sweep, stomp, locked charge and peck-series phases",
+    "Goose wind-up/extended-neck/recovery phases",
+    "Duck walk phases",
+    "Dedicated grain-bomb explosion art; existing generic explosion can be reused"
+  ],
+  "note": "Exports retain actual alpha. Original Figma nodes remain unchanged. Trim removes only transparent exterior pixels (alpha<=1)."
+}

@@ -1,6 +1,6 @@
 import {beakPose} from './engine.js';
-const names=['ryaba','rambo','monk','rat','fox','wolf','bear','squirrel','beak','wing','talon'];
-export const art=Object.fromEntries(names.map(id=>{const image=new Image();image.src=`assets/${['ryaba','rambo','monk'].includes(id)?'v5':'v7'}/${id}.png`;return [id,image];}));
+const names=['ryaba','rambo','monk','rat','fox','wolf','bear','squirrel','beak','wing','talon','guinea','duck','turkey','goose','seed-small','seed-medium','seed-large','bomb','orbit','dust','dust-large','dust-small','turkey-charge','turkey-stomp'];
+export const art=Object.fromEntries(names.map(id=>{const image=new Image();image.src=names.indexOf(id)>10?`assets/next/${id}.webp`:`assets/${['ryaba','rambo','monk'].includes(id)?'v5':'v7'}/${id}.png`;return [id,image];}));
 const ready=image=>image?.complete&&image.naturalWidth>0;
 function sprite(ctx,image,x,y,w,h){if(ready(image))ctx.drawImage(image,x,y,w,h);}
 export function creature(ctx,id,x,y,r,facing,time,moving,inv=0,flash=0){
