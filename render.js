@@ -27,12 +27,13 @@ export function melee(ctx,a){
   ctx.rotate(a.angle);const pose=beakPose(a);
   croppedSprite(ctx,art.beak,pose.x,0,pose.width);
  }else if(a.type==='wing'){
-  const angle=a.angle+a.side*(-1.4+2.8*phase);ctx.rotate(angle);ctx.scale(1,a.side);
+  const angle=a.angle+a.side*(-1.4+2.8*phase);ctx.rotate(angle);ctx.scale(1,-a.side);
   ctx.fillStyle='#edd9ac16';ctx.beginPath();ctx.moveTo(0,0);ctx.arc(0,0,a.r,Math.max(-.7,-phase*2.8),0);ctx.closePath();ctx.fill();
   sprite(ctx,art.wing,-a.r*.08,-a.r*.38,a.r*1.08,a.r*.74);
  }else{
   const impact=Math.max(0,(phase-.4)/.6),lift=phase<.42?Math.sin(phase/.42*Math.PI)*20:0;
-  ctx.rotate(a.angle);sprite(ctx,art.talon,8,-a.r*.3-lift,a.r*.62,a.r*.62);
+  // The stomp always points down; its radial damage is calculated independently in the engine.
+  sprite(ctx,art.talon,8,-a.r*.3-lift,a.r*.62,a.r*.62);
   if(impact>0){ctx.globalAlpha=(1-impact)*.8;ctx.strokeStyle='#e7c382';ctx.lineWidth=3;for(let i=0;i<3;i++){ctx.beginPath();ctx.arc(0,0,a.r*Math.min(1,impact+i*.12),0,Math.PI*2);ctx.stroke();}for(let i=0;i<8;i++){const angle=i*Math.PI/4;ctx.fillStyle='#b4935b';ctx.beginPath();ctx.ellipse(Math.cos(angle)*a.r*impact,Math.sin(angle)*a.r*impact,4,2,angle,0,Math.PI*2);ctx.fill();}}
  }
  ctx.restore();
