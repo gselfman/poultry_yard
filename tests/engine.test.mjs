@@ -1,3 +1,4 @@
+import {purchaseQuote} from '../run-rules.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createGame as createWorldGame,step,choicePool,rollChoices,choose,evolve,reroll,damagePlayer,spawnEnemy,weaponStats,passiveMultiplier,playerStats,revive,declineRevive,spawnProfile,enemyCost,beakShape,beakPose,foxSpeed} from '../engine.js';
@@ -7,14 +8,14 @@ function createGame(...args){const s=createWorldGame(...args);s.player.x=600;s.p
 const weapon=(level=1,effect=null)=>({level,effect,cd:0,volley:0,ammo:20,reload:0});
 function stationaryTarget(s,x=700,y=400,hp=100000){const e=spawnEnemy(s,'bear');Object.assign(e,{x,y,hp,maxHp:hp,speed:0});s.spawnTimer=10000;return e;}
 test('character stats, exclusive weapon and three slots',()=>{const s=createGame();assert.equal(s.player.hp,3);assert(!choicePool(s).some(c=>c.id==='ak'));s.weapons={egg:weapon(),beak:weapon(),feather:weapon()};assert(choicePool(s).filter(c=>c.kind==='weapon').every(c=>s.weapons[c.id]));const r=createGame('rambo');assert.equal(r.player.hp,2);assert(r.weapons.ak);r.weapons={ak:weapon(),egg:weapon(),beak:weapon()};assert(!choicePool(r).some(c=>c.id==='feather'));});
-test('three distinct choices and finite test wallet',()=>{const s=createGame();s.mode='upgrade';rollChoices(s);assert.equal(new Set(s.choices.map(c=>c.id)).size,3);for(let i=0;i<10;i++)assert(reroll(s));assert.equal(s.ge,0);assert.equal(reroll(s),false);});
+test('three distinct choices and finite test wallet',()=>{const s=createGame();s.mode='upgrade';rollChoices(s);assert.equal(new Set(s.choices.map(c=>c.id)).size,3);for(let i=0;i<3;i++)assert(reroll(s,purchaseQuote(s,'reroll')));assert.equal(s.ge,35);assert.equal(reroll(s,purchaseQuote(s,'reroll')),false);});
 test('level five pauses for evolution then removes weapon from pool',()=>{const s=createGame();s.weapons.egg=weapon(4);s.mode='upgrade';s.pending=1;s.choices=[{kind:'weapon',id:'egg'}];choose(s,0);assert.equal(s.mode,'evolution');assert.equal(s.weapons.egg.level,5);assert(!evolve(s,'invalid'));assert(evolve(s,'gold'));assert.equal(s.mode,'playing');assert(!choicePool(s).some(c=>c.id==='egg'));});
 test('damage is one with half-second invulnerability, pause freezes timer',()=>{const s=createGame();damagePlayer(s);damagePlayer(s);assert.equal(s.player.hp,2);s.spawnTimer=100;step(s,.51);damagePlayer(s);assert.equal(s.player.hp,1);s.mode='paused';const t=s.time;step(s,10);assert.equal(s.time,t);});
 test('max health upgrade also heals exactly two',()=>{const s=createGame();s.player.hp=1;s.mode='upgrade';s.pending=1;s.choices=[{kind:'passive',id:'health'}];choose(s,0);assert.equal(s.player.hp,3);assert.equal(s.player.maxHp,5);});
 test('third entire volley is golden, extra projectiles included',()=>{const s=createGame();stationaryTarget(s);s.weapons.egg=weapon(5,'gold');s.passives.shots=2;for(let i=1;i<=3;i++){s.bullets=[];s.weapons.egg.cd=0;step(s,.001);assert.equal(s.bullets.length,5);assert(s.bullets.every(b=>b.gold===(i===3)));}assert(s.bullets.every(b=>b.pierce===Infinity));});
 test('AK magazine reload takes 3.5 seconds; belt bypasses reload',()=>{const s=createGame('rambo');stationaryTarget(s);s.weapons.ak=weapon();for(let i=0;i<20;i++){s.weapons.ak.cd=0;step(s,.001);}assert.equal(s.weapons.ak.ammo,0);assert.equal(s.weapons.ak.reload,3.5);step(s,3.49);assert(s.weapons.ak.reload>0);step(s,.02);assert.equal(s.weapons.ak.ammo,20);assert.equal(s.weapons.ak.reload,0);s.weapons.ak=weapon(5,'belt');for(let i=0;i<25;i++){s.weapons.ak.cd=0;step(s,.001);}assert.equal(s.weapons.ak.reload,0);});
 test('super beak creates exactly one attack, scales with projectile count',()=>{const s=createGame();stationaryTarget(s);s.weapons={beak:weapon(5,'super')};s.passives.shots=4;step(s,.001);assert.equal(s.attacks.filter(f=>f.type==='beak').length,1);assert(s.attacks[0].r>200);});
-test('squirrel does not contact damage and fires ranged acorns',()=>{const s=createGame();s.spawnTimer=100;const e=spawnEnemy(s,'squirrel');Object.assign(e,{x:s.player.x,y:s.player.y,shot:10});step(s,.01);assert.equal(s.player.hp,3);e.x=800;e.shot=0;step(s,.01);assert.equal(s.acorns.length,1);});
+test('squirrel does not contact damage and fires ranged acorns',()=>{const s=createGame();s.spawnTimer=100;const e=spawnEnemy(s,'squirrel');Object.assign(e,{x:s.player.x,y:s.player.y,shot:10});step(s,.01);assert.equal(s.player.hp,3);e.x=750;e.shot=0;step(s,.01);assert.equal(s.acorns.length,1);});
 test('worm heals at most max HP and remains when full',()=>{const s=createGame();s.spawnTimer=100;s.worms=[{x:s.player.x,y:s.player.y}];step(s,.01);assert.equal(s.worms.length,1);s.player.hp=2;step(s,.01);assert.equal(s.player.hp,3);assert.equal(s.worms.length,0);});
 test('bonus doubles kill score after the bosses are defeated',()=>{const s=createGame();s.time=599.99;s.bossEvents={guinea:'dead',turkey:'dead'};s.spawnTimer=100;step(s,.02);assert(s.bonus);const e=stationaryTarget(s,610,400,1);s.weapons={beak:weapon()};step(s,.15);assert.equal(s.kills,1);assert.equal(s.score,200);assert(e.hp<=0);});
 test('experience overflow queues all level choices',()=>{const s=createGame();s.spawnTimer=100;s.gems=[{x:s.player.x,y:s.player.y,value:100}];step(s,.01);assert.equal(s.mode,'upgrade');assert(s.pending>1);const n=s.pending;s.choices=[{kind:'passive',id:'damage'}];choose(s,0);assert.equal(s.pending,n-1);assert.equal(s.mode,'upgrade');});
@@ -85,9 +86,9 @@ test('worm and magnet drops have independent 0.5 percent rolls',()=>{
 
 test('opening spawns more slow enemies and squirrels fire slower acorns',()=>{
   const s=createGame();s.weapons={};s.gems=[];step(s,.41);assert.equal(s.enemies.length,1);assert(s.enemies.every(e=>e.speed<44));
-  const r=createGame();r.spawnTimer=100;r.weapons={};const e=spawnEnemy(r,'squirrel');Object.assign(e,{x:850,y:400,shot:0});step(r,.01);
+  const r=createGame();r.spawnTimer=100;r.weapons={};const e=spawnEnemy(r,'squirrel');Object.assign(e,{x:750,y:400,shot:0});step(r,.01);
   assert.equal(e.shot,3.8);assert(Math.abs(Math.hypot(r.acorns[0].vx,r.acorns[0].vy)-112.5)<1e-9);
-  step(r,1.8);assert.equal(r.acorns.length,1);
+  step(r,1.8);assert.equal(r.acorns.length,0);assert.equal(r.player.hp,2);
 });
 
 test('AK levels increase magazine capacity and refills use upgraded capacity',()=>{
@@ -124,17 +125,17 @@ test('statistics track experience, damage taken and healing pickups',()=>{
 
 test('revival costs 20 GE once, restores HP, preserves build and grants protection',()=>{
  const s=createGame('monk');s.player.hp=1;s.score=90;s.time=100;const e=stationaryTarget(s,610,400);damagePlayer(s);assert.equal(s.mode,'revive');
- assert(revive(s));assert.equal(s.ge,30);assert.equal(s.player.hp,5);assert.equal(s.player.inv,2);assert.equal(s.time,100);assert.equal(s.score,90);assert(s.weapons.martial);assert(e.x>610);
- assert(!revive(s));s.player.inv=0;s.player.hp=1;damagePlayer(s);assert.equal(s.mode,'ended');assert.equal(s.stats.revivals,1);
+ assert(revive(s,purchaseQuote(s,'revive')));assert.equal(s.ge,30);assert.equal(s.player.hp,5);assert.equal(s.player.inv,2);assert.equal(s.time,100);assert.equal(s.score,90);assert(s.weapons.martial);assert(e.x>610);
+ assert(!revive(s,purchaseQuote(s,'revive')));s.player.inv=0;s.player.hp=1;damagePlayer(s);assert.equal(s.mode,'ended');assert.equal(s.stats.revivals,1);
 });
 test('revival cannot be bought at 10 minutes or without enough GE and can be declined',()=>{
- for(const setup of [s=>s.time=600,s=>s.ge=19]){const s=createGame();setup(s);s.player.hp=1;damagePlayer(s);assert.equal(s.mode,'ended');assert(!revive(s));}
+ for(const setup of [s=>s.time=600,s=>s.ge=19]){const s=createGame();setup(s);s.player.hp=1;damagePlayer(s);assert.equal(s.mode,'ended');assert(!revive(s,purchaseQuote(s,'revive')));}
  const s=createGame();s.player.hp=1;damagePlayer(s);assert(declineRevive(s));assert.equal(s.mode,'ended');assert.equal(s.ge,50);
 });
 test('free rerolls are awarded on levels 5 and 10, saved and spent before GE',()=>{
  const s=createGame();s.gems=[];s.spawnTimer=100;s.level=4;s.xp=s.need;step(s,.001);assert.equal(s.freeRerolls,1);assert.equal(s.level,5);
  s.level=9;s.xp=s.need;s.pending=0;s.mode='playing';step(s,.001);assert.equal(s.freeRerolls,2);
- assert(reroll(s));assert(reroll(s));assert.equal(s.freeRerolls,0);assert.equal(s.ge,50);assert(reroll(s));assert.equal(s.ge,45);assert.equal(s.stats.freeRerolls,2);assert.equal(s.stats.paidRerolls,1);
+ assert(reroll(s,purchaseQuote(s,'reroll')));assert(reroll(s,purchaseQuote(s,'reroll')));assert.equal(s.freeRerolls,0);assert.equal(s.ge,50);assert(reroll(s,purchaseQuote(s,'reroll')));assert.equal(s.ge,45);assert.equal(s.stats.freeRerolls,2);assert.equal(s.stats.paidRerolls,1);
  assert.equal(createGame().freeRerolls,0);
 });
 test('projectile passive disappears after three selections and forged fourth is rejected',()=>{
