@@ -1,0 +1,80 @@
+[
+  {
+    "file": "goose-bite-recover-01.png",
+    "removedDetachedPixels": 96,
+    "mainBodyPixelsPreserved": 25771,
+    "alphaUnchangedInsideBody": true
+  },
+  {
+    "file": "goose-bite-recover-02.png",
+    "removedDetachedPixels": 117,
+    "mainBodyPixelsPreserved": 23967,
+    "alphaUnchangedInsideBody": true
+  },
+  {
+    "file": "guinea-charge-prepare-01.png",
+    "removedDetachedPixels": 692,
+    "mainBodyPixelsPreserved": 63649,
+    "alphaUnchangedInsideBody": true
+  },
+  {
+    "file": "guinea-charge-prepare-02.png",
+    "removedDetachedPixels": 1519,
+    "mainBodyPixelsPreserved": 61380,
+    "alphaUnchangedInsideBody": true
+  },
+  {
+    "file": "guinea-charge-prepare-03.png",
+    "removedDetachedPixels": 623,
+    "mainBodyPixelsPreserved": 54516,
+    "alphaUnchangedInsideBody": true
+  },
+  {
+    "file": "guinea-charge-run-02.png",
+    "removedDetachedPixels": 1446,
+    "mainBodyPixelsPreserved": 51080,
+    "alphaUnchangedInsideBody": true
+  },
+  {
+    "file": "guinea-charge-run-03.png",
+    "removedDetachedPixels": 2041,
+    "mainBodyPixelsPreserved": 51504,
+    "alphaUnchangedInsideBody": true
+  },
+  {
+    "file": "guinea-charge-run-04.png",
+    "removedDetachedPixels": 51,
+    "mainBodyPixelsPreserved": 49596,
+    "alphaUnchangedInsideBody": true
+  },
+  {
+    "file": "guinea-stomp-02.png",
+    "removedDetachedPixels": 216,
+    "mainBodyPixelsPreserved": 66639,
+    "alphaUnchangedInsideBody": true
+  },
+  {
+    "file": "guinea-stomp-03.png",
+    "removedDetachedPixels": 265,
+    "mainBodyPixelsPreserved": 67102,
+    "alphaUnchangedInsideBody": true
+  },
+  {
+    "file": "guinea-stomp-04.png",
+    "removedDetachedPixels": 73,
+    "mainBodyPixelsPreserved": 61948,
+    "alphaUnchangedInsideBody": true
+  },
+  {
+    "file": "guinea-wing-sweep-02.png",
+    "removedDetachedPixels": 331,
+    "mainBodyPixelsPreserved": 91651,
+    "alphaUnchangedInsideBody": true
+  },
+  {
+    "file": "guinea-wing-sweep-03.png",
+    "removedDetachedPixels": 322,
+    "mainBodyPixelsPreserved": 87371,
+    "alphaUnchangedInsideBody": true
+  }
+]

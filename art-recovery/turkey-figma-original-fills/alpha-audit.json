@@ -1,0 +1,482 @@
+[
+  {
+    "name": "turkey-walk-01.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      252
+    ],
+    "transparent": 100841,
+    "opaque": 0,
+    "bbox": [
+      0,
+      28,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-walk-02.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      252
+    ],
+    "transparent": 103836,
+    "opaque": 0,
+    "bbox": [
+      2,
+      18,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-walk-03.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      252
+    ],
+    "transparent": 104601,
+    "opaque": 0,
+    "bbox": [
+      0,
+      28,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-walk-04.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      252
+    ],
+    "transparent": 99657,
+    "opaque": 0,
+    "bbox": [
+      0,
+      28,
+      492,
+      512
+    ]
+  },
+  {
+    "name": "turkey-wing-sweep-01.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      251
+    ],
+    "transparent": 128936,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-wing-sweep-02.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      251
+    ],
+    "transparent": 127266,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-wing-sweep-03.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      251
+    ],
+    "transparent": 131359,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-wing-sweep-04.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      251
+    ],
+    "transparent": 138406,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      488,
+      512
+    ]
+  },
+  {
+    "name": "turkey-stomp-01.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      251
+    ],
+    "transparent": 135684,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-stomp-02.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      251
+    ],
+    "transparent": 135386,
+    "opaque": 0,
+    "bbox": [
+      2,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-stomp-03.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      251
+    ],
+    "transparent": 134026,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-stomp-04.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      252
+    ],
+    "transparent": 99604,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      492,
+      512
+    ]
+  },
+  {
+    "name": "turkey-charge-prepare-01.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      251
+    ],
+    "transparent": 130901,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-charge-prepare-02.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      251
+    ],
+    "transparent": 96485,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-charge-prepare-03.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      252
+    ],
+    "transparent": 102837,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-charge-prepare-04.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      253
+    ],
+    "transparent": 103337,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-charge-run-01.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      252
+    ],
+    "transparent": 88151,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-charge-run-02.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      251
+    ],
+    "transparent": 98466,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-charge-run-03.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      253
+    ],
+    "transparent": 102955,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-charge-run-04.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      252
+    ],
+    "transparent": 102391,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "name": "turkey-peck-series-01.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      252
+    ],
+    "transparent": 90094,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      460
+    ]
+  },
+  {
+    "name": "turkey-peck-series-02.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      252
+    ],
+    "transparent": 97836,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      450
+    ]
+  },
+  {
+    "name": "turkey-peck-series-03.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      253
+    ],
+    "transparent": 110152,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      444
+    ]
+  },
+  {
+    "name": "turkey-peck-series-04.png",
+    "size": [
+      512,
+      512
+    ],
+    "mode": "P",
+    "alpha_extrema": [
+      0,
+      252
+    ],
+    "transparent": 102446,
+    "opaque": 0,
+    "bbox": [
+      0,
+      0,
+      512,
+      448
+    ]
+  }
+]

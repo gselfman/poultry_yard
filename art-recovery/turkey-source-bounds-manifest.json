@@ -1,0 +1,635 @@
+{
+  "source": "art-recovery/turkey-original.png",
+  "source_sha256": "31b719e84df5cf5d2bf9349a71149dd0c8db92457539fa475cf92e88b833e968",
+  "source_size": [
+    1024,
+    1536
+  ],
+  "method": "24 alpha>128 connected-component cores; nearest-core subject ownership; unchanged RGBA colors and alpha within 5px padded source bounds; uniform 1.4x scaling; feet baseline y480",
+  "frames": [
+    {
+      "file": "turkey-walk-01.png",
+      "source_bounds": [
+        13,
+        28,
+        255,
+        247
+      ],
+      "core_bounds": [
+        18,
+        33,
+        250,
+        242
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        86,
+        180
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-walk-02.png",
+      "source_bounds": [
+        271,
+        30,
+        504,
+        244
+      ],
+      "core_bounds": [
+        276,
+        35,
+        499,
+        239
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        93,
+        187
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-walk-03.png",
+      "source_bounds": [
+        526,
+        30,
+        763,
+        245
+      ],
+      "core_bounds": [
+        531,
+        35,
+        758,
+        240
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        90,
+        186
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-walk-04.png",
+      "source_bounds": [
+        776,
+        30,
+        1008,
+        247
+      ],
+      "core_bounds": [
+        781,
+        35,
+        1003,
+        242
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        94,
+        183
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-wing-sweep-01.png",
+      "source_bounds": [
+        9,
+        262,
+        261,
+        504
+      ],
+      "core_bounds": [
+        14,
+        267,
+        256,
+        499
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        80,
+        148
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-wing-sweep-02.png",
+      "source_bounds": [
+        266,
+        244,
+        516,
+        506
+      ],
+      "core_bounds": [
+        271,
+        249,
+        511,
+        501
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        81,
+        120
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-wing-sweep-03.png",
+      "source_bounds": [
+        516,
+        288,
+        793,
+        517
+      ],
+      "core_bounds": [
+        521,
+        293,
+        788,
+        512
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        62,
+        166
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-wing-sweep-04.png",
+      "source_bounds": [
+        771,
+        281,
+        1018,
+        505
+      ],
+      "core_bounds": [
+        776,
+        286,
+        1013,
+        500
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        83,
+        173
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-stomp-01.png",
+      "source_bounds": [
+        13,
+        511,
+        254,
+        753
+      ],
+      "core_bounds": [
+        18,
+        516,
+        249,
+        748
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        88,
+        148
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-stomp-02.png",
+      "source_bounds": [
+        273,
+        525,
+        511,
+        757
+      ],
+      "core_bounds": [
+        278,
+        530,
+        506,
+        752
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        90,
+        162
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-stomp-03.png",
+      "source_bounds": [
+        529,
+        546,
+        765,
+        754
+      ],
+      "core_bounds": [
+        534,
+        551,
+        760,
+        749
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        91,
+        196
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-stomp-04.png",
+      "source_bounds": [
+        780,
+        520,
+        1006,
+        756
+      ],
+      "core_bounds": [
+        785,
+        525,
+        1001,
+        751
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        98,
+        157
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-charge-prepare-01.png",
+      "source_bounds": [
+        11,
+        770,
+        250,
+        1002
+      ],
+      "core_bounds": [
+        16,
+        775,
+        245,
+        997
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        88,
+        162
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-charge-prepare-02.png",
+      "source_bounds": [
+        258,
+        777,
+        498,
+        998
+      ],
+      "core_bounds": [
+        263,
+        782,
+        493,
+        993
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        88,
+        178
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-charge-prepare-03.png",
+      "source_bounds": [
+        513,
+        805,
+        770,
+        999
+      ],
+      "core_bounds": [
+        518,
+        810,
+        765,
+        994
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        76,
+        215
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-charge-prepare-04.png",
+      "source_bounds": [
+        750,
+        795,
+        1019,
+        1002
+      ],
+      "core_bounds": [
+        755,
+        800,
+        1014,
+        997
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        68,
+        197
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-charge-run-01.png",
+      "source_bounds": [
+        8,
+        1019,
+        263,
+        1230
+      ],
+      "core_bounds": [
+        13,
+        1024,
+        258,
+        1225
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        78,
+        192
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-charge-run-02.png",
+      "source_bounds": [
+        256,
+        1019,
+        510,
+        1234
+      ],
+      "core_bounds": [
+        261,
+        1024,
+        505,
+        1229
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        78,
+        186
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-charge-run-03.png",
+      "source_bounds": [
+        505,
+        1034,
+        771,
+        1220
+      ],
+      "core_bounds": [
+        510,
+        1039,
+        766,
+        1215
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        70,
+        227
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-charge-run-04.png",
+      "source_bounds": [
+        760,
+        1028,
+        1018,
+        1233
+      ],
+      "core_bounds": [
+        765,
+        1033,
+        1013,
+        1228
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        76,
+        200
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-peck-series-01.png",
+      "source_bounds": [
+        9,
+        1248,
+        237,
+        1478
+      ],
+      "core_bounds": [
+        14,
+        1253,
+        232,
+        1473
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        96,
+        165
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-peck-series-02.png",
+      "source_bounds": [
+        249,
+        1263,
+        547,
+        1473
+      ],
+      "core_bounds": [
+        254,
+        1268,
+        542,
+        1468
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        48,
+        193
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-peck-series-03.png",
+      "source_bounds": [
+        528,
+        1244,
+        748,
+        1478
+      ],
+      "core_bounds": [
+        533,
+        1249,
+        743,
+        1473
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        102,
+        159
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    },
+    {
+      "file": "turkey-peck-series-04.png",
+      "source_bounds": [
+        753,
+        1271,
+        1020,
+        1470
+      ],
+      "core_bounds": [
+        758,
+        1276,
+        1015,
+        1465
+      ],
+      "source_scale": 1.4,
+      "canvas": [
+        512,
+        512
+      ],
+      "paste": [
+        69,
+        208
+      ],
+      "feet_baseline": 480,
+      "alpha_original": true
+    }
+  ]
+}

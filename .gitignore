@@ -5,3 +5,5 @@ artifacts/
 assets/characters-v*.png
 
 assets/references/
+
+build/

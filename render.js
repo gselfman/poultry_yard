@@ -1,44 +1,51 @@
-import {beakPose} from './engine.js';
-const names=['ryaba','rambo','monk','rat','fox','wolf','bear','squirrel','beak','wing','talon'];
-export const art=Object.fromEntries(names.map(id=>{const image=new Image();image.src=`assets/${['ryaba','rambo','monk'].includes(id)?'v5':'v7'}/${id}.png`;return [id,image];}));
+import {BIRD_ACTIONS,BIRD_VISUALS,birdPose} from './bird-poses.js';
+import {combatArt,drawCombat} from './combat-art.js';
+import {beakPose,wingSweep} from './engine.js';
+const names=['ryaba','rambo','monk','rat','fox','wolf','bear','squirrel','beak','wing','talon','guinea','duck','turkey','goose','seed-small','seed-medium','seed-large','bomb','orbit','dust','dust-large','dust-small','turkey-charge','turkey-stomp'];
+export const art=Object.fromEntries(names.map(id=>{const image=new Image();image.src=names.indexOf(id)>10?`assets/next/${id}.webp`:`assets/${['ryaba','rambo','monk'].includes(id)?'v5':'v7'}/${id}.webp`;return [id,image];}));
 const ready=image=>image?.complete&&image.naturalWidth>0;
 function sprite(ctx,image,x,y,w,h){if(ready(image))ctx.drawImage(image,x,y,w,h);}
-export function creature(ctx,id,x,y,r,facing,time,moving,inv=0,flash=0){
- const image=art[id],hero=['ryaba','rambo','monk'].includes(id),box=r*(hero?4.7:4.1);
- ctx.save();ctx.translate(x,y);ctx.fillStyle='#14220e55';ctx.beginPath();ctx.ellipse(0,r*.85,r,Math.max(3,r*.3),0,0,Math.PI*2);ctx.fill();
+export const walkArt=Object.fromEntries(['ryaba','rambo','monk','rat','fox','squirrel','wolf','bear'].map(id=>[id,Array.from({length:['ryaba','rambo','monk'].includes(id)?4:3},(_,i)=>{const im=new Image();im.src=`assets/animation/${id}-${String(i).padStart(2,'0')}.webp`;return im;})]));
+export const birdArt=Object.fromEntries(Object.entries(BIRD_ACTIONS).map(([id,actions])=>[id,Object.fromEntries(actions.map(action=>[action,Array.from({length:4},(_,i)=>{const im=new Image();im.src=`assets/birds-v2/${id}-${action}-${String(i+1).padStart(2,'0')}.webp`;return im;})]))]));
+const outlined=new WeakMap();
+function enemyOutline(image){if(outlined.has(image))return outlined.get(image);const pad=14,c=document.createElement('canvas');c.width=image.naturalWidth+pad*2;c.height=image.naturalHeight+pad*2;const t=c.getContext('2d');const mask=document.createElement('canvas');mask.width=image.naturalWidth;mask.height=image.naturalHeight;const m=mask.getContext('2d');m.drawImage(image,0,0);m.globalCompositeOperation='source-in';m.fillStyle='#201d14';m.fillRect(0,0,mask.width,mask.height);for(let i=0;i<8;i++){const a=i*Math.PI/4;t.drawImage(mask,pad+Math.cos(a)*6,pad+Math.sin(a)*6);}m.fillStyle='#ffe0a1';m.fillRect(0,0,mask.width,mask.height);for(let i=0;i<8;i++){const a=i*Math.PI/4;t.drawImage(mask,pad+Math.cos(a)*3,pad+Math.sin(a)*3);}t.drawImage(image,pad,pad);outlined.set(image,c);return c;}
+export function creature(ctx,id,x,y,r,facing,time,moving,inv=0,flash=0,attack=null){
+ const hero=['ryaba','rambo','monk'].includes(id),frames=walkArt[id],cycle=hero?[1,2,3,2]:[1,0,2,0],clock=time*8,index=moving?cycle[Math.floor(clock)%4]:0;
+ const pose=birdPose(id,attack,time),birdImage=pose&&birdArt[id]?.[pose.action]?.[pose.frame],usingBird=ready(birdImage),animated=usingBird||(frames&&ready(frames[index])),image=usingBird?birdImage:animated?frames[index]:art[id],box=r*(hero?2.5:3.15);
+ ctx.save();ctx.translate(x,y);ctx.fillStyle='#14220e77';ctx.beginPath();ctx.ellipse(0,r*.85,r,Math.max(3,r*.3),0,0,Math.PI*2);ctx.fill();
  if(!ready(image)){ctx.restore();return;}
- const scale=Math.min(box/image.naturalWidth,box*1.1/image.naturalHeight),w=image.naturalWidth*scale,h=image.naturalHeight*scale;
- const stride=moving?Math.sin(time*(id==='bear'?7:12)):0,bob=moving?Math.abs(stride)*1.5:0;
- ctx.globalAlpha=inv>0&&Math.floor(inv*20)%2===0?.35:flash>0?.55:1;
- ctx.scale(facing||1,1);ctx.rotate(stride*.018);
- const cut=.72,sourceCut=image.naturalHeight*cut;
- // Upper body and two foot regions share one image; small offsets form a simple walk cycle.
- ctx.drawImage(image,0,0,image.naturalWidth,sourceCut,-w/2,-h*.57-bob,w,h*cut);
- for(let foot=0;foot<2;foot++)ctx.drawImage(image,foot*image.naturalWidth/2,sourceCut,image.naturalWidth/2,image.naturalHeight-sourceCut,-w/2+foot*w/2+stride*(foot===0?1.3:-1.3),-h*.57+h*cut-bob+Math.max(0,stride*(foot===0?1:-1))*1.5,w/2,h*(1-cut));
+ ctx.globalAlpha=inv>0&&Math.floor(inv*20)%2===0?.35:flash>0?.55:1;ctx.scale(facing||1,1);
+ // Real animation frames use a shared canvas/scale; never normalize each frame separately.
+ if(animated){const draw=id==='rat'?enemyOutline(image):image,visual=usingBird?BIRD_VISUALS[id]:null,k=box/(usingBird?image.naturalWidth:384)*(visual?.size||1)*(visual?.scales[pose.action]||1),top=usingBird?r*.85-(visual?.feet??image.naturalHeight-24)*k:-draw.height*k/2;ctx.drawImage(draw,-draw.width*k/2,top,draw.width*k,draw.height*k);}
+
+ else{const b=alphaBounds(image),k=Math.min(box/b.w,box*1.1/b.h);ctx.drawImage(image,b.x,b.y,b.w,b.h,-b.w*k/2,-b.h*k/2,b.w*k,b.h*k);}
  ctx.restore();
 }
 const crops=new WeakMap();
-function croppedSprite(ctx,image,x,y,w,h=null){if(!ready(image))return;let b=crops.get(image);if(!b){const c=document.createElement('canvas');c.width=image.naturalWidth;c.height=image.naturalHeight;const c2=c.getContext('2d',{willReadFrequently:true});c2.drawImage(image,0,0);const data=c2.getImageData(0,0,c.width,c.height).data;let left=c.width,top=c.height,right=0,bottom=0;for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++)if(data[(y*c.width+x)*4+3]>100){left=Math.min(left,x);top=Math.min(top,y);right=Math.max(right,x);bottom=Math.max(bottom,y);}b={x:left,y:top,w:right-left+1,h:bottom-top+1};crops.set(image,b);}const height=h??w*b.h/b.w;ctx.drawImage(image,b.x,b.y,b.w,b.h,x,y-height/2,w,height);}
+function alphaBounds(image){let b=crops.get(image);if(!b){const c=document.createElement('canvas');c.width=image.naturalWidth;c.height=image.naturalHeight;const c2=c.getContext('2d',{willReadFrequently:true});c2.drawImage(image,0,0);const data=c2.getImageData(0,0,c.width,c.height).data;let left=c.width,top=c.height,right=0,bottom=0;for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++)if(data[(y*c.width+x)*4+3]>100){left=Math.min(left,x);top=Math.min(top,y);right=Math.max(right,x);bottom=Math.max(bottom,y);}b={x:left,y:top,w:right-left+1,h:bottom-top+1};crops.set(image,b);}return b;}
+function croppedSprite(ctx,image,x,y,w,h=null){if(!ready(image))return;const b=alphaBounds(image);const height=h??w*b.h/b.w;ctx.drawImage(image,b.x,b.y,b.w,b.h,x,y-height/2,w,height);}
 export function melee(ctx,a){
  if(a.delay>0)return;
  const phase=Math.min(1,a.elapsed/a.duration),opacity=Math.min(1,phase*12,(1-phase)*10);
  ctx.save();ctx.translate(a.x,a.y);ctx.globalAlpha=opacity;
  if(a.type==='beak'){
   ctx.rotate(a.angle);const pose=beakPose(a);
-  croppedSprite(ctx,art.beak,pose.x,0,pose.width);
+  if(a.remote){const targetX=a.r*.55;drawCombat(ctx,'beak-remote',targetX,0,a.r*.82);}else if(!drawCombat(ctx,a.big?'beak-super':'beak',pose.x+pose.width/2,0,pose.width))croppedSprite(ctx,art.beak,pose.x,0,pose.width);
  }else if(a.type==='wing'){
-  const angle=a.angle+a.side*(-1.4+2.8*phase);ctx.rotate(angle);ctx.scale(1,-a.side);
+  const angle=wingSweep(a,phase);ctx.rotate(angle);
   ctx.fillStyle='#edd9ac16';ctx.beginPath();ctx.moveTo(0,0);ctx.arc(0,0,a.r,Math.max(-.7,-phase*2.8),0);ctx.closePath();ctx.fill();
-  sprite(ctx,art.wing,-a.r*.08,-a.r*.38,a.r*1.08,a.r*.74);
+  if(!drawCombat(ctx,a.side===1?'wing-right':'wing-left',a.r*.45,0,a.r*1.08,a.r*.74))sprite(ctx,art.wing,-a.r*.08,-a.r*.38,a.r*1.08,a.r*.74);
  }else{
   const impact=Math.max(0,(phase-.4)/.6),lift=phase<.42?Math.sin(phase/.42*Math.PI)*20:0;
-  // The stomp always points down; its radial damage is calculated independently in the engine.
-  sprite(ctx,art.talon,8,-a.r*.3-lift,a.r*.62,a.r*.62);
-  if(impact>0){ctx.globalAlpha=(1-impact)*.8;ctx.strokeStyle='#e7c382';ctx.lineWidth=3;for(let i=0;i<3;i++){ctx.beginPath();ctx.arc(0,0,a.r*Math.min(1,impact+i*.12),0,Math.PI*2);ctx.stroke();}for(let i=0;i<8;i++){const angle=i*Math.PI/4;ctx.fillStyle='#b4935b';ctx.beginPath();ctx.ellipse(Math.cos(angle)*a.r*impact,Math.sin(angle)*a.r*impact,4,2,angle,0,Math.PI*2);ctx.fill();}}
+  drawCombat(ctx,'talon',0,-lift,a.r*.62);
+  if(impact>0&&ready(fxFrames.stomp[Math.min(3,Math.floor(impact*4))])){const im=fxFrames.stomp[Math.min(3,Math.floor(impact*4))];ctx.drawImage(im,-a.r,-a.r,a.r*2,a.r*2);ctx.restore();return;}if(impact>0){ctx.globalAlpha=(1-impact)*.8;ctx.strokeStyle='#e7c382';ctx.lineWidth=3;for(let i=0;i<3;i++){ctx.beginPath();ctx.arc(0,0,a.r*Math.min(1,impact+i*.12),0,Math.PI*2);ctx.stroke();}for(let i=0;i<8;i++){const angle=i*Math.PI/4;ctx.fillStyle='#b4935b';ctx.beginPath();ctx.ellipse(Math.cos(angle)*a.r*impact,Math.sin(angle)*a.r*impact,4,2,angle,0,Math.PI*2);ctx.fill();}}
  }
  ctx.restore();
 }
+const fxFrames=Object.fromEntries(['impact','blast','stomp','guard'].map((id,row)=>[id,Array.from({length:4},(_,i)=>{const im=new Image();im.src=`assets/animation/${id}-${String(i).padStart(2,'0')}.webp`;return im;})]));
 export function effect(ctx,f){
+ const seq=fxFrames[f.type],phase=1-f.life/f.max,im=seq?.[Math.min(3,Math.floor(phase*4))];if(ready(im)){ctx.save();const r=f.type==='impact'?f.r*1.4:f.r;ctx.globalAlpha=Math.min(1,(1-phase)*4);ctx.drawImage(im,f.x-r,f.y-r,r*2,r*2);ctx.restore();return;}
+
  const p=1-f.life/f.max;ctx.save();ctx.translate(f.x,f.y);ctx.globalAlpha=1-p;
  if(f.type==='muzzle'&&f.weapon!=='ak'){ctx.strokeStyle='#e4d4ad';ctx.globalAlpha=.25*(1-p);ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(0,0,3+p*8,-1.1,1.1);ctx.stroke();
  }else if(f.type==='muzzle'){

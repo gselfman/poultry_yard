@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {createGame,step,ENEMIES} from '../engine.js';
+function state(){const s=createGame();s.weapons={};s.spawnTimer=s.ambientTimer=1e9;s.need=1e12;s.gems=[];return s;}
+test('large distant XP field remains intact without reallocating the array',()=>{const s=state();s.gems=Array.from({length:30000},(_,i)=>({x:200+i%100,y:200,value:3,tier:3}));const ref=s.gems;step(s,1/60);assert.equal(s.gems,ref);assert.equal(s.gems.length,30000);assert.equal(s.gems.reduce((n,g)=>n+g.value,0),90000);});
+test('in-place XP collection neither skips adjacent drops nor changes total value',()=>{const s=state();s.gems=Array.from({length:1000},()=>({x:s.player.x,y:s.player.y,value:3,tier:3}));step(s,.016);assert.equal(s.gems.length,0);assert.equal(s.stats.gems,1000);assert.equal(s.xp,3000);});
+test('magnet still gathers every seed with its full XP value',()=>{const s=state();s.gems=Array.from({length:500},(_,i)=>({x:s.player.x+30+i%30,y:s.player.y,value:8,tier:8}));s.magnets=[{x:s.player.x,y:s.player.y}];for(let i=0;i<200;i++)step(s,.016);assert.equal(s.gems.length,0);assert.equal(s.xp,4000);});
+test('squirrel base health is reduced to 30',()=>assert.equal(ENEMIES.squirrel.hp,30));

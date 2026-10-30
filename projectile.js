@@ -1,5 +1,6 @@
+import {drawCombat} from './combat-art.js';
 export function projectile(ctx,b){
- ctx.save();ctx.translate(b.x,b.y);ctx.rotate(Math.atan2(b.vy,b.vx));ctx.scale(b.size,b.size);
+ ctx.save();ctx.translate(b.x,b.y);ctx.rotate(Math.atan2(b.vy,b.vx));ctx.scale(b.size,b.size);const id=b.type==='egg'?(b.gold?'egg-gold':'egg-white'):b.type==='feather'?'feather':'bullet',width=b.type==='feather'?30:b.type==='egg'?21:23;if(drawCombat(ctx,id,0,0,width,width)){ctx.restore();return;}
  const ellipse=(x,y,rx,ry,color)=>{ctx.fillStyle=color;ctx.beginPath();ctx.ellipse(x,y,rx,ry,0,0,Math.PI*2);ctx.fill();};
  if(b.type==='egg'){
   ctx.strokeStyle=b.gold?'#f9d45b66':'#e8e2c92a';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(-19,0);ctx.lineTo(-7,0);ctx.stroke();

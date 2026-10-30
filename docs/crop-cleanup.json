@@ -1,0 +1,64 @@
+{
+  "method": "Remove intruding fragments along cell borders; preserve registered cell size and source atlases",
+  "cleaned": {
+    "S01-03": [
+      0,
+      0,
+      304,
+      null
+    ],
+    "S01-10": [
+      0,
+      0,
+      null,
+      304
+    ],
+    "S01-11": [
+      0,
+      0,
+      287,
+      302
+    ],
+    "S08-05": [
+      0,
+      0,
+      null,
+      347
+    ],
+    "S08-11": [
+      25,
+      0,
+      null,
+      null
+    ],
+    "S10-09": [
+      0,
+      0,
+      null,
+      296
+    ],
+    "S10-10": [
+      0,
+      0,
+      null,
+      296
+    ],
+    "S10-11": [
+      0,
+      0,
+      null,
+      301
+    ],
+    "S10-12": [
+      0,
+      0,
+      null,
+      301
+    ]
+  },
+  "animationDrafts": [
+    "S09",
+    "S11",
+    "S12"
+  ]
+}

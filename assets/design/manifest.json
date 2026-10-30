@@ -1,0 +1,2971 @@
+[
+  {
+    "sheet": "S01",
+    "source": "exec-a1bd9109-5326-44b4-b180-ac3238f0c179.png",
+    "sha1": "9b1c41acb571a44bb3a31fc73951a2a5775d1dc8",
+    "width": 1254,
+    "height": 1254,
+    "cols": 4,
+    "rows": 4,
+    "nodeId": "29:12",
+    "cells": [
+      {
+        "index": 1,
+        "file": "S01-01.png",
+        "bounds": [
+          0,
+          0,
+          314,
+          314
+        ],
+        "alphaBounds": [
+          76,
+          67,
+          260,
+          296
+        ]
+      },
+      {
+        "index": 2,
+        "file": "S01-02.png",
+        "bounds": [
+          314,
+          0,
+          627,
+          314
+        ],
+        "alphaBounds": [
+          64,
+          88,
+          255,
+          276
+        ]
+      },
+      {
+        "index": 3,
+        "file": "S01-03.png",
+        "bounds": [
+          627,
+          0,
+          940,
+          314
+        ],
+        "alphaBounds": [
+          23,
+          52,
+          278,
+          309
+        ]
+      },
+      {
+        "index": 4,
+        "file": "S01-04.png",
+        "bounds": [
+          940,
+          0,
+          1254,
+          314
+        ],
+        "alphaBounds": [
+          0,
+          56,
+          288,
+          301
+        ]
+      },
+      {
+        "index": 5,
+        "file": "S01-05.png",
+        "bounds": [
+          0,
+          314,
+          314,
+          627
+        ],
+        "alphaBounds": [
+          30,
+          18,
+          307,
+          300
+        ]
+      },
+      {
+        "index": 6,
+        "file": "S01-06.png",
+        "bounds": [
+          314,
+          314,
+          627,
+          627
+        ],
+        "alphaBounds": [
+          25,
+          18,
+          299,
+          288
+        ]
+      },
+      {
+        "index": 7,
+        "file": "S01-07.png",
+        "bounds": [
+          627,
+          314,
+          940,
+          627
+        ],
+        "alphaBounds": [
+          18,
+          82,
+          288,
+          258
+        ]
+      },
+      {
+        "index": 8,
+        "file": "S01-08.png",
+        "bounds": [
+          940,
+          314,
+          1254,
+          627
+        ],
+        "alphaBounds": [
+          43,
+          39,
+          267,
+          277
+        ]
+      },
+      {
+        "index": 9,
+        "file": "S01-09.png",
+        "bounds": [
+          0,
+          627,
+          314,
+          940
+        ],
+        "alphaBounds": [
+          40,
+          23,
+          310,
+          276
+        ]
+      },
+      {
+        "index": 10,
+        "file": "S01-10.png",
+        "bounds": [
+          314,
+          627,
+          627,
+          940
+        ],
+        "alphaBounds": [
+          49,
+          5,
+          297,
+          304
+        ]
+      },
+      {
+        "index": 11,
+        "file": "S01-11.png",
+        "bounds": [
+          627,
+          627,
+          940,
+          940
+        ],
+        "alphaBounds": [
+          16,
+          30,
+          287,
+          261
+        ]
+      },
+      {
+        "index": 12,
+        "file": "S01-12.png",
+        "bounds": [
+          940,
+          627,
+          1254,
+          940
+        ],
+        "alphaBounds": [
+          0,
+          19,
+          288,
+          313
+        ]
+      },
+      {
+        "index": 13,
+        "file": "S01-13.png",
+        "bounds": [
+          0,
+          940,
+          314,
+          1254
+        ],
+        "alphaBounds": [
+          57,
+          24,
+          291,
+          237
+        ]
+      },
+      {
+        "index": 14,
+        "file": "S01-14.png",
+        "bounds": [
+          314,
+          940,
+          627,
+          1254
+        ],
+        "alphaBounds": [
+          20,
+          0,
+          302,
+          265
+        ]
+      },
+      {
+        "index": 15,
+        "file": "S01-15.png",
+        "bounds": [
+          627,
+          940,
+          940,
+          1254
+        ],
+        "alphaBounds": [
+          10,
+          0,
+          311,
+          259
+        ]
+      },
+      {
+        "index": 16,
+        "file": "S01-16.png",
+        "bounds": [
+          940,
+          940,
+          1254,
+          1254
+        ],
+        "alphaBounds": [
+          59,
+          0,
+          267,
+          256
+        ]
+      }
+    ],
+    "status": "reviewed-crop"
+  },
+  {
+    "sheet": "S02",
+    "source": "exec-7ec787ee-b3ff-483e-9a2f-7f873b80900d.png",
+    "sha1": "6ebc04f7dad65484cc7a15a1993f533fb07c29c9",
+    "width": 1254,
+    "height": 1254,
+    "cols": 4,
+    "rows": 4,
+    "nodeId": "29:13",
+    "cells": [
+      {
+        "index": 1,
+        "file": "S02-01.png",
+        "bounds": [
+          0,
+          0,
+          314,
+          314
+        ],
+        "alphaBounds": [
+          55,
+          81,
+          306,
+          309
+        ]
+      },
+      {
+        "index": 2,
+        "file": "S02-02.png",
+        "bounds": [
+          314,
+          0,
+          627,
+          314
+        ],
+        "alphaBounds": [
+          53,
+          90,
+          305,
+          314
+        ]
+      },
+      {
+        "index": 3,
+        "file": "S02-03.png",
+        "bounds": [
+          627,
+          0,
+          940,
+          314
+        ],
+        "alphaBounds": [
+          15,
+          84,
+          290,
+          307
+        ]
+      },
+      {
+        "index": 4,
+        "file": "S02-04.png",
+        "bounds": [
+          940,
+          0,
+          1254,
+          314
+        ],
+        "alphaBounds": [
+          15,
+          124,
+          279,
+          293
+        ]
+      },
+      {
+        "index": 5,
+        "file": "S02-05.png",
+        "bounds": [
+          0,
+          314,
+          314,
+          627
+        ],
+        "alphaBounds": [
+          60,
+          71,
+          283,
+          265
+        ]
+      },
+      {
+        "index": 6,
+        "file": "S02-06.png",
+        "bounds": [
+          314,
+          314,
+          627,
+          627
+        ],
+        "alphaBounds": [
+          28,
+          0,
+          280,
+          259
+        ]
+      },
+      {
+        "index": 7,
+        "file": "S02-07.png",
+        "bounds": [
+          627,
+          314,
+          940,
+          627
+        ],
+        "alphaBounds": [
+          2,
+          59,
+          295,
+          271
+        ]
+      },
+      {
+        "index": 8,
+        "file": "S02-08.png",
+        "bounds": [
+          940,
+          314,
+          1254,
+          627
+        ],
+        "alphaBounds": [
+          10,
+          59,
+          278,
+          270
+        ]
+      },
+      {
+        "index": 9,
+        "file": "S02-09.png",
+        "bounds": [
+          0,
+          627,
+          314,
+          940
+        ],
+        "alphaBounds": [
+          55,
+          38,
+          306,
+          267
+        ]
+      },
+      {
+        "index": 10,
+        "file": "S02-10.png",
+        "bounds": [
+          314,
+          627,
+          627,
+          940
+        ],
+        "alphaBounds": [
+          53,
+          39,
+          306,
+          274
+        ]
+      },
+      {
+        "index": 11,
+        "file": "S02-11.png",
+        "bounds": [
+          627,
+          627,
+          940,
+          940
+        ],
+        "alphaBounds": [
+          15,
+          42,
+          294,
+          266
+        ]
+      },
+      {
+        "index": 12,
+        "file": "S02-12.png",
+        "bounds": [
+          940,
+          627,
+          1254,
+          940
+        ],
+        "alphaBounds": [
+          14,
+          62,
+          279,
+          313
+        ]
+      },
+      {
+        "index": 13,
+        "file": "S02-13.png",
+        "bounds": [
+          0,
+          940,
+          314,
+          1254
+        ],
+        "alphaBounds": [
+          60,
+          7,
+          303,
+          224
+        ]
+      },
+      {
+        "index": 14,
+        "file": "S02-14.png",
+        "bounds": [
+          314,
+          940,
+          627,
+          1254
+        ],
+        "alphaBounds": [
+          28,
+          39,
+          280,
+          218
+        ]
+      },
+      {
+        "index": 15,
+        "file": "S02-15.png",
+        "bounds": [
+          627,
+          940,
+          940,
+          1254
+        ],
+        "alphaBounds": [
+          1,
+          19,
+          296,
+          231
+        ]
+      },
+      {
+        "index": 16,
+        "file": "S02-16.png",
+        "bounds": [
+          940,
+          940,
+          1254,
+          1254
+        ],
+        "alphaBounds": [
+          11,
+          0,
+          278,
+          229
+        ]
+      }
+    ],
+    "status": "reviewed-crop"
+  },
+  {
+    "sheet": "S03",
+    "source": "exec-f75677f1-ddcc-4a08-ba98-cb93ff7f6bcc.png",
+    "sha1": "45bfa84cdee5d09c404733af2191863652ac4e19",
+    "width": 1448,
+    "height": 1086,
+    "cols": 4,
+    "rows": 3,
+    "nodeId": "29:14",
+    "cells": [
+      {
+        "index": 1,
+        "file": "S03-01.png",
+        "bounds": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "alphaBounds": [
+          87,
+          12,
+          337,
+          353
+        ]
+      },
+      {
+        "index": 2,
+        "file": "S03-02.png",
+        "bounds": [
+          362,
+          0,
+          724,
+          362
+        ],
+        "alphaBounds": [
+          68,
+          12,
+          321,
+          353
+        ]
+      },
+      {
+        "index": 3,
+        "file": "S03-03.png",
+        "bounds": [
+          724,
+          0,
+          1086,
+          362
+        ],
+        "alphaBounds": [
+          54,
+          12,
+          306,
+          353
+        ]
+      },
+      {
+        "index": 4,
+        "file": "S03-04.png",
+        "bounds": [
+          1086,
+          0,
+          1448,
+          362
+        ],
+        "alphaBounds": [
+          37,
+          12,
+          288,
+          351
+        ]
+      },
+      {
+        "index": 5,
+        "file": "S03-05.png",
+        "bounds": [
+          0,
+          362,
+          362,
+          724
+        ],
+        "alphaBounds": [
+          85,
+          6,
+          339,
+          350
+        ]
+      },
+      {
+        "index": 6,
+        "file": "S03-06.png",
+        "bounds": [
+          362,
+          362,
+          724,
+          724
+        ],
+        "alphaBounds": [
+          68,
+          6,
+          325,
+          350
+        ]
+      },
+      {
+        "index": 7,
+        "file": "S03-07.png",
+        "bounds": [
+          724,
+          362,
+          1086,
+          724
+        ],
+        "alphaBounds": [
+          52,
+          6,
+          310,
+          350
+        ]
+      },
+      {
+        "index": 8,
+        "file": "S03-08.png",
+        "bounds": [
+          1086,
+          362,
+          1448,
+          724
+        ],
+        "alphaBounds": [
+          34,
+          6,
+          290,
+          350
+        ]
+      },
+      {
+        "index": 9,
+        "file": "S03-09.png",
+        "bounds": [
+          0,
+          724,
+          362,
+          1086
+        ],
+        "alphaBounds": [
+          83,
+          4,
+          339,
+          326
+        ]
+      },
+      {
+        "index": 10,
+        "file": "S03-10.png",
+        "bounds": [
+          362,
+          724,
+          724,
+          1086
+        ],
+        "alphaBounds": [
+          66,
+          4,
+          326,
+          327
+        ]
+      },
+      {
+        "index": 11,
+        "file": "S03-11.png",
+        "bounds": [
+          724,
+          724,
+          1086,
+          1086
+        ],
+        "alphaBounds": [
+          52,
+          4,
+          309,
+          326
+        ]
+      },
+      {
+        "index": 12,
+        "file": "S03-12.png",
+        "bounds": [
+          1086,
+          724,
+          1448,
+          1086
+        ],
+        "alphaBounds": [
+          35,
+          4,
+          293,
+          326
+        ]
+      }
+    ],
+    "status": "reviewed-crop"
+  },
+  {
+    "sheet": "S04",
+    "source": "exec-f69f382f-6307-403c-80fd-6b4e12d70f92.png",
+    "sha1": "db10c07ab724cb03bc22db311f201b8f1c0d56b9",
+    "width": 1254,
+    "height": 1254,
+    "cols": 4,
+    "rows": 4,
+    "nodeId": "29:15",
+    "cells": [
+      {
+        "index": 1,
+        "file": "S04-01.png",
+        "bounds": [
+          0,
+          0,
+          314,
+          314
+        ],
+        "alphaBounds": [
+          21,
+          183,
+          307,
+          288
+        ]
+      },
+      {
+        "index": 2,
+        "file": "S04-02.png",
+        "bounds": [
+          314,
+          0,
+          627,
+          314
+        ],
+        "alphaBounds": [
+          17,
+          183,
+          302,
+          289
+        ]
+      },
+      {
+        "index": 3,
+        "file": "S04-03.png",
+        "bounds": [
+          627,
+          0,
+          940,
+          314
+        ],
+        "alphaBounds": [
+          12,
+          181,
+          297,
+          289
+        ]
+      },
+      {
+        "index": 4,
+        "file": "S04-04.png",
+        "bounds": [
+          940,
+          0,
+          1254,
+          314
+        ],
+        "alphaBounds": [
+          8,
+          182,
+          291,
+          288
+        ]
+      },
+      {
+        "index": 5,
+        "file": "S04-05.png",
+        "bounds": [
+          0,
+          314,
+          314,
+          627
+        ],
+        "alphaBounds": [
+          21,
+          116,
+          307,
+          222
+        ]
+      },
+      {
+        "index": 6,
+        "file": "S04-06.png",
+        "bounds": [
+          314,
+          314,
+          627,
+          627
+        ],
+        "alphaBounds": [
+          16,
+          115,
+          300,
+          222
+        ]
+      },
+      {
+        "index": 7,
+        "file": "S04-07.png",
+        "bounds": [
+          627,
+          314,
+          940,
+          627
+        ],
+        "alphaBounds": [
+          11,
+          115,
+          297,
+          222
+        ]
+      },
+      {
+        "index": 8,
+        "file": "S04-08.png",
+        "bounds": [
+          940,
+          314,
+          1254,
+          627
+        ],
+        "alphaBounds": [
+          8,
+          115,
+          293,
+          222
+        ]
+      },
+      {
+        "index": 9,
+        "file": "S04-09.png",
+        "bounds": [
+          0,
+          627,
+          314,
+          940
+        ],
+        "alphaBounds": [
+          57,
+          18,
+          276,
+          235
+        ]
+      },
+      {
+        "index": 10,
+        "file": "S04-10.png",
+        "bounds": [
+          314,
+          627,
+          627,
+          940
+        ],
+        "alphaBounds": [
+          52,
+          17,
+          269,
+          235
+        ]
+      },
+      {
+        "index": 11,
+        "file": "S04-11.png",
+        "bounds": [
+          627,
+          627,
+          940,
+          940
+        ],
+        "alphaBounds": [
+          47,
+          17,
+          264,
+          235
+        ]
+      },
+      {
+        "index": 12,
+        "file": "S04-12.png",
+        "bounds": [
+          940,
+          627,
+          1254,
+          940
+        ],
+        "alphaBounds": [
+          42,
+          18,
+          257,
+          235
+        ]
+      },
+      {
+        "index": 13,
+        "file": "S04-13.png",
+        "bounds": [
+          0,
+          940,
+          314,
+          1254
+        ],
+        "alphaBounds": [
+          47,
+          33,
+          287,
+          133
+        ]
+      },
+      {
+        "index": 14,
+        "file": "S04-14.png",
+        "bounds": [
+          314,
+          940,
+          627,
+          1254
+        ],
+        "alphaBounds": [
+          41,
+          31,
+          280,
+          133
+        ]
+      },
+      {
+        "index": 15,
+        "file": "S04-15.png",
+        "bounds": [
+          627,
+          940,
+          940,
+          1254
+        ],
+        "alphaBounds": [
+          34,
+          33,
+          275,
+          132
+        ]
+      },
+      {
+        "index": 16,
+        "file": "S04-16.png",
+        "bounds": [
+          940,
+          940,
+          1254,
+          1254
+        ],
+        "alphaBounds": [
+          30,
+          33,
+          269,
+          132
+        ]
+      }
+    ],
+    "status": "reviewed-crop"
+  },
+  {
+    "sheet": "S05",
+    "source": "exec-096b608c-8679-4274-b857-421f8aa51bf1.png",
+    "sha1": "a8192315328811421ed4f96898a1b05d9a3748fb",
+    "width": 1254,
+    "height": 1254,
+    "cols": 4,
+    "rows": 4,
+    "nodeId": "29:16",
+    "cells": [
+      {
+        "index": 1,
+        "file": "S05-01.png",
+        "bounds": [
+          0,
+          0,
+          314,
+          314
+        ],
+        "alphaBounds": [
+          74,
+          76,
+          260,
+          278
+        ]
+      },
+      {
+        "index": 2,
+        "file": "S05-02.png",
+        "bounds": [
+          314,
+          0,
+          627,
+          314
+        ],
+        "alphaBounds": [
+          79,
+          76,
+          251,
+          283
+        ]
+      },
+      {
+        "index": 3,
+        "file": "S05-03.png",
+        "bounds": [
+          627,
+          0,
+          940,
+          314
+        ],
+        "alphaBounds": [
+          41,
+          84,
+          268,
+          275
+        ]
+      },
+      {
+        "index": 4,
+        "file": "S05-04.png",
+        "bounds": [
+          940,
+          0,
+          1254,
+          314
+        ],
+        "alphaBounds": [
+          36,
+          72,
+          264,
+          289
+        ]
+      },
+      {
+        "index": 5,
+        "file": "S05-05.png",
+        "bounds": [
+          0,
+          314,
+          314,
+          627
+        ],
+        "alphaBounds": [
+          66,
+          61,
+          270,
+          264
+        ]
+      },
+      {
+        "index": 6,
+        "file": "S05-06.png",
+        "bounds": [
+          314,
+          314,
+          627,
+          627
+        ],
+        "alphaBounds": [
+          40,
+          72,
+          270,
+          257
+        ]
+      },
+      {
+        "index": 7,
+        "file": "S05-07.png",
+        "bounds": [
+          627,
+          314,
+          940,
+          627
+        ],
+        "alphaBounds": [
+          47,
+          46,
+          262,
+          276
+        ]
+      },
+      {
+        "index": 8,
+        "file": "S05-08.png",
+        "bounds": [
+          940,
+          314,
+          1254,
+          627
+        ],
+        "alphaBounds": [
+          56,
+          48,
+          262,
+          274
+        ]
+      },
+      {
+        "index": 9,
+        "file": "S05-09.png",
+        "bounds": [
+          0,
+          627,
+          314,
+          940
+        ],
+        "alphaBounds": [
+          48,
+          33,
+          285,
+          264
+        ]
+      },
+      {
+        "index": 10,
+        "file": "S05-10.png",
+        "bounds": [
+          314,
+          627,
+          627,
+          940
+        ],
+        "alphaBounds": [
+          52,
+          39,
+          263,
+          248
+        ]
+      },
+      {
+        "index": 11,
+        "file": "S05-11.png",
+        "bounds": [
+          627,
+          627,
+          940,
+          940
+        ],
+        "alphaBounds": [
+          49,
+          40,
+          261,
+          248
+        ]
+      },
+      {
+        "index": 12,
+        "file": "S05-12.png",
+        "bounds": [
+          940,
+          627,
+          1254,
+          940
+        ],
+        "alphaBounds": [
+          41,
+          42,
+          271,
+          251
+        ]
+      },
+      {
+        "index": 13,
+        "file": "S05-13.png",
+        "bounds": [
+          0,
+          940,
+          314,
+          1254
+        ],
+        "alphaBounds": [
+          48,
+          29,
+          287,
+          247
+        ]
+      },
+      {
+        "index": 14,
+        "file": "S05-14.png",
+        "bounds": [
+          314,
+          940,
+          627,
+          1254
+        ],
+        "alphaBounds": [
+          57,
+          17,
+          270,
+          245
+        ]
+      },
+      {
+        "index": 15,
+        "file": "S05-15.png",
+        "bounds": [
+          627,
+          940,
+          940,
+          1254
+        ],
+        "alphaBounds": [
+          49,
+          27,
+          262,
+          234
+        ]
+      },
+      {
+        "index": 16,
+        "file": "S05-16.png",
+        "bounds": [
+          940,
+          940,
+          1254,
+          1254
+        ],
+        "alphaBounds": [
+          46,
+          92,
+          263,
+          173
+        ]
+      }
+    ],
+    "status": "reviewed-crop"
+  },
+  {
+    "sheet": "S06",
+    "source": "exec-891e4706-10dc-442b-a17f-1bc7e65367fc.png",
+    "sha1": "a2d46adc53403550149c2301bba65a97ac593dc8",
+    "width": 1448,
+    "height": 1086,
+    "cols": 4,
+    "rows": 3,
+    "nodeId": "29:17",
+    "cells": [
+      {
+        "index": 1,
+        "file": "S06-01.png",
+        "bounds": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "alphaBounds": [
+          33,
+          168,
+          336,
+          264
+        ]
+      },
+      {
+        "index": 2,
+        "file": "S06-02.png",
+        "bounds": [
+          362,
+          0,
+          724,
+          362
+        ],
+        "alphaBounds": [
+          8,
+          162,
+          362,
+          269
+        ]
+      },
+      {
+        "index": 3,
+        "file": "S06-03.png",
+        "bounds": [
+          724,
+          0,
+          1086,
+          362
+        ],
+        "alphaBounds": [
+          79,
+          107,
+          362,
+          311
+        ]
+      },
+      {
+        "index": 4,
+        "file": "S06-04.png",
+        "bounds": [
+          1086,
+          0,
+          1448,
+          362
+        ],
+        "alphaBounds": [
+          0,
+          164,
+          346,
+          269
+        ]
+      },
+      {
+        "index": 5,
+        "file": "S06-05.png",
+        "bounds": [
+          0,
+          362,
+          362,
+          724
+        ],
+        "alphaBounds": [
+          21,
+          156,
+          346,
+          207
+        ]
+      },
+      {
+        "index": 6,
+        "file": "S06-06.png",
+        "bounds": [
+          362,
+          362,
+          724,
+          724
+        ],
+        "alphaBounds": [
+          28,
+          158,
+          341,
+          205
+        ]
+      },
+      {
+        "index": 7,
+        "file": "S06-07.png",
+        "bounds": [
+          724,
+          362,
+          1086,
+          724
+        ],
+        "alphaBounds": [
+          17,
+          156,
+          344,
+          207
+        ]
+      },
+      {
+        "index": 8,
+        "file": "S06-08.png",
+        "bounds": [
+          1086,
+          362,
+          1448,
+          724
+        ],
+        "alphaBounds": [
+          26,
+          159,
+          336,
+          205
+        ]
+      },
+      {
+        "index": 9,
+        "file": "S06-09.png",
+        "bounds": [
+          0,
+          724,
+          362,
+          1086
+        ],
+        "alphaBounds": [
+          69,
+          22,
+          318,
+          258
+        ]
+      },
+      {
+        "index": 10,
+        "file": "S06-10.png",
+        "bounds": [
+          362,
+          724,
+          724,
+          1086
+        ],
+        "alphaBounds": [
+          60,
+          21,
+          308,
+          258
+        ]
+      },
+      {
+        "index": 11,
+        "file": "S06-11.png",
+        "bounds": [
+          724,
+          724,
+          1086,
+          1086
+        ],
+        "alphaBounds": [
+          8,
+          73,
+          354,
+          207
+        ]
+      },
+      {
+        "index": 12,
+        "file": "S06-12.png",
+        "bounds": [
+          1086,
+          724,
+          1448,
+          1086
+        ],
+        "alphaBounds": [
+          14,
+          72,
+          348,
+          203
+        ]
+      }
+    ],
+    "status": "reviewed-crop"
+  },
+  {
+    "sheet": "S07",
+    "source": "exec-5c0e057a-d933-4c85-92a7-5ee60d0556e8.png",
+    "sha1": "e1a8109847311246cda60f79adb25adf13608efb",
+    "width": 1448,
+    "height": 1086,
+    "cols": 4,
+    "rows": 3,
+    "nodeId": "29:18",
+    "cells": [
+      {
+        "index": 1,
+        "file": "S07-01.png",
+        "bounds": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "alphaBounds": [
+          79,
+          98,
+          294,
+          317
+        ]
+      },
+      {
+        "index": 2,
+        "file": "S07-02.png",
+        "bounds": [
+          362,
+          0,
+          724,
+          362
+        ],
+        "alphaBounds": [
+          76,
+          98,
+          294,
+          317
+        ]
+      },
+      {
+        "index": 3,
+        "file": "S07-03.png",
+        "bounds": [
+          724,
+          0,
+          1086,
+          362
+        ],
+        "alphaBounds": [
+          72,
+          98,
+          289,
+          317
+        ]
+      },
+      {
+        "index": 4,
+        "file": "S07-04.png",
+        "bounds": [
+          1086,
+          0,
+          1448,
+          362
+        ],
+        "alphaBounds": [
+          72,
+          98,
+          287,
+          317
+        ]
+      },
+      {
+        "index": 5,
+        "file": "S07-05.png",
+        "bounds": [
+          0,
+          362,
+          362,
+          724
+        ],
+        "alphaBounds": [
+          65,
+          84,
+          336,
+          265
+        ]
+      },
+      {
+        "index": 6,
+        "file": "S07-06.png",
+        "bounds": [
+          362,
+          362,
+          724,
+          724
+        ],
+        "alphaBounds": [
+          67,
+          85,
+          319,
+          263
+        ]
+      },
+      {
+        "index": 7,
+        "file": "S07-07.png",
+        "bounds": [
+          724,
+          362,
+          1086,
+          724
+        ],
+        "alphaBounds": [
+          53,
+          86,
+          330,
+          265
+        ]
+      },
+      {
+        "index": 8,
+        "file": "S07-08.png",
+        "bounds": [
+          1086,
+          362,
+          1448,
+          724
+        ],
+        "alphaBounds": [
+          55,
+          84,
+          309,
+          264
+        ]
+      },
+      {
+        "index": 9,
+        "file": "S07-09.png",
+        "bounds": [
+          0,
+          724,
+          362,
+          1086
+        ],
+        "alphaBounds": [
+          74,
+          27,
+          318,
+          256
+        ]
+      },
+      {
+        "index": 10,
+        "file": "S07-10.png",
+        "bounds": [
+          362,
+          724,
+          724,
+          1086
+        ],
+        "alphaBounds": [
+          72,
+          27,
+          314,
+          256
+        ]
+      },
+      {
+        "index": 11,
+        "file": "S07-11.png",
+        "bounds": [
+          724,
+          724,
+          1086,
+          1086
+        ],
+        "alphaBounds": [
+          67,
+          27,
+          311,
+          256
+        ]
+      },
+      {
+        "index": 12,
+        "file": "S07-12.png",
+        "bounds": [
+          1086,
+          724,
+          1448,
+          1086
+        ],
+        "alphaBounds": [
+          67,
+          26,
+          311,
+          256
+        ]
+      }
+    ],
+    "status": "reviewed-crop"
+  },
+  {
+    "sheet": "S08",
+    "source": "exec-d072e87c-1ae3-44d4-9c4a-4e9537738a84.png",
+    "sha1": "d52ccc3ef68e42a19e2590297db227b9726198c3",
+    "width": 1448,
+    "height": 1086,
+    "cols": 4,
+    "rows": 3,
+    "nodeId": "29:19",
+    "cells": [
+      {
+        "index": 1,
+        "file": "S08-01.png",
+        "bounds": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "alphaBounds": [
+          44,
+          91,
+          332,
+          303
+        ]
+      },
+      {
+        "index": 2,
+        "file": "S08-02.png",
+        "bounds": [
+          362,
+          0,
+          724,
+          362
+        ],
+        "alphaBounds": [
+          45,
+          91,
+          329,
+          300
+        ]
+      },
+      {
+        "index": 3,
+        "file": "S08-03.png",
+        "bounds": [
+          724,
+          0,
+          1086,
+          362
+        ],
+        "alphaBounds": [
+          10,
+          128,
+          347,
+          267
+        ]
+      },
+      {
+        "index": 4,
+        "file": "S08-04.png",
+        "bounds": [
+          1086,
+          0,
+          1448,
+          362
+        ],
+        "alphaBounds": [
+          42,
+          145,
+          321,
+          246
+        ]
+      },
+      {
+        "index": 5,
+        "file": "S08-05.png",
+        "bounds": [
+          0,
+          362,
+          362,
+          724
+        ],
+        "alphaBounds": [
+          31,
+          49,
+          337,
+          274
+        ]
+      },
+      {
+        "index": 6,
+        "file": "S08-06.png",
+        "bounds": [
+          362,
+          362,
+          724,
+          724
+        ],
+        "alphaBounds": [
+          97,
+          93,
+          297,
+          247
+        ]
+      },
+      {
+        "index": 7,
+        "file": "S08-07.png",
+        "bounds": [
+          724,
+          362,
+          1086,
+          724
+        ],
+        "alphaBounds": [
+          52,
+          78,
+          301,
+          260
+        ]
+      },
+      {
+        "index": 8,
+        "file": "S08-08.png",
+        "bounds": [
+          1086,
+          362,
+          1448,
+          724
+        ],
+        "alphaBounds": [
+          18,
+          19,
+          341,
+          309
+        ]
+      },
+      {
+        "index": 9,
+        "file": "S08-09.png",
+        "bounds": [
+          0,
+          724,
+          362,
+          1086
+        ],
+        "alphaBounds": [
+          23,
+          0,
+          346,
+          279
+        ]
+      },
+      {
+        "index": 10,
+        "file": "S08-10.png",
+        "bounds": [
+          362,
+          724,
+          724,
+          1086
+        ],
+        "alphaBounds": [
+          56,
+          0,
+          362,
+          285
+        ]
+      },
+      {
+        "index": 11,
+        "file": "S08-11.png",
+        "bounds": [
+          724,
+          724,
+          1086,
+          1086
+        ],
+        "alphaBounds": [
+          25,
+          7,
+          307,
+          267
+        ]
+      },
+      {
+        "index": 12,
+        "file": "S08-12.png",
+        "bounds": [
+          1086,
+          724,
+          1448,
+          1086
+        ],
+        "alphaBounds": [
+          64,
+          9,
+          290,
+          264
+        ]
+      }
+    ],
+    "status": "reviewed-crop"
+  },
+  {
+    "sheet": "S09",
+    "source": "exec-c2e3ef7f-0840-4da0-b88b-0d37c20ba174.png",
+    "sha1": "6e5867c90d07bef732d6df288435a2cd4e98e913",
+    "width": 1254,
+    "height": 1254,
+    "cols": 4,
+    "rows": 4,
+    "nodeId": "29:21",
+    "cells": [
+      {
+        "index": 1,
+        "file": "S09-01.png",
+        "bounds": [
+          0,
+          0,
+          314,
+          314
+        ],
+        "alphaBounds": [
+          107,
+          160,
+          204,
+          243
+        ]
+      },
+      {
+        "index": 2,
+        "file": "S09-02.png",
+        "bounds": [
+          314,
+          0,
+          627,
+          314
+        ],
+        "alphaBounds": [
+          67,
+          120,
+          239,
+          273
+        ]
+      },
+      {
+        "index": 3,
+        "file": "S09-03.png",
+        "bounds": [
+          627,
+          0,
+          940,
+          314
+        ],
+        "alphaBounds": [
+          82,
+          132,
+          259,
+          273
+        ]
+      },
+      {
+        "index": 4,
+        "file": "S09-04.png",
+        "bounds": [
+          940,
+          0,
+          1254,
+          314
+        ],
+        "alphaBounds": [
+          118,
+          162,
+          215,
+          258
+        ]
+      },
+      {
+        "index": 5,
+        "file": "S09-05.png",
+        "bounds": [
+          0,
+          314,
+          314,
+          627
+        ],
+        "alphaBounds": [
+          102,
+          154,
+          242,
+          272
+        ]
+      },
+      {
+        "index": 6,
+        "file": "S09-06.png",
+        "bounds": [
+          314,
+          314,
+          627,
+          627
+        ],
+        "alphaBounds": [
+          47,
+          99,
+          288,
+          313
+        ]
+      },
+      {
+        "index": 7,
+        "file": "S09-07.png",
+        "bounds": [
+          627,
+          314,
+          940,
+          627
+        ],
+        "alphaBounds": [
+          45,
+          110,
+          293,
+          313
+        ]
+      },
+      {
+        "index": 8,
+        "file": "S09-08.png",
+        "bounds": [
+          940,
+          314,
+          1254,
+          627
+        ],
+        "alphaBounds": [
+          106,
+          156,
+          249,
+          287
+        ]
+      },
+      {
+        "index": 9,
+        "file": "S09-09.png",
+        "bounds": [
+          0,
+          627,
+          314,
+          940
+        ],
+        "alphaBounds": [
+          55,
+          165,
+          256,
+          284
+        ]
+      },
+      {
+        "index": 10,
+        "file": "S09-10.png",
+        "bounds": [
+          314,
+          627,
+          627,
+          940
+        ],
+        "alphaBounds": [
+          8,
+          0,
+          287,
+          303
+        ]
+      },
+      {
+        "index": 11,
+        "file": "S09-11.png",
+        "bounds": [
+          627,
+          627,
+          940,
+          940
+        ],
+        "alphaBounds": [
+          9,
+          0,
+          313,
+          304
+        ]
+      },
+      {
+        "index": 12,
+        "file": "S09-12.png",
+        "bounds": [
+          940,
+          627,
+          1254,
+          940
+        ],
+        "alphaBounds": [
+          0,
+          161,
+          272,
+          280
+        ]
+      },
+      {
+        "index": 13,
+        "file": "S09-13.png",
+        "bounds": [
+          0,
+          940,
+          314,
+          1254
+        ],
+        "alphaBounds": [
+          54,
+          121,
+          277,
+          217
+        ]
+      },
+      {
+        "index": 14,
+        "file": "S09-14.png",
+        "bounds": [
+          314,
+          940,
+          627,
+          1254
+        ],
+        "alphaBounds": [
+          22,
+          104,
+          289,
+          228
+        ]
+      },
+      {
+        "index": 15,
+        "file": "S09-15.png",
+        "bounds": [
+          627,
+          940,
+          940,
+          1254
+        ],
+        "alphaBounds": [
+          42,
+          116,
+          288,
+          222
+        ]
+      },
+      {
+        "index": 16,
+        "file": "S09-16.png",
+        "bounds": [
+          940,
+          940,
+          1254,
+          1254
+        ],
+        "alphaBounds": [
+          52,
+          121,
+          272,
+          211
+        ]
+      }
+    ],
+    "status": "reference-only"
+  },
+  {
+    "sheet": "S10",
+    "source": "exec-5702e5ab-6eb4-4a03-aa2d-57dd62e5f27f.png",
+    "sha1": "f348a54d578a73e6eebf08ef5d28567f24b26c36",
+    "width": 1254,
+    "height": 1254,
+    "cols": 4,
+    "rows": 4,
+    "nodeId": "29:22",
+    "cells": [
+      {
+        "index": 1,
+        "file": "S10-01.png",
+        "bounds": [
+          0,
+          0,
+          314,
+          314
+        ],
+        "alphaBounds": [
+          57,
+          85,
+          279,
+          256
+        ]
+      },
+      {
+        "index": 2,
+        "file": "S10-02.png",
+        "bounds": [
+          314,
+          0,
+          627,
+          314
+        ],
+        "alphaBounds": [
+          37,
+          58,
+          295,
+          267
+        ]
+      },
+      {
+        "index": 3,
+        "file": "S10-03.png",
+        "bounds": [
+          627,
+          0,
+          940,
+          314
+        ],
+        "alphaBounds": [
+          45,
+          69,
+          275,
+          269
+        ]
+      },
+      {
+        "index": 4,
+        "file": "S10-04.png",
+        "bounds": [
+          940,
+          0,
+          1254,
+          314
+        ],
+        "alphaBounds": [
+          49,
+          87,
+          265,
+          255
+        ]
+      },
+      {
+        "index": 5,
+        "file": "S10-05.png",
+        "bounds": [
+          0,
+          314,
+          314,
+          627
+        ],
+        "alphaBounds": [
+          65,
+          70,
+          272,
+          253
+        ]
+      },
+      {
+        "index": 6,
+        "file": "S10-06.png",
+        "bounds": [
+          314,
+          314,
+          627,
+          627
+        ],
+        "alphaBounds": [
+          39,
+          54,
+          285,
+          254
+        ]
+      },
+      {
+        "index": 7,
+        "file": "S10-07.png",
+        "bounds": [
+          627,
+          314,
+          940,
+          627
+        ],
+        "alphaBounds": [
+          55,
+          64,
+          255,
+          236
+        ]
+      },
+      {
+        "index": 8,
+        "file": "S10-08.png",
+        "bounds": [
+          940,
+          314,
+          1254,
+          627
+        ],
+        "alphaBounds": [
+          54,
+          56,
+          238,
+          254
+        ]
+      },
+      {
+        "index": 9,
+        "file": "S10-09.png",
+        "bounds": [
+          0,
+          627,
+          314,
+          940
+        ],
+        "alphaBounds": [
+          43,
+          110,
+          314,
+          211
+        ]
+      },
+      {
+        "index": 10,
+        "file": "S10-10.png",
+        "bounds": [
+          314,
+          627,
+          627,
+          940
+        ],
+        "alphaBounds": [
+          0,
+          88,
+          275,
+          210
+        ]
+      },
+      {
+        "index": 11,
+        "file": "S10-11.png",
+        "bounds": [
+          627,
+          627,
+          940,
+          940
+        ],
+        "alphaBounds": [
+          52,
+          79,
+          259,
+          218
+        ]
+      },
+      {
+        "index": 12,
+        "file": "S10-12.png",
+        "bounds": [
+          940,
+          627,
+          1254,
+          940
+        ],
+        "alphaBounds": [
+          26,
+          71,
+          263,
+          224
+        ]
+      },
+      {
+        "index": 13,
+        "file": "S10-13.png",
+        "bounds": [
+          0,
+          940,
+          314,
+          1254
+        ],
+        "alphaBounds": [
+          51,
+          0,
+          274,
+          265
+        ]
+      },
+      {
+        "index": 14,
+        "file": "S10-14.png",
+        "bounds": [
+          314,
+          940,
+          627,
+          1254
+        ],
+        "alphaBounds": [
+          61,
+          0,
+          283,
+          265
+        ]
+      },
+      {
+        "index": 15,
+        "file": "S10-15.png",
+        "bounds": [
+          627,
+          940,
+          940,
+          1254
+        ],
+        "alphaBounds": [
+          62,
+          0,
+          214,
+          266
+        ]
+      },
+      {
+        "index": 16,
+        "file": "S10-16.png",
+        "bounds": [
+          940,
+          940,
+          1254,
+          1254
+        ],
+        "alphaBounds": [
+          99,
+          0,
+          252,
+          266
+        ]
+      }
+    ],
+    "status": "reviewed-crop"
+  },
+  {
+    "sheet": "S11",
+    "source": "exec-0f4b6804-77c7-4043-8433-a11995bee104.png",
+    "sha1": "be101635e2cefde76108335196c595ec2d8e45d8",
+    "width": 1448,
+    "height": 1086,
+    "cols": 4,
+    "rows": 3,
+    "nodeId": "28:7",
+    "cells": [
+      {
+        "index": 1,
+        "file": "S11-01.png",
+        "bounds": [
+          0,
+          0,
+          362,
+          362
+        ],
+        "alphaBounds": [
+          24,
+          50,
+          331,
+          353
+        ]
+      },
+      {
+        "index": 2,
+        "file": "S11-02.png",
+        "bounds": [
+          362,
+          0,
+          724,
+          362
+        ],
+        "alphaBounds": [
+          31,
+          46,
+          339,
+          350
+        ]
+      },
+      {
+        "index": 3,
+        "file": "S11-03.png",
+        "bounds": [
+          724,
+          0,
+          1086,
+          362
+        ],
+        "alphaBounds": [
+          30,
+          46,
+          336,
+          352
+        ]
+      },
+      {
+        "index": 4,
+        "file": "S11-04.png",
+        "bounds": [
+          1086,
+          0,
+          1448,
+          362
+        ],
+        "alphaBounds": [
+          30,
+          44,
+          338,
+          352
+        ]
+      },
+      {
+        "index": 5,
+        "file": "S11-05.png",
+        "bounds": [
+          0,
+          362,
+          362,
+          724
+        ],
+        "alphaBounds": [
+          21,
+          22,
+          343,
+          332
+        ]
+      },
+      {
+        "index": 6,
+        "file": "S11-06.png",
+        "bounds": [
+          362,
+          362,
+          724,
+          724
+        ],
+        "alphaBounds": [
+          13,
+          22,
+          342,
+          362
+        ]
+      },
+      {
+        "index": 7,
+        "file": "S11-07.png",
+        "bounds": [
+          724,
+          362,
+          1086,
+          724
+        ],
+        "alphaBounds": [
+          18,
+          22,
+          345,
+          362
+        ]
+      },
+      {
+        "index": 8,
+        "file": "S11-08.png",
+        "bounds": [
+          1086,
+          362,
+          1448,
+          724
+        ],
+        "alphaBounds": [
+          17,
+          22,
+          342,
+          334
+        ]
+      },
+      {
+        "index": 9,
+        "file": "S11-09.png",
+        "bounds": [
+          0,
+          724,
+          362,
+          1086
+        ],
+        "alphaBounds": [
+          15,
+          0,
+          357,
+          322
+        ]
+      },
+      {
+        "index": 10,
+        "file": "S11-10.png",
+        "bounds": [
+          362,
+          724,
+          724,
+          1086
+        ],
+        "alphaBounds": [
+          26,
+          0,
+          358,
+          321
+        ]
+      },
+      {
+        "index": 11,
+        "file": "S11-11.png",
+        "bounds": [
+          724,
+          724,
+          1086,
+          1086
+        ],
+        "alphaBounds": [
+          31,
+          0,
+          361,
+          320
+        ]
+      },
+      {
+        "index": 12,
+        "file": "S11-12.png",
+        "bounds": [
+          1086,
+          724,
+          1448,
+          1086
+        ],
+        "alphaBounds": [
+          25,
+          0,
+          355,
+          322
+        ]
+      }
+    ],
+    "status": "reference-only"
+  },
+  {
+    "sheet": "S12",
+    "source": "exec-c8ea2115-188e-41ef-be60-a900bc36c108.png",
+    "sha1": "fc4a8e36fb53ce7f2a89390f286519c268c5323a",
+    "width": 971,
+    "height": 1619,
+    "cols": 3,
+    "rows": 5,
+    "nodeId": "28:6",
+    "cells": [
+      {
+        "index": 1,
+        "file": "S12-01.png",
+        "bounds": [
+          0,
+          0,
+          324,
+          324
+        ],
+        "alphaBounds": [
+          22,
+          84,
+          324,
+          267
+        ]
+      },
+      {
+        "index": 2,
+        "file": "S12-02.png",
+        "bounds": [
+          324,
+          0,
+          647,
+          324
+        ],
+        "alphaBounds": [
+          0,
+          86,
+          323,
+          268
+        ]
+      },
+      {
+        "index": 3,
+        "file": "S12-03.png",
+        "bounds": [
+          647,
+          0,
+          971,
+          324
+        ],
+        "alphaBounds": [
+          0,
+          84,
+          322,
+          267
+        ]
+      },
+      {
+        "index": 4,
+        "file": "S12-04.png",
+        "bounds": [
+          0,
+          324,
+          324,
+          648
+        ],
+        "alphaBounds": [
+          16,
+          10,
+          324,
+          324
+        ]
+      },
+      {
+        "index": 5,
+        "file": "S12-05.png",
+        "bounds": [
+          324,
+          324,
+          647,
+          648
+        ],
+        "alphaBounds": [
+          0,
+          11,
+          323,
+          324
+        ]
+      },
+      {
+        "index": 6,
+        "file": "S12-06.png",
+        "bounds": [
+          647,
+          324,
+          971,
+          648
+        ],
+        "alphaBounds": [
+          0,
+          9,
+          321,
+          324
+        ]
+      },
+      {
+        "index": 7,
+        "file": "S12-07.png",
+        "bounds": [
+          0,
+          648,
+          324,
+          971
+        ],
+        "alphaBounds": [
+          28,
+          0,
+          324,
+          323
+        ]
+      },
+      {
+        "index": 8,
+        "file": "S12-08.png",
+        "bounds": [
+          324,
+          648,
+          647,
+          971
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          323,
+          323
+        ]
+      },
+      {
+        "index": 9,
+        "file": "S12-09.png",
+        "bounds": [
+          647,
+          648,
+          971,
+          971
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          322,
+          323
+        ]
+      },
+      {
+        "index": 10,
+        "file": "S12-10.png",
+        "bounds": [
+          0,
+          971,
+          324,
+          1295
+        ],
+        "alphaBounds": [
+          16,
+          0,
+          324,
+          324
+        ]
+      },
+      {
+        "index": 11,
+        "file": "S12-11.png",
+        "bounds": [
+          324,
+          971,
+          647,
+          1295
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          323,
+          324
+        ]
+      },
+      {
+        "index": 12,
+        "file": "S12-12.png",
+        "bounds": [
+          647,
+          971,
+          971,
+          1295
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          312,
+          324
+        ]
+      },
+      {
+        "index": 13,
+        "file": "S12-13.png",
+        "bounds": [
+          0,
+          1295,
+          324,
+          1619
+        ],
+        "alphaBounds": [
+          16,
+          0,
+          324,
+          238
+        ]
+      },
+      {
+        "index": 14,
+        "file": "S12-14.png",
+        "bounds": [
+          324,
+          1295,
+          647,
+          1619
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          323,
+          236
+        ]
+      },
+      {
+        "index": 15,
+        "file": "S12-15.png",
+        "bounds": [
+          647,
+          1295,
+          971,
+          1619
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          311,
+          243
+        ]
+      }
+    ],
+    "status": "reference-only"
+  },
+  {
+    "sheet": "B02",
+    "source": "exec-39edc163-4ea1-4e2a-8f1e-77e427297136.png",
+    "sha1": "a58bcab55aae70fd828a065070954513e1c8916c",
+    "width": 1254,
+    "height": 1254,
+    "cols": 2,
+    "rows": 2,
+    "nodeId": "29:23",
+    "cells": [
+      {
+        "index": 1,
+        "file": "B02-01.png",
+        "bounds": [
+          0,
+          0,
+          627,
+          627
+        ],
+        "alphaBounds": [
+          83,
+          130,
+          595,
+          579
+        ]
+      },
+      {
+        "index": 2,
+        "file": "B02-02.png",
+        "bounds": [
+          627,
+          0,
+          1254,
+          627
+        ],
+        "alphaBounds": [
+          31,
+          120,
+          590,
+          594
+        ]
+      },
+      {
+        "index": 3,
+        "file": "B02-03.png",
+        "bounds": [
+          0,
+          627,
+          627,
+          1254
+        ],
+        "alphaBounds": [
+          53,
+          61,
+          627,
+          534
+        ]
+      },
+      {
+        "index": 4,
+        "file": "B02-04.png",
+        "bounds": [
+          627,
+          627,
+          1254,
+          1254
+        ],
+        "alphaBounds": [
+          0,
+          104,
+          566,
+          499
+        ]
+      }
+    ],
+    "status": "reviewed-crop"
+  }
+]

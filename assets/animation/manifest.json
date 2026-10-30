@@ -1,0 +1,871 @@
+{
+  "source": "Existing Figma sheets S11 node 28:7, S12 node 28:6; repaired extraction from source-sized cells, no generative edits",
+  "canvas": 384,
+  "anchor": [
+    192,
+    192
+  ],
+  "creatures": {
+    "ryaba": {
+      "sheet": "S11",
+      "fps": 8,
+      "idle": 0,
+      "walk": [
+        1,
+        2,
+        3,
+        2
+      ],
+      "scale": 1.1437908496732025,
+      "frames": [
+        {
+          "file": "ryaba-00.png",
+          "webp": "ryaba-00.webp",
+          "sourceBounds": [
+            24,
+            49,
+            331,
+            354
+          ],
+          "visibleBounds": [
+            16,
+            18,
+            367,
+            367
+          ],
+          "sourceFrame": 1
+        },
+        {
+          "file": "ryaba-01.png",
+          "webp": "ryaba-01.webp",
+          "sourceBounds": [
+            393,
+            45,
+            701,
+            351
+          ],
+          "visibleBounds": [
+            16,
+            17,
+            368,
+            367
+          ],
+          "sourceFrame": 2
+        },
+        {
+          "file": "ryaba-02.png",
+          "webp": "ryaba-02.webp",
+          "sourceBounds": [
+            754,
+            45,
+            1061,
+            353
+          ],
+          "visibleBounds": [
+            16,
+            15,
+            367,
+            367
+          ],
+          "sourceFrame": 3
+        },
+        {
+          "file": "ryaba-03.png",
+          "webp": "ryaba-03.webp",
+          "sourceBounds": [
+            1116,
+            43,
+            1424,
+            353
+          ],
+          "visibleBounds": [
+            16,
+            12,
+            368,
+            367
+          ],
+          "sourceFrame": 4
+        }
+      ],
+      "alignment": "fixed scale across row, visible silhouette horizontally centred, feet baseline y367; runtime visual body anchor should be centre of bounds"
+    },
+    "rambo": {
+      "sheet": "S11",
+      "fps": 8,
+      "idle": 0,
+      "walk": [
+        1,
+        2,
+        3,
+        2
+      ],
+      "scale": 1.0736196319018405,
+      "frames": [
+        {
+          "file": "rambo-00.png",
+          "webp": "rambo-00.webp",
+          "sourceBounds": [
+            20,
+            386,
+            344,
+            695
+          ],
+          "visibleBounds": [
+            18,
+            35,
+            366,
+            367
+          ],
+          "sourceFrame": 5
+        },
+        {
+          "file": "rambo-01.png",
+          "webp": "rambo-01.webp",
+          "sourceBounds": [
+            375,
+            385,
+            705,
+            697
+          ],
+          "visibleBounds": [
+            15,
+            32,
+            369,
+            367
+          ],
+          "sourceFrame": 6
+        },
+        {
+          "file": "rambo-02.png",
+          "webp": "rambo-02.webp",
+          "sourceBounds": [
+            742,
+            384,
+            1070,
+            697
+          ],
+          "visibleBounds": [
+            16,
+            31,
+            368,
+            367
+          ],
+          "sourceFrame": 7
+        },
+        {
+          "file": "rambo-03.png",
+          "webp": "rambo-03.webp",
+          "sourceBounds": [
+            1102,
+            385,
+            1429,
+            697
+          ],
+          "visibleBounds": [
+            16,
+            32,
+            367,
+            367
+          ],
+          "sourceFrame": 8
+        }
+      ],
+      "alignment": "fixed scale across row, visible silhouette horizontally centred, feet baseline y367; runtime visual body anchor should be centre of bounds"
+    },
+    "monk": {
+      "sheet": "S11",
+      "fps": 8,
+      "idle": 0,
+      "walk": [
+        1,
+        2,
+        3,
+        2
+      ],
+      "scale": 1.0294117647058822,
+      "frames": [
+        {
+          "file": "monk-00.png",
+          "webp": "monk-00.webp",
+          "sourceBounds": [
+            14,
+            723,
+            358,
+            1047
+          ],
+          "visibleBounds": [
+            15,
+            33,
+            369,
+            367
+          ],
+          "sourceFrame": 9
+        },
+        {
+          "file": "monk-01.png",
+          "webp": "monk-01.webp",
+          "sourceBounds": [
+            388,
+            722,
+            720,
+            1046
+          ],
+          "visibleBounds": [
+            21,
+            33,
+            363,
+            367
+          ],
+          "sourceFrame": 10
+        },
+        {
+          "file": "monk-02.png",
+          "webp": "monk-02.webp",
+          "sourceBounds": [
+            755,
+            720,
+            1086,
+            1045
+          ],
+          "visibleBounds": [
+            21,
+            32,
+            362,
+            367
+          ],
+          "sourceFrame": 11
+        },
+        {
+          "file": "monk-03.png",
+          "webp": "monk-03.webp",
+          "sourceBounds": [
+            1110,
+            723,
+            1441,
+            1047
+          ],
+          "visibleBounds": [
+            21,
+            33,
+            362,
+            367
+          ],
+          "sourceFrame": 12
+        }
+      ],
+      "alignment": "fixed scale across row, visible silhouette horizontally centred, feet baseline y367; runtime visual body anchor should be centre of bounds"
+    },
+    "rat": {
+      "sheet": "S12",
+      "fps": 8,
+      "idle": 0,
+      "walk": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "scale": 1.206896551724138,
+      "frames": [
+        {
+          "file": "rat-00.png",
+          "webp": "rat-00.webp",
+          "sourceBounds": [
+            22,
+            84,
+            315,
+            268
+          ],
+          "visibleBounds": [
+            15,
+            145,
+            369,
+            367
+          ],
+          "sourceFrame": 1
+        },
+        {
+          "file": "rat-01.png",
+          "webp": "rat-01.webp",
+          "sourceBounds": [
+            339,
+            85,
+            629,
+            268
+          ],
+          "visibleBounds": [
+            17,
+            146,
+            367,
+            367
+          ],
+          "sourceFrame": 2
+        },
+        {
+          "file": "rat-02.png",
+          "webp": "rat-02.webp",
+          "sourceBounds": [
+            646,
+            83,
+            940,
+            267
+          ],
+          "visibleBounds": [
+            14,
+            145,
+            369,
+            367
+          ],
+          "sourceFrame": 3
+        }
+      ],
+      "alignment": "fixed scale across row, visible silhouette horizontally centred, feet baseline y367; runtime visual body anchor should be centre of bounds"
+    },
+    "fox": {
+      "sheet": "S12",
+      "fps": 8,
+      "idle": 0,
+      "walk": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "scale": 1.0736196319018405,
+      "frames": [
+        {
+          "file": "fox-00.png",
+          "webp": "fox-00.webp",
+          "sourceBounds": [
+            15,
+            333,
+            345,
+            583
+          ],
+          "visibleBounds": [
+            15,
+            99,
+            369,
+            367
+          ],
+          "sourceFrame": 4
+        },
+        {
+          "file": "fox-01.png",
+          "webp": "fox-01.webp",
+          "sourceBounds": [
+            351,
+            335,
+            660,
+            579
+          ],
+          "visibleBounds": [
+            26,
+            105,
+            358,
+            367
+          ],
+          "sourceFrame": 5
+        },
+        {
+          "file": "fox-02.png",
+          "webp": "fox-02.webp",
+          "sourceBounds": [
+            664,
+            332,
+            968,
+            580
+          ],
+          "visibleBounds": [
+            29,
+            101,
+            355,
+            367
+          ],
+          "sourceFrame": 6
+        }
+      ],
+      "alignment": "fixed scale across row, visible silhouette horizontally centred, feet baseline y367; runtime visual body anchor should be centre of bounds"
+    },
+    "squirrel": {
+      "sheet": "S12",
+      "fps": 8,
+      "idle": 0,
+      "walk": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "scale": 1.232394366197183,
+      "frames": [
+        {
+          "file": "squirrel-00.png",
+          "webp": "squirrel-00.webp",
+          "sourceBounds": [
+            27,
+            619,
+            315,
+            904
+          ],
+          "visibleBounds": [
+            14,
+            16,
+            369,
+            367
+          ],
+          "sourceFrame": 7
+        },
+        {
+          "file": "squirrel-01.png",
+          "webp": "squirrel-01.webp",
+          "sourceBounds": [
+            365,
+            618,
+            640,
+            904
+          ],
+          "visibleBounds": [
+            22,
+            15,
+            361,
+            367
+          ],
+          "sourceFrame": 8
+        },
+        {
+          "file": "squirrel-02.png",
+          "webp": "squirrel-02.webp",
+          "sourceBounds": [
+            671,
+            619,
+            948,
+            904
+          ],
+          "visibleBounds": [
+            21,
+            16,
+            362,
+            367
+          ],
+          "sourceFrame": 9
+        }
+      ],
+      "alignment": "fixed scale across row, visible silhouette horizontally centred, feet baseline y367; runtime visual body anchor should be centre of bounds"
+    },
+    "wolf": {
+      "sheet": "S12",
+      "fps": 8,
+      "idle": 0,
+      "walk": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "scale": 1.0479041916167664,
+      "frames": [
+        {
+          "file": "wolf-00.png",
+          "webp": "wolf-00.webp",
+          "sourceBounds": [
+            15,
+            944,
+            353,
+            1214
+          ],
+          "visibleBounds": [
+            15,
+            84,
+            369,
+            367
+          ],
+          "sourceFrame": 10
+        },
+        {
+          "file": "wolf-01.png",
+          "webp": "wolf-01.webp",
+          "sourceBounds": [
+            354,
+            944,
+            659,
+            1211
+          ],
+          "visibleBounds": [
+            32,
+            87,
+            352,
+            367
+          ],
+          "sourceFrame": 11
+        },
+        {
+          "file": "wolf-02.png",
+          "webp": "wolf-02.webp",
+          "sourceBounds": [
+            656,
+            940,
+            959,
+            1215
+          ],
+          "visibleBounds": [
+            33,
+            79,
+            351,
+            367
+          ],
+          "sourceFrame": 12
+        }
+      ],
+      "alignment": "fixed scale across row, visible silhouette horizontally centred, feet baseline y367; runtime visual body anchor should be centre of bounds"
+    },
+    "bear": {
+      "sheet": "S12",
+      "fps": 8,
+      "idle": 0,
+      "walk": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "scale": 1.070336391437309,
+      "frames": [
+        {
+          "file": "bear-00.png",
+          "webp": "bear-00.webp",
+          "sourceBounds": [
+            15,
+            1246,
+            346,
+            1534
+          ],
+          "visibleBounds": [
+            15,
+            59,
+            369,
+            367
+          ],
+          "sourceFrame": 13
+        },
+        {
+          "file": "bear-01.png",
+          "webp": "bear-01.webp",
+          "sourceBounds": [
+            341,
+            1256,
+            653,
+            1532
+          ],
+          "visibleBounds": [
+            25,
+            72,
+            359,
+            367
+          ],
+          "sourceFrame": 14
+        },
+        {
+          "file": "bear-02.png",
+          "webp": "bear-02.webp",
+          "sourceBounds": [
+            653,
+            1258,
+            959,
+            1539
+          ],
+          "visibleBounds": [
+            28,
+            66,
+            356,
+            367
+          ],
+          "sourceFrame": 15
+        }
+      ],
+      "alignment": "fixed scale across row, visible silhouette horizontally centred, feet baseline y367; runtime visual body anchor should be centre of bounds"
+    }
+  },
+  "effects": {
+    "impact": {
+      "frames": [
+        {
+          "file": "impact-00.png",
+          "sourceCell": 1,
+          "sourceBounds": [
+            0,
+            100,
+            314,
+            300
+          ],
+          "visibleBounds": [
+            17,
+            80,
+            367,
+            303
+          ]
+        },
+        {
+          "file": "impact-01.png",
+          "sourceCell": 2,
+          "sourceBounds": [
+            314,
+            100,
+            627,
+            300
+          ],
+          "visibleBounds": [
+            17,
+            80,
+            366,
+            303
+          ]
+        },
+        {
+          "file": "impact-02.png",
+          "sourceCell": 3,
+          "sourceBounds": [
+            627,
+            100,
+            940,
+            300
+          ],
+          "visibleBounds": [
+            17,
+            80,
+            366,
+            303
+          ]
+        },
+        {
+          "file": "impact-03.png",
+          "sourceCell": 4,
+          "sourceBounds": [
+            940,
+            100,
+            1254,
+            300
+          ],
+          "visibleBounds": [
+            17,
+            80,
+            367,
+            303
+          ]
+        }
+      ],
+      "note": "Shared scale and centre across four phases. Stomp crop excludes explosion fragments from previous row.",
+      "sourceScale": 1.1146496815286624
+    },
+    "blast": {
+      "frames": [
+        {
+          "file": "blast-00.png",
+          "sourceCell": 5,
+          "sourceBounds": [
+            0,
+            380,
+            314,
+            660
+          ],
+          "visibleBounds": [
+            24,
+            42,
+            360,
+            342
+          ]
+        },
+        {
+          "file": "blast-01.png",
+          "sourceCell": 6,
+          "sourceBounds": [
+            314,
+            380,
+            627,
+            660
+          ],
+          "visibleBounds": [
+            24,
+            42,
+            359,
+            342
+          ]
+        },
+        {
+          "file": "blast-02.png",
+          "sourceCell": 7,
+          "sourceBounds": [
+            627,
+            380,
+            940,
+            660
+          ],
+          "visibleBounds": [
+            24,
+            42,
+            359,
+            342
+          ]
+        },
+        {
+          "file": "blast-03.png",
+          "sourceCell": 8,
+          "sourceBounds": [
+            940,
+            380,
+            1254,
+            660
+          ],
+          "visibleBounds": [
+            24,
+            42,
+            360,
+            342
+          ]
+        }
+      ],
+      "note": "Shared scale and centre across four phases. Stomp crop excludes explosion fragments from previous row.",
+      "sourceScale": 1.0714285714285714
+    },
+    "stomp": {
+      "frames": [
+        {
+          "file": "stomp-00.png",
+          "sourceCell": 9,
+          "sourceBounds": [
+            0,
+            720,
+            314,
+            960
+          ],
+          "visibleBounds": [
+            17,
+            58,
+            367,
+            326
+          ]
+        },
+        {
+          "file": "stomp-01.png",
+          "sourceCell": 10,
+          "sourceBounds": [
+            314,
+            720,
+            627,
+            960
+          ],
+          "visibleBounds": [
+            17,
+            58,
+            366,
+            326
+          ]
+        },
+        {
+          "file": "stomp-02.png",
+          "sourceCell": 11,
+          "sourceBounds": [
+            627,
+            720,
+            940,
+            960
+          ],
+          "visibleBounds": [
+            17,
+            58,
+            366,
+            326
+          ]
+        },
+        {
+          "file": "stomp-03.png",
+          "sourceCell": 12,
+          "sourceBounds": [
+            940,
+            720,
+            1254,
+            960
+          ],
+          "visibleBounds": [
+            17,
+            58,
+            367,
+            326
+          ]
+        }
+      ],
+      "note": "Shared scale and centre across four phases. Stomp crop excludes explosion fragments from previous row.",
+      "sourceScale": 1.1146496815286624
+    },
+    "guard": {
+      "frames": [
+        {
+          "file": "guard-00.png",
+          "sourceCell": 13,
+          "sourceBounds": [
+            0,
+            1000,
+            314,
+            1200
+          ],
+          "visibleBounds": [
+            17,
+            80,
+            367,
+            303
+          ]
+        },
+        {
+          "file": "guard-01.png",
+          "sourceCell": 14,
+          "sourceBounds": [
+            314,
+            1000,
+            627,
+            1200
+          ],
+          "visibleBounds": [
+            17,
+            80,
+            366,
+            303
+          ]
+        },
+        {
+          "file": "guard-02.png",
+          "sourceCell": 15,
+          "sourceBounds": [
+            627,
+            1000,
+            940,
+            1200
+          ],
+          "visibleBounds": [
+            17,
+            80,
+            366,
+            303
+          ]
+        },
+        {
+          "file": "guard-03.png",
+          "sourceCell": 16,
+          "sourceBounds": [
+            940,
+            1000,
+            1254,
+            1200
+          ],
+          "visibleBounds": [
+            17,
+            80,
+            367,
+            303
+          ]
+        }
+      ],
+      "note": "Shared scale and centre across four phases. Stomp crop excludes explosion fragments from previous row.",
+      "sourceScale": 1.1146496815286624
+    }
+  }
+}

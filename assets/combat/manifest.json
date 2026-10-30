@@ -1,0 +1,339 @@
+{
+  "canvas": [
+    384,
+    384
+  ],
+  "anchor": [
+    192,
+    192
+  ],
+  "direction": "right (+X); runtime rotation atan2(vy,vx)",
+  "source": "Existing Figma atlases; no generation",
+  "sprites": {
+    "egg-white": {
+      "png": "egg-white.png",
+      "webp": "egg-white.webp",
+      "sheet": "S08",
+      "cell": 1,
+      "sourceNodeId": "29:19",
+      "sourceBounds": [
+        44,
+        91,
+        332,
+        303
+      ],
+      "sourceCanvas": [
+        1448,
+        1086
+      ],
+      "rotationCounterClockwiseDegrees": 0,
+      "visibleBounds": [
+        48,
+        86,
+        336,
+        298
+      ],
+      "notes": ""
+    },
+    "egg-gold": {
+      "png": "egg-gold.png",
+      "webp": "egg-gold.webp",
+      "sheet": "S08",
+      "cell": 2,
+      "sourceNodeId": "29:19",
+      "sourceBounds": [
+        407,
+        91,
+        691,
+        300
+      ],
+      "sourceCanvas": [
+        1448,
+        1086
+      ],
+      "rotationCounterClockwiseDegrees": 0,
+      "visibleBounds": [
+        50,
+        87,
+        334,
+        296
+      ],
+      "notes": ""
+    },
+    "feather": {
+      "png": "feather.png",
+      "webp": "feather.webp",
+      "sheet": "S08",
+      "cell": 3,
+      "sourceNodeId": "29:19",
+      "sourceBounds": [
+        734,
+        128,
+        1071,
+        267
+      ],
+      "sourceCanvas": [
+        1448,
+        1086
+      ],
+      "rotationCounterClockwiseDegrees": 0,
+      "visibleBounds": [
+        23,
+        122,
+        360,
+        261
+      ],
+      "notes": ""
+    },
+    "bullet": {
+      "png": "bullet.png",
+      "webp": "bullet.webp",
+      "sheet": "S08",
+      "cell": 4,
+      "sourceNodeId": "29:19",
+      "sourceBounds": [
+        1128,
+        145,
+        1407,
+        246
+      ],
+      "sourceCanvas": [
+        1448,
+        1086
+      ],
+      "rotationCounterClockwiseDegrees": 0,
+      "visibleBounds": [
+        52,
+        141,
+        331,
+        242
+      ],
+      "notes": ""
+    },
+    "acorn": {
+      "png": "acorn.png",
+      "webp": "acorn.webp",
+      "sheet": "S08",
+      "cell": 5,
+      "sourceNodeId": "29:19",
+      "sourceBounds": [
+        31,
+        411,
+        337,
+        636
+      ],
+      "sourceCanvas": [
+        1448,
+        1086
+      ],
+      "rotationCounterClockwiseDegrees": 14,
+      "visibleBounds": [
+        35,
+        67,
+        349,
+        317
+      ],
+      "notes": "Acorn has cap/stem at left, nut tip to right. 14° CCW corrects original downward diagonal."
+    },
+    "beak": {
+      "png": "beak.png",
+      "webp": "beak.webp",
+      "sheet": "S08",
+      "cell": 6,
+      "sourceNodeId": "29:19",
+      "sourceBounds": [
+        459,
+        455,
+        659,
+        609
+      ],
+      "sourceCanvas": [
+        1448,
+        1086
+      ],
+      "rotationCounterClockwiseDegrees": 0,
+      "visibleBounds": [
+        92,
+        115,
+        292,
+        269
+      ],
+      "notes": ""
+    },
+    "beak-super": {
+      "png": "beak-super.png",
+      "webp": "beak-super.webp",
+      "sheet": "S08",
+      "cell": 7,
+      "sourceNodeId": "29:19",
+      "sourceBounds": [
+        776,
+        440,
+        1025,
+        622
+      ],
+      "sourceCanvas": [
+        1448,
+        1086
+      ],
+      "rotationCounterClockwiseDegrees": 0,
+      "visibleBounds": [
+        67,
+        101,
+        316,
+        283
+      ],
+      "notes": ""
+    },
+    "wing-left": {
+      "png": "wing-left.png",
+      "webp": "wing-left.webp",
+      "sheet": "S08",
+      "cell": 8,
+      "sourceNodeId": "29:19",
+      "sourceBounds": [
+        1104,
+        381,
+        1427,
+        671
+      ],
+      "sourceCanvas": [
+        1448,
+        1086
+      ],
+      "rotationCounterClockwiseDegrees": 0,
+      "visibleBounds": [
+        30,
+        47,
+        353,
+        337
+      ],
+      "notes": ""
+    },
+    "wing-right": {
+      "png": "wing-right.png",
+      "webp": "wing-right.webp",
+      "sheet": "S08",
+      "cell": 9,
+      "sourceNodeId": "29:19",
+      "sourceBounds": [
+        23,
+        724,
+        346,
+        1003
+      ],
+      "sourceCanvas": [
+        1448,
+        1086
+      ],
+      "rotationCounterClockwiseDegrees": 0,
+      "visibleBounds": [
+        30,
+        52,
+        353,
+        331
+      ],
+      "notes": ""
+    },
+    "talon": {
+      "png": "talon.png",
+      "webp": "talon.webp",
+      "sheet": "S08",
+      "cell": 10,
+      "sourceNodeId": "29:19",
+      "sourceBounds": [
+        418,
+        724,
+        724,
+        1009
+      ],
+      "sourceCanvas": [
+        1448,
+        1086
+      ],
+      "rotationCounterClockwiseDegrees": 0,
+      "visibleBounds": [
+        39,
+        49,
+        345,
+        334
+      ],
+      "notes": ""
+    },
+    "shell-left": {
+      "png": "shell-left.png",
+      "webp": "shell-left.webp",
+      "sheet": "S08",
+      "cell": 11,
+      "sourceNodeId": "29:19",
+      "sourceBounds": [
+        749,
+        731,
+        1031,
+        991
+      ],
+      "sourceCanvas": [
+        1448,
+        1086
+      ],
+      "rotationCounterClockwiseDegrees": 0,
+      "visibleBounds": [
+        51,
+        62,
+        333,
+        322
+      ],
+      "notes": ""
+    },
+    "shell-right": {
+      "png": "shell-right.png",
+      "webp": "shell-right.webp",
+      "sheet": "S08",
+      "cell": 12,
+      "sourceNodeId": "29:19",
+      "sourceBounds": [
+        1150,
+        733,
+        1376,
+        988
+      ],
+      "sourceCanvas": [
+        1448,
+        1086
+      ],
+      "rotationCounterClockwiseDegrees": 0,
+      "visibleBounds": [
+        79,
+        64,
+        305,
+        319
+      ],
+      "notes": ""
+    },
+    "beak-remote": {
+      "png": "beak-remote.png",
+      "webp": "beak-remote.webp",
+      "sheet": "S01",
+      "cell": 9,
+      "sourceNodeId": "29:12",
+      "sourceBounds": [
+        40,
+        650,
+        310,
+        903
+      ],
+      "sourceCanvas": [
+        1254,
+        1254
+      ],
+      "rotationCounterClockwiseDegrees": 20,
+      "visibleBounds": [
+        25,
+        31,
+        359,
+        352
+      ],
+      "notes": "Three distinct remote beaks with short appearance marks; use as compact target-local effect rather than an emitted projectile."
+    }
+  }
+}

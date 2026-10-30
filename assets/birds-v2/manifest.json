@@ -1,0 +1,344 @@
+{
+  "source": "Figma page80:2 imported source image bytes, no alpha removal or generative edits",
+  "frames": [
+    {
+      "file": "duck-walk-01.png",
+      "webp": "duck-walk-01.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 94227
+    },
+    {
+      "file": "duck-walk-02.png",
+      "webp": "duck-walk-02.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 98546
+    },
+    {
+      "file": "duck-walk-03.png",
+      "webp": "duck-walk-03.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 93565
+    },
+    {
+      "file": "duck-walk-04.png",
+      "webp": "duck-walk-04.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 97963
+    },
+    {
+      "file": "goose-bite-prepare-01.png",
+      "webp": "goose-bite-prepare-01.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 95430
+    },
+    {
+      "file": "goose-bite-prepare-02.png",
+      "webp": "goose-bite-prepare-02.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 100828
+    },
+    {
+      "file": "goose-bite-prepare-03.png",
+      "webp": "goose-bite-prepare-03.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 97001
+    },
+    {
+      "file": "goose-bite-prepare-04.png",
+      "webp": "goose-bite-prepare-04.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 99490
+    },
+    {
+      "file": "goose-bite-recover-01.png",
+      "webp": "goose-bite-recover-01.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 114895
+    },
+    {
+      "file": "goose-bite-recover-02.png",
+      "webp": "goose-bite-recover-02.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 117087
+    },
+    {
+      "file": "goose-bite-recover-03.png",
+      "webp": "goose-bite-recover-03.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 116368
+    },
+    {
+      "file": "goose-bite-recover-04.png",
+      "webp": "goose-bite-recover-04.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 111961
+    },
+    {
+      "file": "goose-walk-01.png",
+      "webp": "goose-walk-01.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 99329
+    },
+    {
+      "file": "goose-walk-02.png",
+      "webp": "goose-walk-02.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 101889
+    },
+    {
+      "file": "goose-walk-03.png",
+      "webp": "goose-walk-03.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 99931
+    },
+    {
+      "file": "goose-walk-04.png",
+      "webp": "goose-walk-04.webp",
+      "size": [
+        384,
+        384
+      ],
+      "transparentPixels": 101745
+    },
+    {
+      "file": "guinea-charge-prepare-01.png",
+      "webp": "guinea-charge-prepare-01.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 186483
+    },
+    {
+      "file": "guinea-charge-prepare-02.png",
+      "webp": "guinea-charge-prepare-02.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 187914
+    },
+    {
+      "file": "guinea-charge-prepare-03.png",
+      "webp": "guinea-charge-prepare-03.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 194240
+    },
+    {
+      "file": "guinea-charge-prepare-04.png",
+      "webp": "guinea-charge-prepare-04.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 194413
+    },
+    {
+      "file": "guinea-charge-run-01.png",
+      "webp": "guinea-charge-run-01.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 195262
+    },
+    {
+      "file": "guinea-charge-run-02.png",
+      "webp": "guinea-charge-run-02.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 196981
+    },
+    {
+      "file": "guinea-charge-run-03.png",
+      "webp": "guinea-charge-run-03.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 196151
+    },
+    {
+      "file": "guinea-charge-run-04.png",
+      "webp": "guinea-charge-run-04.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 201382
+    },
+    {
+      "file": "guinea-stomp-01.png",
+      "webp": "guinea-stomp-01.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 188453
+    },
+    {
+      "file": "guinea-stomp-02.png",
+      "webp": "guinea-stomp-02.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 183563
+    },
+    {
+      "file": "guinea-stomp-03.png",
+      "webp": "guinea-stomp-03.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 184499
+    },
+    {
+      "file": "guinea-stomp-04.png",
+      "webp": "guinea-stomp-04.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 190049
+    },
+    {
+      "file": "guinea-walk-01.png",
+      "webp": "guinea-walk-01.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 168290
+    },
+    {
+      "file": "guinea-walk-02.png",
+      "webp": "guinea-walk-02.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 163214
+    },
+    {
+      "file": "guinea-walk-03.png",
+      "webp": "guinea-walk-03.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 167177
+    },
+    {
+      "file": "guinea-walk-04.png",
+      "webp": "guinea-walk-04.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 172150
+    },
+    {
+      "file": "guinea-wing-sweep-01.png",
+      "webp": "guinea-wing-sweep-01.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 192990
+    },
+    {
+      "file": "guinea-wing-sweep-02.png",
+      "webp": "guinea-wing-sweep-02.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 155124
+    },
+    {
+      "file": "guinea-wing-sweep-03.png",
+      "webp": "guinea-wing-sweep-03.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 158852
+    },
+    {
+      "file": "guinea-wing-sweep-04.png",
+      "webp": "guinea-wing-sweep-04.webp",
+      "size": [
+        512,
+        512
+      ],
+      "transparentPixels": 196142
+    }
+  ],
+  "turkey": {
+    "originalGroupMissing": "81:5",
+    "availablePreviewNode": "83:6",
+    "previewSize": [
+      220,
+      330
+    ],
+    "alphaMin": 0,
+    "alphaMax": 252,
+    "fullyTransparentPixels": 28551,
+    "totalPixels": 72600,
+    "conclusion": "Preview is transparent; prior opaque-background diagnosis was wrong. Full-resolution original not available in current Figma or exposed Library. Do not upscale/crop damaged low-res preview as production animation.",
+    "auditFile": "source-originals/turkey-preview-audit.png"
+  },
+  "isolationAudit": "isolation-audit.json"
+}

@@ -1,28 +1,31 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createGame,step,choicePool,rollChoices,choose,evolve,reroll,damagePlayer,spawnEnemy,weaponStats,passiveMultiplier,playerStats,revive,declineRevive,spawnProfile,enemyCost,beakShape,beakPose,foxSpeed} from '../engine.js';
+import {createGame as createWorldGame,step,choicePool,rollChoices,choose,evolve,reroll,damagePlayer,spawnEnemy,weaponStats,passiveMultiplier,playerStats,revive,declineRevive,spawnProfile,enemyCost,beakShape,beakPose,foxSpeed} from '../engine.js';
+// Legacy combat fixtures deliberately use a local patch at (600,400).
+function createGame(...args){const s=createWorldGame(...args);s.player.x=600;s.player.y=400;s.gems=[];return s;}
+
 const weapon=(level=1,effect=null)=>({level,effect,cd:0,volley:0,ammo:20,reload:0});
 function stationaryTarget(s,x=700,y=400,hp=100000){const e=spawnEnemy(s,'bear');Object.assign(e,{x,y,hp,maxHp:hp,speed:0});s.spawnTimer=10000;return e;}
 test('character stats, exclusive weapon and three slots',()=>{const s=createGame();assert.equal(s.player.hp,3);assert(!choicePool(s).some(c=>c.id==='ak'));s.weapons={egg:weapon(),beak:weapon(),feather:weapon()};assert(choicePool(s).filter(c=>c.kind==='weapon').every(c=>s.weapons[c.id]));const r=createGame('rambo');assert.equal(r.player.hp,2);assert(r.weapons.ak);r.weapons={ak:weapon(),egg:weapon(),beak:weapon()};assert(!choicePool(r).some(c=>c.id==='feather'));});
 test('three distinct choices and finite test wallet',()=>{const s=createGame();s.mode='upgrade';rollChoices(s);assert.equal(new Set(s.choices.map(c=>c.id)).size,3);for(let i=0;i<10;i++)assert(reroll(s));assert.equal(s.ge,0);assert.equal(reroll(s),false);});
 test('level five pauses for evolution then removes weapon from pool',()=>{const s=createGame();s.weapons.egg=weapon(4);s.mode='upgrade';s.pending=1;s.choices=[{kind:'weapon',id:'egg'}];choose(s,0);assert.equal(s.mode,'evolution');assert.equal(s.weapons.egg.level,5);assert(!evolve(s,'invalid'));assert(evolve(s,'gold'));assert.equal(s.mode,'playing');assert(!choicePool(s).some(c=>c.id==='egg'));});
 test('damage is one with half-second invulnerability, pause freezes timer',()=>{const s=createGame();damagePlayer(s);damagePlayer(s);assert.equal(s.player.hp,2);s.spawnTimer=100;step(s,.51);damagePlayer(s);assert.equal(s.player.hp,1);s.mode='paused';const t=s.time;step(s,10);assert.equal(s.time,t);});
-test('max health upgrade also heals exactly one',()=>{const s=createGame();s.player.hp=1;s.mode='upgrade';s.pending=1;s.choices=[{kind:'passive',id:'health'}];choose(s,0);assert.equal(s.player.hp,2);assert.equal(s.player.maxHp,4);});
+test('max health upgrade also heals exactly two',()=>{const s=createGame();s.player.hp=1;s.mode='upgrade';s.pending=1;s.choices=[{kind:'passive',id:'health'}];choose(s,0);assert.equal(s.player.hp,3);assert.equal(s.player.maxHp,5);});
 test('third entire volley is golden, extra projectiles included',()=>{const s=createGame();stationaryTarget(s);s.weapons.egg=weapon(5,'gold');s.passives.shots=2;for(let i=1;i<=3;i++){s.bullets=[];s.weapons.egg.cd=0;step(s,.001);assert.equal(s.bullets.length,5);assert(s.bullets.every(b=>b.gold===(i===3)));}assert(s.bullets.every(b=>b.pierce===Infinity));});
 test('AK magazine reload takes 3.5 seconds; belt bypasses reload',()=>{const s=createGame('rambo');stationaryTarget(s);s.weapons.ak=weapon();for(let i=0;i<20;i++){s.weapons.ak.cd=0;step(s,.001);}assert.equal(s.weapons.ak.ammo,0);assert.equal(s.weapons.ak.reload,3.5);step(s,3.49);assert(s.weapons.ak.reload>0);step(s,.02);assert.equal(s.weapons.ak.ammo,20);assert.equal(s.weapons.ak.reload,0);s.weapons.ak=weapon(5,'belt');for(let i=0;i<25;i++){s.weapons.ak.cd=0;step(s,.001);}assert.equal(s.weapons.ak.reload,0);});
 test('super beak creates exactly one attack, scales with projectile count',()=>{const s=createGame();stationaryTarget(s);s.weapons={beak:weapon(5,'super')};s.passives.shots=4;step(s,.001);assert.equal(s.attacks.filter(f=>f.type==='beak').length,1);assert(s.attacks[0].r>200);});
 test('squirrel does not contact damage and fires ranged acorns',()=>{const s=createGame();s.spawnTimer=100;const e=spawnEnemy(s,'squirrel');Object.assign(e,{x:s.player.x,y:s.player.y,shot:10});step(s,.01);assert.equal(s.player.hp,3);e.x=800;e.shot=0;step(s,.01);assert.equal(s.acorns.length,1);});
 test('worm heals at most max HP and remains when full',()=>{const s=createGame();s.spawnTimer=100;s.worms=[{x:s.player.x,y:s.player.y}];step(s,.01);assert.equal(s.worms.length,1);s.player.hp=2;step(s,.01);assert.equal(s.player.hp,3);assert.equal(s.worms.length,0);});
-test('600-second threshold marks success and doubles kill score',()=>{const s=createGame();s.time=599.99;s.spawnTimer=100;step(s,.02);assert(s.bonus);const e=stationaryTarget(s,610,400,1);s.weapons={beak:weapon()};step(s,.15);assert.equal(s.kills,1);assert.equal(s.score,200);assert(e.hp<=0);});
+test('bonus doubles kill score after the bosses are defeated',()=>{const s=createGame();s.time=599.99;s.bossEvents={guinea:'dead',turkey:'dead'};s.spawnTimer=100;step(s,.02);assert(s.bonus);const e=stationaryTarget(s,610,400,1);s.weapons={beak:weapon()};step(s,.15);assert.equal(s.kills,1);assert.equal(s.score,200);assert(e.hp<=0);});
 test('experience overflow queues all level choices',()=>{const s=createGame();s.spawnTimer=100;s.gems=[{x:s.player.x,y:s.player.y,value:100}];step(s,.01);assert.equal(s.mode,'upgrade');assert(s.pending>1);const n=s.pending;s.choices=[{kind:'passive',id:'damage'}];choose(s,0);assert.equal(s.pending,n-1);assert.equal(s.mode,'upgrade');});
 test('death freezes combat and offers revival without collecting healing',()=>{const s=createGame();s.player.hp=1;s.spawnTimer=100;s.worms=[{x:s.player.x,y:s.player.y}];const e=spawnEnemy(s,'rat');Object.assign(e,{x:s.player.x,y:s.player.y});step(s,.01);assert.equal(s.mode,'revive');assert.equal(s.player.hp,0);});
 
 test('passives add small bonuses without compounding',()=>{
   const s=createGame();s.passives.damage=3;s.passives.speed=2;s.passives.haste=3;s.passives.magnet=2;
-  assert(Math.abs(weaponStats(s,'egg').damage-13*(1+.10*3))<1e-9);
-  assert(Math.abs(weaponStats(s,'egg').interval-.9/(1+.08*3))<1e-9);
-  assert(playerStats(s).pickup===48+20*2);
-  s.spawnTimer=100;const x=s.player.x;step(s,.1,{x:1,y:0});assert(Math.abs(s.player.x-x-12.6*(1+.12*2))<1e-9);
+  assert(Math.abs(weaponStats(s,'egg').damage-15*(1+.12*3))<1e-9);
+  assert(Math.abs(weaponStats(s,'egg').interval-.9/(1+.10*3))<1e-9);
+  assert(playerStats(s).pickup===48+24*2);
+  s.spawnTimer=100;const x=s.player.x;step(s,.1,{x:1,y:0});assert(Math.abs(s.player.x-x-12.6*(1+.20*2))<1e-9);
 });
 
 test('weapon upgrades add damage, rate and size each tier; projectiles at tiers 3 and 5',()=>{
@@ -37,14 +40,14 @@ test('weapon upgrades add damage, rate and size each tier; projectiles at tiers 
 test('projectiles and HP grow by fixed integers, health preserves lost HP',()=>{
   const s=createGame();s.passives.shots=3;assert.equal(weaponStats(s,'feather',weapon()).count,8);
   s.player.hp=1;for(let i=0;i<3;i++){s.mode='upgrade';s.pending=1;s.choices=[{kind:'passive',id:'health'}];choose(s,0);}
-  assert.equal(s.player.maxHp,6);assert.equal(s.player.maxHp-s.player.hp,2);
+  assert.equal(s.player.maxHp,9);assert.equal(s.player.maxHp-s.player.hp,2);
 });
 
 test('size changes the actual collision radius, not just projectile artwork',()=>{
   const s=createGame();s.spawnTimer=100;s.weapons.egg.cd=0;s.passives.size=3;stationaryTarget(s,900,400);
-  step(s,.001);assert(Math.abs(s.bullets[0].r-6*(1+.10*3))<1e-9);
+  step(s,.001);assert(Math.abs(s.bullets[0].r-6*(1+.20*3))<1e-9);
   s.weapons={beak:weapon()};s.fx=[];s.passives.size=1;stationaryTarget(s,675,400,100);
-  step(s,.15);assert(s.attacks.some(f=>f.type==='beak'&&Math.abs(f.r-74*1.1)<1e-9));
+  step(s,.15);assert(s.attacks.some(f=>f.type==='beak'&&Math.abs(f.r-74*1.20)<1e-9));
   assert(s.enemies.some(e=>e.x===675&&e.hp<100));
 });
 
@@ -69,14 +72,14 @@ test('magnet attracts existing XP across the yard but not future drops',()=>{
 
 test('experience multiplier applies once on collection and also to magnetized XP',()=>{
   const s=createGame();s.spawnTimer=100;s.need=10000;s.passives.experience=2;s.gems=[{x:600,y:400,value:10,magnetized:true}];
-  step(s,.01);assert(Math.abs(s.xp-10*1.16)<1e-9);step(s,.1);assert(Math.abs(s.xp-10*1.16)<1e-9);
+  step(s,.01);assert(Math.abs(s.xp-10*1.36)<1e-9);step(s,.1);assert(Math.abs(s.xp-10*1.36)<1e-9);
 });
 
 test('worm and magnet drops have independent 0.5 percent rolls',()=>{
   const s=createGame();s.weapons={beak:weapon()};stationaryTarget(s,610,400,1);
-  let rolls=[.9,.004];s.random=()=>rolls.shift()??.9;step(s,.15);assert.equal(s.magnets.length,0); // immediately picked up
+  let rolls=[.9,.9,.004];s.random=()=>rolls.shift()??.9;step(s,.15);assert.equal(s.magnets.length,0); // immediately picked up
   assert(s.events.includes('magnet'));assert.equal(s.worms.length,0);
-  const r=createGame();r.weapons={beak:weapon()};stationaryTarget(r,675,400,1);rolls=[.004,.9];r.random=()=>rolls.shift()??.9;
+  const r=createGame();r.weapons={beak:weapon()};stationaryTarget(r,675,400,1);rolls=[.9,.004,.9];r.random=()=>rolls.shift()??.9;
   step(r,.15);assert.equal(r.worms.length,1);assert.equal(r.magnets.length,0);
 });
 
@@ -84,7 +87,7 @@ test('opening spawns more slow enemies and squirrels fire slower acorns',()=>{
   const s=createGame();s.weapons={};s.gems=[];step(s,.41);assert.equal(s.enemies.length,1);assert(s.enemies.every(e=>e.speed<44));
   const r=createGame();r.spawnTimer=100;r.weapons={};const e=spawnEnemy(r,'squirrel');Object.assign(e,{x:850,y:400,shot:0});step(r,.01);
   assert.equal(e.shot,3.8);assert(Math.abs(Math.hypot(r.acorns[0].vx,r.acorns[0].vy)-112.5)<1e-9);
-  step(r,2.4);assert.equal(r.acorns.length,1);
+  step(r,1.8);assert.equal(r.acorns.length,1);
 });
 
 test('AK levels increase magazine capacity and refills use upgraded capacity',()=>{
@@ -96,15 +99,15 @@ test('AK levels increase magazine capacity and refills use upgraded capacity',()
 
 test('attack speed shortens reload including an active reload proportionally',()=>{
   const s=createGame('rambo');s.weapons.ak.reload=1.75;s.weapons.ak.ammo=0;s.mode='upgrade';s.pending=1;s.choices=[{kind:'passive',id:'haste'}];choose(s,0);
-  assert(Math.abs(s.weapons.ak.reload-1.75/1.08)<1e-9);
-  assert(Math.abs(weaponStats(s,'ak').reload-3.5/1.08)<1e-9);
-  s.weapons.ak.level=4;assert(Math.abs(weaponStats(s,'ak').reload-3.5/1.20)<1e-9);
+  assert(Math.abs(s.weapons.ak.reload-1.75/1.10)<1e-9);
+  assert(Math.abs(weaponStats(s,'ak').reload-3.5/1.10)<1e-9);
+  s.weapons.ak.level=4;assert(Math.abs(weaponStats(s,'ak').reload-3.5/1.25)<1e-9);
 });
 
 test('weapon upgrades and global damage bonuses sum against base damage',()=>{
   const s=createGame();s.passives.damage=5;s.passives.size=5;s.passives.experience=5;
-  const v=weaponStats(s,'egg',weapon(5));assert(Math.abs(v.damage-13*2.1)<1e-9);assert(Math.abs(v.size-1.7)<1e-9);
-  assert.equal(passiveMultiplier(s,'experience'),1.4);
+  const v=weaponStats(s,'egg',weapon(5));assert(Math.abs(v.damage-15*2.32)<1e-9);assert(Math.abs(v.size-2.24)<1e-9);
+  assert.equal(passiveMultiplier(s,'experience'),1.9);
 });
 
 test('statistics count effective damage once, by weapon and enemy type',()=>{
@@ -139,7 +142,7 @@ test('projectile passive disappears after three selections and forged fourth is 
  assert(!choicePool(s).some(c=>c.id==='shots'));s.mode='upgrade';s.choices=[{kind:'passive',id:'shots'}];assert(!choose(s,0));assert.equal(s.passives.shots,3);
 });
 test('character level bonuses are linear and apply to all weapons',()=>{
- const r=createGame('rambo');r.level=11;assert(Math.abs(playerStats(r).damageBonus-.2)<1e-9);assert(Math.abs(weaponStats(r,'egg',weapon()).damage-13*1.2)<1e-9);
+ const r=createGame('rambo');r.level=11;assert(Math.abs(playerStats(r).damageBonus-.2)<1e-9);assert(Math.abs(weaponStats(r,'egg',weapon()).damage-15*1.2)<1e-9);
  const m=createGame('monk');m.level=11;assert.equal(m.player.hp,5);assert(m.player.x===600);assert(Math.abs(playerStats(m).hasteBonus-.2)<1e-9);assert(Math.abs(weaponStats(m,'egg',weapon()).interval-.9/1.2)<1e-9);
  const y=createGame();y.level=11;assert(Math.abs(playerStats(y).xpBonus-.2)<1e-9);assert(playerStats(m).speed<playerStats(y).speed);
 });
@@ -160,7 +163,7 @@ test('attack speed shortens both martial animation and repeat interval',()=>{
  const a=createGame('monk'),b=createGame('monk');for(const s of [a,b]){s.gems=[];stationaryTarget(s,680,400);s.weapons.martial.cd=0;}b.passives.haste=3;b.level=6;step(a,.001);step(b,.001);assert(b.attacks[0].duration<a.attacks[0].duration);assert(b.weapons.martial.cd<a.weapons.martial.cd);
 });
 test('spawn transitions suppress only future old types, ramp over 30 seconds and blend after 60',()=>{
- assert.deepEqual(Object.keys(spawnProfile(240).weights),['wolf']);assert(spawnProfile(240).ramp<spawnProfile(270).ramp);assert(spawnProfile(300).weights.rat>spawnProfile(300).weights.wolf);
+ assert.deepEqual(Object.keys(spawnProfile(220).weights),['wolf']);assert(spawnProfile(220).ramp<spawnProfile(245).ramp);assert(spawnProfile(340).weights.rat>spawnProfile(340).weights.wolf);
  assert.deepEqual(Object.keys(spawnProfile(420).weights),['bear']);assert(spawnProfile(480).weights.fox>spawnProfile(480).weights.bear);
  assert(enemyCost('fox',241)<enemyCost('fox',239));assert(enemyCost('wolf',361)<enemyCost('wolf',359));
  const s=createGame();const rat=spawnEnemy(s,'rat');s.time=239.99;s.spawnTimer=100;step(s,.02);assert(s.enemies.includes(rat));
@@ -177,7 +180,7 @@ test('beak stays attached and damages late entrants once throughout its lifetime
  late.x=s.player.x+60;late.y=s.player.y;step(s,.10);assert(late.hp<100000);const after=late.hp;step(s,.05);assert.equal(late.hp,after);assert(s.attacks.length>0);
 });
 test('super beak is one slower strike with bounded size and projectile damage growth',()=>{
- const s=createGame();s.weapons={beak:weapon(5,'super')};stationaryTarget(s);s.passives.shots=3;s.passives.size=20;const shape=beakShape(s);assert(shape.range<250);assert(shape.duration>.6);step(s,.01);assert.equal(s.attacks.length,1);assert(s.attacks[0].damage>weaponStats(s,'beak').damage*3.5);
+ const s=createGame();s.weapons={beak:weapon(5,'super')};stationaryTarget(s);s.passives.shots=3;s.passives.size=20;const shape=beakShape(s);assert(shape.range<250);assert(shape.duration>.55);step(s,.01);assert.equal(s.attacks.length,1);assert(s.attacks[0].damage>weaponStats(s,'beak').damage*3.5);
 });
 test('fox dash speed is continuous at ten minutes and grows gently with a cap',()=>{
  const a=foxSpeed(599.99,2,100),b=foxSpeed(600,2,10000),c=foxSpeed(610,2,10000),d=foxSpeed(660,2,10000);

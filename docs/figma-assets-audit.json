@@ -1,0 +1,156 @@
+[
+  {
+    "file": "exec-7ec787ee-b3ff-483e-9a2f-7f873b80900d.png",
+    "sha1": "6ebc04f7dad65484cc7a15a1993f533fb07c29c9",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-710fb3b7-a64c-442d-92bb-b81a8eb26344.png",
+    "sha1": "652b9fb815bcd225d82afccffb91a45e7f16e0c9",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-fb3bc1ae-641e-4317-a198-95ea1869de1d.png",
+    "sha1": "915fb476fe258409959af80c60f1bc3845faf576",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-6c390cf3-2c81-49ea-bd8a-2a9b1e9b1e3d.png",
+    "sha1": "18d867316123f4fc381bbe13d56b8e67535a4093",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-b34e9600-ff4d-4a8f-ae2d-75d4e9d32892.png",
+    "sha1": "a5779839e6c2ae77c31fbc69bec86b24700124ff",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-a1bd9109-5326-44b4-b180-ac3238f0c179.png",
+    "sha1": "9b1c41acb571a44bb3a31fc73951a2a5775d1dc8",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-7f3f55f7-6d29-43bf-ab86-f2ed8aa6c0fb.png",
+    "sha1": "6c04e7f9db03f65a2b1a5145f9245a29460df4a3",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-5981d06a-0301-4e40-a231-d7087f6fc09c.png",
+    "sha1": "25a2e22c5ad66bbf4163c0d9965d9c49a75b2335",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-39edc163-4ea1-4e2a-8f1e-77e427297136.png",
+    "sha1": "a58bcab55aae70fd828a065070954513e1c8916c",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-891e4706-10dc-442b-a17f-1bc7e65367fc.png",
+    "sha1": "a2d46adc53403550149c2301bba65a97ac593dc8",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-c8ea2115-188e-41ef-be60-a900bc36c108.png",
+    "sha1": "fc4a8e36fb53ce7f2a89390f286519c268c5323a",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-7356eab0-fe8b-4793-9f2c-f191b0833e25.png",
+    "sha1": "9a5b9b7dee0590d070ca11461bc20641e5339e4c",
+    "inFigma": true,
+    "exactBytes": false,
+    "note": "Figma: уменьшенное JPEG-превью 768x512, node 36:2; исходный PNG сохранён отдельно"
+  },
+  {
+    "file": "exec-592c6b93-33bb-4961-9ef2-3355c7777be6.png",
+    "sha1": "041db15b30e6dbbf453fab435c08fe20a2656e2d",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-0f4b6804-77c7-4043-8433-a11995bee104.png",
+    "sha1": "be101635e2cefde76108335196c595ec2d8e45d8",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-d072e87c-1ae3-44d4-9c4a-4e9537738a84.png",
+    "sha1": "d52ccc3ef68e42a19e2590297db227b9726198c3",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-5702e5ab-6eb4-4a03-aa2d-57dd62e5f27f.png",
+    "sha1": "f348a54d578a73e6eebf08ef5d28567f24b26c36",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-513b257c-c038-4633-adaa-feacf5a1e3ae.png",
+    "sha1": "26f0e395149d1d5a8cf202705527cdf4add0de79",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-5c0e057a-d933-4c85-92a7-5ee60d0556e8.png",
+    "sha1": "e1a8109847311246cda60f79adb25adf13608efb",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-f75677f1-ddcc-4a08-ba98-cb93ff7f6bcc.png",
+    "sha1": "45bfa84cdee5d09c404733af2191863652ac4e19",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-c2e3ef7f-0840-4da0-b88b-0d37c20ba174.png",
+    "sha1": "6e5867c90d07bef732d6df288435a2cd4e98e913",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-096b608c-8679-4274-b857-421f8aa51bf1.png",
+    "sha1": "a8192315328811421ed4f96898a1b05d9a3748fb",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  },
+  {
+    "file": "exec-f69f382f-6307-403c-80fd-6b4e12d70f92.png",
+    "sha1": "db10c07ab724cb03bc22db311f201b8f1c0d56b9",
+    "inFigma": true,
+    "exactBytes": true,
+    "note": "Исходные байты найдены по imageHash"
+  }
+]
