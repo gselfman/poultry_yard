@@ -1,0 +1,11 @@
+const STREAM='https://qura.one/radio';
+const clamp=v=>Math.max(0,Math.min(1,Number.isFinite(v)?v:.5));
+export class QuRaRadio {
+ constructor({createAudio=()=>new Audio(),storage,setTimer=setTimeout,clearTimer=clearTimeout}={}){try{this.storage=storage??globalThis.localStorage;}catch{this.storage=null;}this.setTimer=setTimer;this.clearTimer=clearTimer;this.audio=createAudio();this.audio.preload='none';this.enabled=false;this.message='Включается по нажатию. Звуки боя настраиваются отдельно.';this.volume=.5;this.generation=0;this.attempt=0;this.timer=null;try{this.volume=clamp(Number(this.storage?.getItem('qura-yard-radio-volume')??.5));}catch{}this.audio.volume=this.volume;this.audio.addEventListener('error',()=>this.reconnect());this.audio.addEventListener('ended',()=>this.reconnect());this.audio.addEventListener('playing',()=>{if(this.enabled){this.attempt=0;this.message='Радио играет';this.notify();}});}
+ notify(){this.onchange?.();}
+ setVolume(v){this.volume=clamp(v);this.audio.volume=this.volume;try{this.storage?.setItem('qura-yard-radio-volume',String(this.volume));}catch{}this.notify();}
+ async toggle(){if(this.enabled){this.stop();return;}this.enabled=true;this.attempt=0;this.message='Подключаем радио…';this.notify();await this.play(++this.generation);}
+ async play(generation){if(!this.enabled||generation!==this.generation)return;this.audio.src=STREAM;try{await this.audio.play();if(generation!==this.generation){if(!this.enabled)this.audio.pause();return;}this.message='Радио играет';this.notify();}catch(e){if(generation!==this.generation)return;if(e.name==='NotAllowedError'){this.stop();this.message='Браузер просит ещё раз нажать «Включить радио».';this.notify();}else this.reconnect();}}
+ reconnect(){if(!this.enabled||this.timer!==null)return;if(this.attempt>=5){this.stop();this.message='Радио недоступно. Можно попробовать включить ещё раз.';this.notify();return;}const generation=this.generation,delay=Math.min(30000,1000*2**this.attempt++);this.message='Связь с радио прервалась. Подключаем снова…';this.notify();this.timer=this.setTimer(()=>{this.timer=null;this.play(generation);},delay);}
+ stop(){this.enabled=false;++this.generation;if(this.timer!==null)this.clearTimer(this.timer);this.timer=null;this.audio.pause();this.audio.removeAttribute('src');this.audio.load();this.message='Радио выключено';this.notify();}
+}
