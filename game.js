@@ -1,5 +1,5 @@
 import {groundPattern} from './ground-pattern.js';
-import {heroMenu,settingsView,rulesView,aboutView,upgradeView,evolutionView,pauseView,resultView,hearts,uiIcon,weaponImage} from './ui-views.js?v=20261103-final';
+import {heroMenu,settingsView,rulesView,aboutView,upgradeView,evolutionView,pauseView,resultView,hearts,uiIcon,weaponImage} from './ui-views.js?v=20261103-farm';
 import {openRunChest,continueBonus,finishRun} from './rewards.js';
 import {purchaseQuote,cleanProgress,unlockedHeroes,recordVictories,PAID_REROLL_LIMIT} from './run-rules.js';
 import {cameraView,stickVector,bossMarker} from './viewport.js';
@@ -63,7 +63,7 @@ function chicken(x,y,inv=0,t=0){const id=s?.character||'ryaba';creature(ctx,id,x
 function enemy(e,t){creature(ctx,e.type,e.x,e.y,e.r,e.facing,t+e.id*.173,e.moving!==false,0,e.flash,e.attack);if(e.hp<e.maxHp){ctx.fillStyle='#271809';ctx.fillRect(e.x-e.r,e.y-e.r-19,e.r*2,3);ctx.fillStyle='#e6a455';ctx.fillRect(e.x-e.r,e.y-e.r-19,e.r*2*e.hp/e.maxHp,3);}}
 
 const grass=Array.from({length:700},(_,i)=>({x:(i*139.31)%1200,y:(i*91.67)%800,shade:i%3}));
-function draw(){const dpr=Math.min(devicePixelRatio||1,2),w=canvas.clientWidth,h=canvas.clientHeight;if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);}ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);const p=s?.player||{x:600,y:400};const view=cameraView(w,h,p,WORLD),{scale,vw,vh,cx,cy}=view;ctx.translate(view.offsetX,view.offsetY);ctx.scale(scale,scale);
+function draw(){if(overlay.childElementCount>0)return;const dpr=Math.min(devicePixelRatio||1,2),w=canvas.clientWidth,h=canvas.clientHeight;if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);}ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);const p=s?.player||{x:600,y:400};const view=cameraView(w,h,p,WORLD),{scale,vw,vh,cx,cy}=view;ctx.translate(view.offsetX,view.offsetY);ctx.scale(scale,scale);
 if(arenaImage.complete&&arenaImage.naturalWidth){const pattern=arenaPattern||(arenaPattern=groundPattern(ctx,arenaImage));ctx.save();ctx.scale(.55,.55);ctx.fillStyle=pattern;ctx.fillRect(0,0,WORLD.width/.55,WORLD.height/.55);ctx.restore();}else{ctx.fillStyle='#587447';ctx.fillRect(0,0,WORLD.width,WORLD.height);const light=ctx.createRadialGradient(570,340,30,600,400,750);light.addColorStop(0,'#90a26855');light.addColorStop(1,'#213d3544');ctx.fillStyle=light;ctx.fillRect(0,0,WORLD.width,WORLD.height);ellipse(280,240,150,80,'#b5a36a12');ellipse(890,610,220,100,'#c3b17715');for(const g of grass){ctx.strokeStyle=['#b0bb6e40','#2a503c45','#d2c67e25'][g.shade];ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(g.x,g.y);ctx.lineTo(g.x-3,g.y-5);ctx.moveTo(g.x,g.y);ctx.lineTo(g.x+3,g.y-7);ctx.stroke();}
 }
 landscape(ctx,s,{x:cx-vw/2,y:view.viewY,w:vw,h:vh});
