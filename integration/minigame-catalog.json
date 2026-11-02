@@ -1,0 +1,21 @@
+{
+  "gameId": "poultry_yard",
+  "locale": "ru",
+  "title": "Птичий двор",
+  "shortDescription": "Двигайся, собирай усиления и отбивайся от зверей. Курочка атакует сама!",
+  "description": "Двор окружили звери — пора дать отпор! Выбери курочку, собирай светящиеся семечки и сочетай орудия. Двигайся и уворачивайся: курочка атакует сама. Победи Цесарку и Индюка, открой новых героев и попробуй другую сборку. После победы можно продолжить бонусную волну.",
+  "tags": ["Выживание", "10 минут"],
+  "ctaLabel": "Играть",
+  "route": null,
+  "image": {
+    "src": "assets/catalog/poultry-yard-gameplay.jpg",
+    "width": 1280,
+    "height": 720,
+    "aspectRatio": "16:9",
+    "alt": "Курочка Рэмбо защищает двор: вокруг звери, светящиеся семечки и снаряды",
+    "captureType": "engine-rendered-qa-gameplay"
+  },
+  "entryPolicyFromBootstrap": true,
+  "rewardsFromServer": true,
+  "note": "Connect the existing QuRa minigame card component and real game route. Do not enable real rewards until host integration is verified."
+}
