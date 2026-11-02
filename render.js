@@ -1,3 +1,4 @@
+import {turkeyPeckRotation} from './enemy-attack-geometry.js';
 import {BIRD_ACTIONS,BIRD_VISUALS,birdPose} from './bird-poses.js';
 import {combatArt,drawCombat} from './combat-art.js';
 import {beakPose,wingSweep} from './engine.js';
@@ -14,7 +15,7 @@ export function creature(ctx,id,x,y,r,facing,time,moving,inv=0,flash=0,attack=nu
  const pose=birdPose(id,attack,time),birdImage=pose&&birdArt[id]?.[pose.action]?.[pose.frame],usingBird=ready(birdImage),animated=usingBird||(frames&&ready(frames[index])),image=usingBird?birdImage:animated?frames[index]:art[id],box=r*(hero?2.5:3.15);
  ctx.save();ctx.translate(x,y);ctx.fillStyle='#14220e77';ctx.beginPath();ctx.ellipse(0,r*.85,r,Math.max(3,r*.3),0,0,Math.PI*2);ctx.fill();
  if(!ready(image)){ctx.restore();return;}
- ctx.globalAlpha=inv>0&&Math.floor(inv*20)%2===0?.35:flash>0?.55:1;ctx.scale(facing||1,1);
+ ctx.globalAlpha=inv>0&&Math.floor(inv*20)%2===0?.35:flash>0?.55:1;if(id==='turkey'&&attack?.kind==='pecks')ctx.rotate(turkeyPeckRotation(attack.angle,facing,pose.frame));ctx.scale(facing||1,1);
  // Real animation frames use a shared canvas/scale; never normalize each frame separately.
  if(animated){const draw=id==='rat'?enemyOutline(image):image,visual=usingBird?BIRD_VISUALS[id]:null,k=box/(usingBird?image.naturalWidth:384)*(visual?.size||1)*(visual?.scales[pose.action]||1),top=usingBird?r*.85-(visual?.feet??image.naturalHeight-24)*k:-draw.height*k/2;ctx.drawImage(draw,-draw.width*k/2,top,draw.width*k,draw.height*k);}
 
