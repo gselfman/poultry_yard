@@ -154,7 +154,7 @@ export function inEnemyAttack(p,e,a,previous=null){
 }
 function enemyAttackStep(s,e,dt){
  e.attackCd=Math.max(0,e.attackCd-dt);const p=s.player;
- if(!e.attack&&e.attackCd===0){const shape=enemyAttackShape(e.type,e.attackIndex);if(e.type==='turkey'&&shape.kind==='pecks')Object.assign(shape,turkeyPeckGeometry(e.r,TUNING.bosses));if(distance(e,p)<(e.type==='goose'?shape.range+45:e.type==='guinea'?TUNING.bosses.guineaEngage:TUNING.bosses.turkeyEngage)){e.attack={...shape,elapsed:0,phase:'windup',originX:e.x,originY:e.y,angle:Math.atan2(p.y-e.y,p.x-e.x),hitPulses:new Set()};e.attackIndex++;}}
+ if(!e.attack&&e.attackCd===0){const shape=enemyAttackShape(e.type,e.attackIndex);if(e.type==='turkey'&&shape.kind==='pecks')Object.assign(shape,turkeyPeckGeometry(e.r,TUNING.bosses));if(distance(e,p)<(shape.kind==='pecks'?shape.range+shape.width+p.r+12:e.type==='goose'?shape.range+45:e.type==='guinea'?TUNING.bosses.guineaEngage:TUNING.bosses.turkeyEngage)){e.attack={...shape,elapsed:0,phase:'windup',originX:e.x,originY:e.y,angle:Math.atan2(p.y-e.y,p.x-e.x),hitPulses:new Set()};e.attackIndex++;}}
  const a=e.attack;if(!a)return false;e.moving=false;a.elapsed+=dt;e.facing=Math.cos(a.angle)<0?-1:1;
  if(a.elapsed<a.windup){a.phase='windup';return true;}
  if(a.elapsed<a.windup+a.active){a.phase='active';const before={x:e.x,y:e.y};if(a.kind==='charge'){moveBody(e,Math.cos(a.angle)*a.speed*dt,Math.sin(a.angle)*a.speed*dt,ENEMIES[e.type].isBoss?[]:s.obstacles);e.x=clamp(e.x,32,WORLD.width-32);e.y=clamp(e.y,45,WORLD.height-45);e.moving=true;}

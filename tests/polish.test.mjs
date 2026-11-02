@@ -13,3 +13,5 @@ test('boss defeat emits one death burst and continuation preserves earned chest'
 test('all item choices and evolutions have complete plain descriptions',()=>{for(const w of Object.values(WEAPONS)){assert(w.description?.length>10);for(const e of w.effects)assert(e[2]?.length>15);}for(const p of PASSIVES)assert(p[3].length>10);const s=createGame();assert(choicePool(s).every(c=>c.description.length>10));assert(WEAPONS.dust.description.includes('постоянно'));});
 
 test('alternate peck frame uses its shorter visible beak reach',()=>{const r=ENEMIES.turkey.r,a=turkeyPeckGeometry(r,{},1);near(a.range+a.width,r*1.30);near(turkeyPeckRotation(0,1,3),-.02);near(turkeyPeckRotation(Math.PI,-1,3),.02);});
+
+test('turkey approaches within peck reach instead of attacking empty space',()=>{const s=createGame();s.time=600;s.bossEvents.guinea='dead';s.weapons={};s.gems=[];s.spawnTimer=999;const e=spawnEnemy(s,'turkey');Object.assign(e,{x:s.player.x-300,y:s.player.y,attackIndex:3,attackCd:0});step(s,.01);assert.equal(e.attack,null);assert(e.x>s.player.x-300);e.x=s.player.x-120;step(s,.01);assert.equal(e.attack.kind,'pecks');});
