@@ -1,3 +1,4 @@
+import {continueBonus} from '../rewards.js';
 import {purchaseQuote} from '../run-rules.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -15,9 +16,9 @@ test('max health upgrade also heals exactly two',()=>{const s=createGame();s.pla
 test('third entire volley is golden, extra projectiles included',()=>{const s=createGame();stationaryTarget(s);s.weapons.egg=weapon(5,'gold');s.passives.shots=2;for(let i=1;i<=3;i++){s.bullets=[];s.weapons.egg.cd=0;step(s,.001);assert.equal(s.bullets.length,5);assert(s.bullets.every(b=>b.gold===(i===3)));}assert(s.bullets.every(b=>b.pierce===Infinity));});
 test('AK magazine reload takes 3.5 seconds; belt bypasses reload',()=>{const s=createGame('rambo');stationaryTarget(s);s.weapons.ak=weapon();for(let i=0;i<20;i++){s.weapons.ak.cd=0;step(s,.001);}assert.equal(s.weapons.ak.ammo,0);assert.equal(s.weapons.ak.reload,3.5);step(s,3.49);assert(s.weapons.ak.reload>0);step(s,.02);assert.equal(s.weapons.ak.ammo,20);assert.equal(s.weapons.ak.reload,0);s.weapons.ak=weapon(5,'belt');for(let i=0;i<25;i++){s.weapons.ak.cd=0;step(s,.001);}assert.equal(s.weapons.ak.reload,0);});
 test('super beak creates exactly one attack, scales with projectile count',()=>{const s=createGame();stationaryTarget(s);s.weapons={beak:weapon(5,'super')};s.passives.shots=4;step(s,.001);assert.equal(s.attacks.filter(f=>f.type==='beak').length,1);assert(s.attacks[0].r>200);});
-test('squirrel does not contact damage and fires ranged acorns',()=>{const s=createGame();s.spawnTimer=100;const e=spawnEnemy(s,'squirrel');Object.assign(e,{x:s.player.x,y:s.player.y,shot:10});step(s,.01);assert.equal(s.player.hp,3);e.x=750;e.shot=0;step(s,.01);assert.equal(s.acorns.length,1);});
+test('squirrel does not contact damage and fires ranged acorns',()=>{const s=createGame();s.spawnTimer=100;const e=spawnEnemy(s,'squirrel');Object.assign(e,{x:s.player.x,y:s.player.y,shot:10});step(s,.01);assert.equal(s.player.hp,3);e.x=740;e.shot=0;step(s,.01);assert.equal(s.acorns.length,1);});
 test('worm heals at most max HP and remains when full',()=>{const s=createGame();s.spawnTimer=100;s.worms=[{x:s.player.x,y:s.player.y}];step(s,.01);assert.equal(s.worms.length,1);s.player.hp=2;step(s,.01);assert.equal(s.player.hp,3);assert.equal(s.worms.length,0);});
-test('bonus doubles kill score after the bosses are defeated',()=>{const s=createGame();s.time=599.99;s.bossEvents={guinea:'dead',turkey:'dead'};s.spawnTimer=100;step(s,.02);assert(s.bonus);const e=stationaryTarget(s,610,400,1);s.weapons={beak:weapon()};step(s,.15);assert.equal(s.kills,1);assert.equal(s.score,200);assert(e.hp<=0);});
+test('bonus doubles kill score after the bosses are defeated',()=>{const s=createGame();s.time=599.99;s.bossEvents={guinea:'dead',turkey:'dead'};s.spawnTimer=100;step(s,.02);assert(s.bonus);assert.equal(s.mode,'victory');assert(continueBonus(s));const e=stationaryTarget(s,610,400,1);s.weapons={beak:weapon()};step(s,.15);assert.equal(s.kills,1);assert.equal(s.score,200);assert(e.hp<=0);});
 test('experience overflow queues all level choices',()=>{const s=createGame();s.spawnTimer=100;s.gems=[{x:s.player.x,y:s.player.y,value:100}];step(s,.01);assert.equal(s.mode,'upgrade');assert(s.pending>1);const n=s.pending;s.choices=[{kind:'passive',id:'damage'}];choose(s,0);assert.equal(s.pending,n-1);assert.equal(s.mode,'upgrade');});
 test('death freezes combat and offers revival without collecting healing',()=>{const s=createGame();s.player.hp=1;s.spawnTimer=100;s.worms=[{x:s.player.x,y:s.player.y}];const e=spawnEnemy(s,'rat');Object.assign(e,{x:s.player.x,y:s.player.y});step(s,.01);assert.equal(s.mode,'revive');assert.equal(s.player.hp,0);});
 
@@ -86,7 +87,7 @@ test('worm and magnet drops have independent 0.5 percent rolls',()=>{
 
 test('opening spawns more slow enemies and squirrels fire slower acorns',()=>{
   const s=createGame();s.weapons={};s.gems=[];step(s,.41);assert.equal(s.enemies.length,1);assert(s.enemies.every(e=>e.speed<44));
-  const r=createGame();r.spawnTimer=100;r.weapons={};const e=spawnEnemy(r,'squirrel');Object.assign(e,{x:750,y:400,shot:0});step(r,.01);
+  const r=createGame();r.spawnTimer=100;r.weapons={};const e=spawnEnemy(r,'squirrel');Object.assign(e,{x:740,y:400,shot:0});step(r,.01);
   assert.equal(e.shot,3.8);assert(Math.abs(Math.hypot(r.acorns[0].vx,r.acorns[0].vy)-112.5)<1e-9);
   step(r,1.8);assert.equal(r.acorns.length,0);assert.equal(r.player.hp,2);
 });

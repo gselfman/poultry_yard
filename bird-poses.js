@@ -1,5 +1,5 @@
 // Undo per-row atlas fitting: keep one source-pixel scale per species.
-export const BIRD_VISUALS={turkey:{size:1.18,feet:480,scales:{walk:1,'wing-sweep':1,stomp:1,'charge-prepare':1,'charge-run':1,'peck-series':1}},goose:{size:1.22,scales:{walk:1,'bite-prepare':361/357,'bite-recover':402/357}},guinea:{size:1.18,scales:{walk:1,'wing-sweep':309/264,stomp:297/264,'charge-prepare':296/264,'charge-run':298/264}}};
+export const BIRD_VISUALS={turkey:{size:1.18,feet:480,scales:{walk:1,'wing-sweep':1,stomp:1,'charge-prepare':1,'charge-run':1,'peck-series':1}},goose:{size:1.281,scales:{walk:1,'bite-prepare':361/357,'bite-recover':402/357}},guinea:{size:1.18,scales:{walk:1,'wing-sweep':309/264,stomp:297/264,'charge-prepare':296/264,'charge-run':298/264}}};
 export const BIRD_ACTIONS={turkey:['walk','wing-sweep','stomp','charge-prepare','charge-run','peck-series'],duck:['walk'],goose:['walk','bite-prepare','bite-recover'],guinea:['walk','wing-sweep','stomp','charge-prepare','charge-run']};
 export function birdPose(type,attack,time){
  if(!BIRD_ACTIONS[type])return null;
