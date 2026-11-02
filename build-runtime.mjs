@@ -5,7 +5,7 @@ for(const file of await readdir(source))if(/\.(js|css|html)$/.test(file)&&!['ass
 const assetRoot=path.resolve(`${source}/assets`);await cp(`${source}/assets`,path.join(out,'assets'),{recursive:true,filter:assetPath=>{
  const p=path.relative(assetRoot,path.resolve(assetPath)).replaceAll('\\','/');
  if(!path.extname(p))return true;
- if(p.startsWith('fonts/'))return true;if(p.startsWith('v5/')||p.startsWith('v7/'))return p.endsWith('.webp');
+ if(p.startsWith('fonts/'))return true;if(p.startsWith('catalog/'))return /\.(jpg|webp)$/.test(p);if(p.startsWith('v5/')||p.startsWith('v7/'))return p.endsWith('.webp');
  if(/^(next|animation|combat|birds-v2)\//.test(p))return /\.(webp|png)$/.test(p);
  if(p.startsWith('design/'))return /\.(webp|svg)$/.test(p)||p==='design/qura-logo.png'||/^design\/(?:S\d+-\d+-trim|B02-\d+)\.png$/.test(p);
  return /^(yard|ryaba|rambo)-v1\.webp$/.test(p);
