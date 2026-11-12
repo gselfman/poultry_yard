@@ -1,0 +1,294 @@
+{
+  "rat": {
+    "source": "mouse-v12",
+    "files": [
+      "assets/approved/rat-00.webp",
+      "assets/approved/rat-01.webp",
+      "assets/approved/rat-02.webp",
+      "assets/approved/rat-03.webp",
+      "assets/approved/rat-04.webp",
+      "assets/approved/rat-05.webp",
+      "assets/approved/rat-06.webp",
+      "assets/approved/rat-07.webp"
+    ],
+    "durations": [
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80
+    ],
+    "width": 520,
+    "height": 288,
+    "loop": true,
+    "sourceUnion": [
+      95,
+      91,
+      704,
+      428
+    ]
+  },
+  "wolf": {
+    "source": "wolf",
+    "files": [
+      "assets/approved/wolf-00.webp",
+      "assets/approved/wolf-01.webp",
+      "assets/approved/wolf-02.webp",
+      "assets/approved/wolf-03.webp",
+      "assets/approved/wolf-04.webp",
+      "assets/approved/wolf-05.webp",
+      "assets/approved/wolf-06.webp",
+      "assets/approved/wolf-07.webp"
+    ],
+    "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "width": 454,
+    "height": 253,
+    "loop": true,
+    "sourceUnion": [
+      20,
+      143,
+      474,
+      396
+    ]
+  },
+  "fox": {
+    "source": "fox-walk-v13",
+    "files": [
+      "assets/approved/fox-00.webp",
+      "assets/approved/fox-01.webp",
+      "assets/approved/fox-02.webp",
+      "assets/approved/fox-03.webp",
+      "assets/approved/fox-04.webp",
+      "assets/approved/fox-05.webp",
+      "assets/approved/fox-06.webp",
+      "assets/approved/fox-07.webp"
+    ],
+    "durations": [
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150,
+      150
+    ],
+    "width": 520,
+    "height": 281,
+    "loop": true,
+    "sourceUnion": [
+      102,
+      106,
+      698,
+      428
+    ]
+  },
+  "foxJump": {
+    "source": "fox-v03",
+    "files": [
+      "assets/approved/foxJump-00.webp",
+      "assets/approved/foxJump-01.webp",
+      "assets/approved/foxJump-02.webp",
+      "assets/approved/foxJump-03.webp",
+      "assets/approved/foxJump-04.webp",
+      "assets/approved/foxJump-05.webp",
+      "assets/approved/foxJump-06.webp",
+      "assets/approved/foxJump-07.webp"
+    ],
+    "durations": [
+      140,
+      160,
+      80,
+      100,
+      110,
+      100,
+      110,
+      160
+    ],
+    "width": 422,
+    "height": 284,
+    "loop": false,
+    "sourceUnion": [
+      76,
+      138,
+      498,
+      422
+    ]
+  },
+  "bear": {
+    "source": "bear-walk-v18",
+    "files": [
+      "assets/approved/bear-00.webp",
+      "assets/approved/bear-01.webp",
+      "assets/approved/bear-02.webp",
+      "assets/approved/bear-03.webp",
+      "assets/approved/bear-04.webp",
+      "assets/approved/bear-05.webp",
+      "assets/approved/bear-06.webp",
+      "assets/approved/bear-07.webp"
+    ],
+    "durations": [
+      180,
+      120,
+      160,
+      140,
+      180,
+      120,
+      160,
+      140
+    ],
+    "width": 520,
+    "height": 309,
+    "loop": true,
+    "sourceUnion": [
+      110,
+      101,
+      671,
+      434
+    ]
+  },
+  "gooseBite": {
+    "source": "goose-bite-v09",
+    "files": [
+      "assets/approved/gooseBite-00.webp",
+      "assets/approved/gooseBite-01.webp",
+      "assets/approved/gooseBite-02.webp",
+      "assets/approved/gooseBite-03.webp",
+      "assets/approved/gooseBite-04.webp",
+      "assets/approved/gooseBite-05.webp",
+      "assets/approved/gooseBite-06.webp",
+      "assets/approved/gooseBite-07.webp",
+      "assets/approved/gooseBite-08.webp",
+      "assets/approved/gooseBite-09.webp",
+      "assets/approved/gooseBite-10.webp",
+      "assets/approved/gooseBite-11.webp"
+    ],
+    "durations": [
+      80,
+      100,
+      80,
+      60,
+      80,
+      80,
+      80,
+      60,
+      60,
+      80,
+      100,
+      100
+    ],
+    "width": 464,
+    "height": 245,
+    "loop": false,
+    "sourceUnion": [
+      125,
+      113,
+      589,
+      358
+    ]
+  },
+  "stomp": {
+    "source": "stomp",
+    "files": [
+      "assets/approved/stomp-00.webp",
+      "assets/approved/stomp-01.webp",
+      "assets/approved/stomp-02.webp",
+      "assets/approved/stomp-03.webp",
+      "assets/approved/stomp-04.webp",
+      "assets/approved/stomp-05.webp",
+      "assets/approved/stomp-06.webp",
+      "assets/approved/stomp-07.webp"
+    ],
+    "durations": [
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80
+    ],
+    "width": 520,
+    "height": 262,
+    "loop": false,
+    "sourceUnion": [
+      100,
+      246,
+      1183,
+      792
+    ]
+  },
+  "gooseWind": {
+    "source": "goose-wind",
+    "files": [
+      "assets/approved/gooseWind-00.webp",
+      "assets/approved/gooseWind-01.webp",
+      "assets/approved/gooseWind-02.webp",
+      "assets/approved/gooseWind-03.webp"
+    ],
+    "durations": [
+      90,
+      90,
+      90,
+      90
+    ],
+    "width": 186,
+    "height": 134,
+    "loop": false,
+    "sourceUnion": [
+      54,
+      67,
+      240,
+      201
+    ]
+  },
+  "duckIdle": {
+    "files": [
+      "assets/approved/duck-idle.webp"
+    ],
+    "durations": [
+      1000
+    ],
+    "width": 448,
+    "height": 360,
+    "loop": true,
+    "source": "assets-v09/duck-v09-trim.png"
+  },
+  "squirrelIdle": {
+    "files": [
+      "assets/approved/squirrel-idle.webp"
+    ],
+    "durations": [
+      1000
+    ],
+    "width": 406,
+    "height": 360,
+    "loop": true,
+    "source": "assets-v09/squirrel-v09-trim.png"
+  },
+  "gooseIdle": {
+    "files": [
+      "assets/approved/goose-idle.webp"
+    ],
+    "durations": [
+      1000
+    ],
+    "width": 422,
+    "height": 360,
+    "loop": true,
+    "source": "assets-v10/goose-after-trim.png"
+  }
+}

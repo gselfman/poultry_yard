@@ -1,0 +1,13 @@
+{
+  "format": "poultry-reward-policy-v1",
+  "enabled": false,
+  "entry": {"ticketCost": 1, "geFallbackEnabled": false},
+  "ge": {"paidRerollCost": 5, "paidRerollsPerRun": 3, "reviveCost": 20, "revivesPerRun": 1, "reviveBeforeSeconds": 600},
+  "accountXp": {"source": "daily_quest", "trigger": "PLAY_POULTRY", "setting": "game_v1_quest_daily_xp", "runXpIsNotAccountXp": true},
+  "lootboxes": {
+    "guinea-defeated": {"tier": "weak", "grantOncePerSession": true, "catalogId": null, "description": "Самый слабый лутбокс. Содержимое и вероятности утверждаются в QuRa; не копировать главный сундук."},
+    "turkey-defeated": {"tier": "main", "grantOncePerSession": true, "catalogId": null, "geMin": 21, "geMax": 67, "accessoryCount": 1, "openAt": "run-results"}
+  },
+  "ranking": {"shared": true, "scoreFormulaApproved": false},
+  "note": "Integration proposal, not an enabled server config. Server owns catalog, RNG, caps, ledger and settlement."
+}

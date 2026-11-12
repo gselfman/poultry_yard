@@ -1,0 +1,3079 @@
+{
+  "version": 1,
+  "rules": {
+    "heroes.ryaba.hp": {
+      "base": 3,
+      "min": 1,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "heroes",
+        "ryaba",
+        "hp"
+      ]
+    },
+    "heroes.ryaba.speed": {
+      "base": 126,
+      "min": 31.5,
+      "max": 504,
+      "integer": true,
+      "path": [
+        "heroes",
+        "ryaba",
+        "speed"
+      ]
+    },
+    "heroes.rambo.hp": {
+      "base": 2,
+      "min": 1,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "heroes",
+        "rambo",
+        "hp"
+      ]
+    },
+    "heroes.rambo.speed": {
+      "base": 147.6,
+      "min": 36.9,
+      "max": 590.4,
+      "integer": false,
+      "path": [
+        "heroes",
+        "rambo",
+        "speed"
+      ]
+    },
+    "heroes.monk.hp": {
+      "base": 5,
+      "min": 1,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "heroes",
+        "monk",
+        "hp"
+      ]
+    },
+    "heroes.monk.speed": {
+      "base": 107.1,
+      "min": 26.775,
+      "max": 428.4,
+      "integer": false,
+      "path": [
+        "heroes",
+        "monk",
+        "speed"
+      ]
+    },
+    "weapons.egg.damage": {
+      "base": 15,
+      "min": 3.75,
+      "max": 60,
+      "integer": false,
+      "path": [
+        "weapons",
+        "egg",
+        "damage"
+      ]
+    },
+    "weapons.egg.interval": {
+      "base": 0.9,
+      "min": 0.225,
+      "max": 3.6,
+      "integer": false,
+      "path": [
+        "weapons",
+        "egg",
+        "interval"
+      ]
+    },
+    "weapons.egg.speed": {
+      "base": 270,
+      "min": 67.5,
+      "max": 1080,
+      "integer": true,
+      "path": [
+        "weapons",
+        "egg",
+        "speed"
+      ]
+    },
+    "weapons.beak.damage": {
+      "base": 25,
+      "min": 6.25,
+      "max": 100,
+      "integer": false,
+      "path": [
+        "weapons",
+        "beak",
+        "damage"
+      ]
+    },
+    "weapons.beak.interval": {
+      "base": 1.5,
+      "min": 0.375,
+      "max": 6,
+      "integer": false,
+      "path": [
+        "weapons",
+        "beak",
+        "interval"
+      ]
+    },
+    "weapons.feather.damage": {
+      "base": 18,
+      "min": 4.5,
+      "max": 72,
+      "integer": false,
+      "path": [
+        "weapons",
+        "feather",
+        "damage"
+      ]
+    },
+    "weapons.feather.interval": {
+      "base": 1.8,
+      "min": 0.45,
+      "max": 7.2,
+      "integer": false,
+      "path": [
+        "weapons",
+        "feather",
+        "interval"
+      ]
+    },
+    "weapons.feather.speed": {
+      "base": 320,
+      "min": 80,
+      "max": 1280,
+      "integer": true,
+      "path": [
+        "weapons",
+        "feather",
+        "speed"
+      ]
+    },
+    "weapons.martial.damage": {
+      "base": 24,
+      "min": 6,
+      "max": 96,
+      "integer": false,
+      "path": [
+        "weapons",
+        "martial",
+        "damage"
+      ]
+    },
+    "weapons.martial.interval": {
+      "base": 1.15,
+      "min": 0.2875,
+      "max": 4.6,
+      "integer": false,
+      "path": [
+        "weapons",
+        "martial",
+        "interval"
+      ]
+    },
+    "weapons.ak.damage": {
+      "base": 8,
+      "min": 2,
+      "max": 32,
+      "integer": false,
+      "path": [
+        "weapons",
+        "ak",
+        "damage"
+      ]
+    },
+    "weapons.ak.interval": {
+      "base": 0.13,
+      "min": 0.0325,
+      "max": 0.52,
+      "integer": false,
+      "path": [
+        "weapons",
+        "ak",
+        "interval"
+      ]
+    },
+    "weapons.ak.speed": {
+      "base": 420,
+      "min": 105,
+      "max": 1680,
+      "integer": true,
+      "path": [
+        "weapons",
+        "ak",
+        "speed"
+      ]
+    },
+    "weapons.bomb.damage": {
+      "base": 36,
+      "min": 9,
+      "max": 144,
+      "integer": false,
+      "path": [
+        "weapons",
+        "bomb",
+        "damage"
+      ]
+    },
+    "weapons.bomb.interval": {
+      "base": 3.8,
+      "min": 0.95,
+      "max": 15.2,
+      "integer": false,
+      "path": [
+        "weapons",
+        "bomb",
+        "interval"
+      ]
+    },
+    "weapons.dust.damage": {
+      "base": 5,
+      "min": 1.25,
+      "max": 20,
+      "integer": false,
+      "path": [
+        "weapons",
+        "dust",
+        "damage"
+      ]
+    },
+    "weapons.dust.interval": {
+      "base": 4.5,
+      "min": 1.125,
+      "max": 18,
+      "integer": false,
+      "path": [
+        "weapons",
+        "dust",
+        "interval"
+      ]
+    },
+    "weapons.orbit.damage": {
+      "base": 16,
+      "min": 4,
+      "max": 64,
+      "integer": false,
+      "path": [
+        "weapons",
+        "orbit",
+        "damage"
+      ]
+    },
+    "weapons.orbit.interval": {
+      "base": 0.65,
+      "min": 0.1625,
+      "max": 2.6,
+      "integer": false,
+      "path": [
+        "weapons",
+        "orbit",
+        "interval"
+      ]
+    },
+    "enemies.rat.hp": {
+      "base": 12,
+      "min": 3,
+      "max": 48,
+      "integer": true,
+      "path": [
+        "enemies",
+        "rat",
+        "hp"
+      ]
+    },
+    "enemies.rat.speed": {
+      "base": 39.9,
+      "min": 9.975,
+      "max": 159.6,
+      "integer": false,
+      "path": [
+        "enemies",
+        "rat",
+        "speed"
+      ]
+    },
+    "enemies.rat.r": {
+      "base": 14.256000000000002,
+      "min": 3.5640000000000005,
+      "max": 57.02400000000001,
+      "integer": false,
+      "path": [
+        "enemies",
+        "rat",
+        "r"
+      ]
+    },
+    "enemies.rat.score": {
+      "base": 10,
+      "min": 2.5,
+      "max": 40,
+      "integer": true,
+      "path": [
+        "enemies",
+        "rat",
+        "score"
+      ]
+    },
+    "enemies.rat.xp": {
+      "base": 2,
+      "min": 0.5,
+      "max": 8,
+      "integer": true,
+      "path": [
+        "enemies",
+        "rat",
+        "xp"
+      ]
+    },
+    "enemies.rat.weight": {
+      "base": 0.65,
+      "min": 0.1625,
+      "max": 2.6,
+      "integer": false,
+      "path": [
+        "enemies",
+        "rat",
+        "weight"
+      ]
+    },
+    "enemies.rat.lateBoost": {
+      "base": 0.15,
+      "min": 0.0375,
+      "max": 0.6,
+      "integer": false,
+      "path": [
+        "enemies",
+        "rat",
+        "lateBoost"
+      ]
+    },
+    "enemies.rat.damage": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": false,
+      "path": [
+        "enemies",
+        "rat",
+        "damage"
+      ]
+    },
+    "enemies.fox.hp": {
+      "base": 21,
+      "min": 5.25,
+      "max": 84,
+      "integer": true,
+      "path": [
+        "enemies",
+        "fox",
+        "hp"
+      ]
+    },
+    "enemies.fox.speed": {
+      "base": 56.7,
+      "min": 14.175,
+      "max": 226.8,
+      "integer": false,
+      "path": [
+        "enemies",
+        "fox",
+        "speed"
+      ]
+    },
+    "enemies.fox.r": {
+      "base": 19.008000000000003,
+      "min": 4.752000000000001,
+      "max": 76.03200000000001,
+      "integer": false,
+      "path": [
+        "enemies",
+        "fox",
+        "r"
+      ]
+    },
+    "enemies.fox.score": {
+      "base": 25,
+      "min": 6.25,
+      "max": 100,
+      "integer": true,
+      "path": [
+        "enemies",
+        "fox",
+        "score"
+      ]
+    },
+    "enemies.fox.xp": {
+      "base": 4,
+      "min": 1,
+      "max": 16,
+      "integer": true,
+      "path": [
+        "enemies",
+        "fox",
+        "xp"
+      ]
+    },
+    "enemies.fox.weight": {
+      "base": 1.1,
+      "min": 0.275,
+      "max": 4.4,
+      "integer": false,
+      "path": [
+        "enemies",
+        "fox",
+        "weight"
+      ]
+    },
+    "enemies.fox.lateBoost": {
+      "base": 0.22,
+      "min": 0.055,
+      "max": 0.88,
+      "integer": false,
+      "path": [
+        "enemies",
+        "fox",
+        "lateBoost"
+      ]
+    },
+    "enemies.fox.damage": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": false,
+      "path": [
+        "enemies",
+        "fox",
+        "damage"
+      ]
+    },
+    "enemies.wolf.hp": {
+      "base": 95,
+      "min": 23.75,
+      "max": 380,
+      "integer": true,
+      "path": [
+        "enemies",
+        "wolf",
+        "hp"
+      ]
+    },
+    "enemies.wolf.speed": {
+      "base": 70.56,
+      "min": 17.64,
+      "max": 282.24,
+      "integer": false,
+      "path": [
+        "enemies",
+        "wolf",
+        "speed"
+      ]
+    },
+    "enemies.wolf.r": {
+      "base": 24.948000000000004,
+      "min": 6.237000000000001,
+      "max": 99.79200000000002,
+      "integer": false,
+      "path": [
+        "enemies",
+        "wolf",
+        "r"
+      ]
+    },
+    "enemies.wolf.score": {
+      "base": 50,
+      "min": 12.5,
+      "max": 200,
+      "integer": true,
+      "path": [
+        "enemies",
+        "wolf",
+        "score"
+      ]
+    },
+    "enemies.wolf.xp": {
+      "base": 8,
+      "min": 2,
+      "max": 32,
+      "integer": true,
+      "path": [
+        "enemies",
+        "wolf",
+        "xp"
+      ]
+    },
+    "enemies.wolf.weight": {
+      "base": 2,
+      "min": 0.5,
+      "max": 8,
+      "integer": false,
+      "path": [
+        "enemies",
+        "wolf",
+        "weight"
+      ]
+    },
+    "enemies.wolf.lateBoost": {
+      "base": 0.2,
+      "min": 0.05,
+      "max": 0.8,
+      "integer": false,
+      "path": [
+        "enemies",
+        "wolf",
+        "lateBoost"
+      ]
+    },
+    "enemies.wolf.damage": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": false,
+      "path": [
+        "enemies",
+        "wolf",
+        "damage"
+      ]
+    },
+    "enemies.bear.hp": {
+      "base": 322,
+      "min": 80.5,
+      "max": 1288,
+      "integer": true,
+      "path": [
+        "enemies",
+        "bear",
+        "hp"
+      ]
+    },
+    "enemies.bear.speed": {
+      "base": 24.150000000000002,
+      "min": 6.0375000000000005,
+      "max": 96.60000000000001,
+      "integer": false,
+      "path": [
+        "enemies",
+        "bear",
+        "speed"
+      ]
+    },
+    "enemies.bear.r": {
+      "base": 33.264,
+      "min": 8.316,
+      "max": 133.056,
+      "integer": false,
+      "path": [
+        "enemies",
+        "bear",
+        "r"
+      ]
+    },
+    "enemies.bear.score": {
+      "base": 100,
+      "min": 25,
+      "max": 400,
+      "integer": true,
+      "path": [
+        "enemies",
+        "bear",
+        "score"
+      ]
+    },
+    "enemies.bear.xp": {
+      "base": 15,
+      "min": 3.75,
+      "max": 60,
+      "integer": true,
+      "path": [
+        "enemies",
+        "bear",
+        "xp"
+      ]
+    },
+    "enemies.bear.weight": {
+      "base": 5,
+      "min": 1.25,
+      "max": 20,
+      "integer": false,
+      "path": [
+        "enemies",
+        "bear",
+        "weight"
+      ]
+    },
+    "enemies.bear.lateBoost": {
+      "base": 0.15,
+      "min": 0.0375,
+      "max": 0.6,
+      "integer": false,
+      "path": [
+        "enemies",
+        "bear",
+        "lateBoost"
+      ]
+    },
+    "enemies.bear.damage": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": false,
+      "path": [
+        "enemies",
+        "bear",
+        "damage"
+      ]
+    },
+    "enemies.squirrel.hp": {
+      "base": 30,
+      "min": 7.5,
+      "max": 120,
+      "integer": true,
+      "path": [
+        "enemies",
+        "squirrel",
+        "hp"
+      ]
+    },
+    "enemies.squirrel.speed": {
+      "base": 60.900000000000006,
+      "min": 15.225000000000001,
+      "max": 243.60000000000002,
+      "integer": false,
+      "path": [
+        "enemies",
+        "squirrel",
+        "speed"
+      ]
+    },
+    "enemies.squirrel.r": {
+      "base": 16.632,
+      "min": 4.158,
+      "max": 66.528,
+      "integer": false,
+      "path": [
+        "enemies",
+        "squirrel",
+        "r"
+      ]
+    },
+    "enemies.squirrel.score": {
+      "base": 40,
+      "min": 10,
+      "max": 160,
+      "integer": true,
+      "path": [
+        "enemies",
+        "squirrel",
+        "score"
+      ]
+    },
+    "enemies.squirrel.xp": {
+      "base": 6,
+      "min": 1.5,
+      "max": 24,
+      "integer": true,
+      "path": [
+        "enemies",
+        "squirrel",
+        "xp"
+      ]
+    },
+    "enemies.squirrel.weight": {
+      "base": 0.9,
+      "min": 0.225,
+      "max": 3.6,
+      "integer": false,
+      "path": [
+        "enemies",
+        "squirrel",
+        "weight"
+      ]
+    },
+    "enemies.squirrel.lateBoost": {
+      "base": 0.18,
+      "min": 0.045,
+      "max": 0.72,
+      "integer": false,
+      "path": [
+        "enemies",
+        "squirrel",
+        "lateBoost"
+      ]
+    },
+    "enemies.squirrel.damage": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": false,
+      "path": [
+        "enemies",
+        "squirrel",
+        "damage"
+      ]
+    },
+    "enemies.goose.hp": {
+      "base": 100,
+      "min": 25,
+      "max": 400,
+      "integer": true,
+      "path": [
+        "enemies",
+        "goose",
+        "hp"
+      ]
+    },
+    "enemies.goose.speed": {
+      "base": 36.75,
+      "min": 9.1875,
+      "max": 147,
+      "integer": false,
+      "path": [
+        "enemies",
+        "goose",
+        "speed"
+      ]
+    },
+    "enemies.goose.r": {
+      "base": 23.760000000000005,
+      "min": 5.940000000000001,
+      "max": 95.04000000000002,
+      "integer": false,
+      "path": [
+        "enemies",
+        "goose",
+        "r"
+      ]
+    },
+    "enemies.goose.score": {
+      "base": 55,
+      "min": 13.75,
+      "max": 220,
+      "integer": true,
+      "path": [
+        "enemies",
+        "goose",
+        "score"
+      ]
+    },
+    "enemies.goose.xp": {
+      "base": 9,
+      "min": 2.25,
+      "max": 36,
+      "integer": true,
+      "path": [
+        "enemies",
+        "goose",
+        "xp"
+      ]
+    },
+    "enemies.goose.weight": {
+      "base": 2.5,
+      "min": 0.625,
+      "max": 10,
+      "integer": false,
+      "path": [
+        "enemies",
+        "goose",
+        "weight"
+      ]
+    },
+    "enemies.goose.lateBoost": {
+      "base": 0.2,
+      "min": 0.05,
+      "max": 0.8,
+      "integer": false,
+      "path": [
+        "enemies",
+        "goose",
+        "lateBoost"
+      ]
+    },
+    "enemies.goose.damage": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": false,
+      "path": [
+        "enemies",
+        "goose",
+        "damage"
+      ]
+    },
+    "enemies.duck.hp": {
+      "base": 12,
+      "min": 3,
+      "max": 48,
+      "integer": true,
+      "path": [
+        "enemies",
+        "duck",
+        "hp"
+      ]
+    },
+    "enemies.duck.speed": {
+      "base": 89.964,
+      "min": 22.491,
+      "max": 359.856,
+      "integer": false,
+      "path": [
+        "enemies",
+        "duck",
+        "speed"
+      ]
+    },
+    "enemies.duck.r": {
+      "base": 15.444000000000003,
+      "min": 3.8610000000000007,
+      "max": 61.77600000000001,
+      "integer": false,
+      "path": [
+        "enemies",
+        "duck",
+        "r"
+      ]
+    },
+    "enemies.duck.score": {
+      "base": 22,
+      "min": 5.5,
+      "max": 88,
+      "integer": true,
+      "path": [
+        "enemies",
+        "duck",
+        "score"
+      ]
+    },
+    "enemies.duck.xp": {
+      "base": 3,
+      "min": 0.75,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "enemies",
+        "duck",
+        "xp"
+      ]
+    },
+    "enemies.duck.weight": {
+      "base": 0.7,
+      "min": 0.175,
+      "max": 2.8,
+      "integer": false,
+      "path": [
+        "enemies",
+        "duck",
+        "weight"
+      ]
+    },
+    "enemies.duck.lateBoost": {
+      "base": 0.25,
+      "min": 0.0625,
+      "max": 1,
+      "integer": false,
+      "path": [
+        "enemies",
+        "duck",
+        "lateBoost"
+      ]
+    },
+    "enemies.duck.damage": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": false,
+      "path": [
+        "enemies",
+        "duck",
+        "damage"
+      ]
+    },
+    "enemies.guinea.hp": {
+      "base": 3600,
+      "min": 900,
+      "max": 14400,
+      "integer": true,
+      "path": [
+        "enemies",
+        "guinea",
+        "hp"
+      ]
+    },
+    "enemies.guinea.speed": {
+      "base": 36.75,
+      "min": 9.1875,
+      "max": 147,
+      "integer": false,
+      "path": [
+        "enemies",
+        "guinea",
+        "speed"
+      ]
+    },
+    "enemies.guinea.r": {
+      "base": 42.76800000000001,
+      "min": 10.692000000000002,
+      "max": 171.07200000000003,
+      "integer": false,
+      "path": [
+        "enemies",
+        "guinea",
+        "r"
+      ]
+    },
+    "enemies.guinea.score": {
+      "base": 900,
+      "min": 225,
+      "max": 3600,
+      "integer": true,
+      "path": [
+        "enemies",
+        "guinea",
+        "score"
+      ]
+    },
+    "enemies.guinea.xp": {
+      "base": 540,
+      "min": 135,
+      "max": 2160,
+      "integer": true,
+      "path": [
+        "enemies",
+        "guinea",
+        "xp"
+      ]
+    },
+    "enemies.guinea.weight": {
+      "base": 12,
+      "min": 3,
+      "max": 48,
+      "integer": false,
+      "path": [
+        "enemies",
+        "guinea",
+        "weight"
+      ]
+    },
+    "enemies.guinea.lateBoost": {
+      "base": 0,
+      "min": 0,
+      "max": 0,
+      "integer": true,
+      "path": [
+        "enemies",
+        "guinea",
+        "lateBoost"
+      ]
+    },
+    "enemies.guinea.damage": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": false,
+      "path": [
+        "enemies",
+        "guinea",
+        "damage"
+      ]
+    },
+    "enemies.turkey.hp": {
+      "base": 13600,
+      "min": 3400,
+      "max": 54400,
+      "integer": true,
+      "path": [
+        "enemies",
+        "turkey",
+        "hp"
+      ]
+    },
+    "enemies.turkey.speed": {
+      "base": 32.550000000000004,
+      "min": 8.137500000000001,
+      "max": 130.20000000000002,
+      "integer": false,
+      "path": [
+        "enemies",
+        "turkey",
+        "speed"
+      ]
+    },
+    "enemies.turkey.r": {
+      "base": 85.53600000000002,
+      "min": 21.384000000000004,
+      "max": 342.14400000000006,
+      "integer": false,
+      "path": [
+        "enemies",
+        "turkey",
+        "r"
+      ]
+    },
+    "enemies.turkey.score": {
+      "base": 2500,
+      "min": 625,
+      "max": 10000,
+      "integer": true,
+      "path": [
+        "enemies",
+        "turkey",
+        "score"
+      ]
+    },
+    "enemies.turkey.xp": {
+      "base": 1200,
+      "min": 300,
+      "max": 4800,
+      "integer": true,
+      "path": [
+        "enemies",
+        "turkey",
+        "xp"
+      ]
+    },
+    "enemies.turkey.weight": {
+      "base": 20,
+      "min": 5,
+      "max": 80,
+      "integer": false,
+      "path": [
+        "enemies",
+        "turkey",
+        "weight"
+      ]
+    },
+    "enemies.turkey.lateBoost": {
+      "base": 0,
+      "min": 0,
+      "max": 0,
+      "integer": true,
+      "path": [
+        "enemies",
+        "turkey",
+        "lateBoost"
+      ]
+    },
+    "enemies.turkey.damage": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": false,
+      "path": [
+        "enemies",
+        "turkey",
+        "damage"
+      ]
+    },
+    "passives.speed": {
+      "base": 0.2,
+      "min": 0.05,
+      "max": 0.8,
+      "integer": false,
+      "path": [
+        "passives",
+        "speed"
+      ]
+    },
+    "passives.damage": {
+      "base": 0.12,
+      "min": 0.03,
+      "max": 0.48,
+      "integer": false,
+      "path": [
+        "passives",
+        "damage"
+      ]
+    },
+    "passives.haste": {
+      "base": 0.1,
+      "min": 0.025,
+      "max": 0.4,
+      "integer": false,
+      "path": [
+        "passives",
+        "haste"
+      ]
+    },
+    "passives.magnet": {
+      "base": 24,
+      "min": 6,
+      "max": 96,
+      "integer": true,
+      "path": [
+        "passives",
+        "magnet"
+      ]
+    },
+    "passives.health": {
+      "base": 2,
+      "min": 1,
+      "max": 3,
+      "integer": true,
+      "path": [
+        "passives",
+        "health"
+      ]
+    },
+    "passives.shots": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": true,
+      "path": [
+        "passives",
+        "shots"
+      ]
+    },
+    "passives.size": {
+      "base": 0.2,
+      "min": 0.05,
+      "max": 0.8,
+      "integer": false,
+      "path": [
+        "passives",
+        "size"
+      ]
+    },
+    "passives.experience": {
+      "base": 0.18,
+      "min": 0.045,
+      "max": 0.72,
+      "integer": false,
+      "path": [
+        "passives",
+        "experience"
+      ]
+    },
+    "innate.ryaba": {
+      "base": 0.02,
+      "min": 0.005,
+      "max": 0.08,
+      "integer": false,
+      "path": [
+        "innate",
+        "ryaba"
+      ]
+    },
+    "innate.rambo": {
+      "base": 0.02,
+      "min": 0.005,
+      "max": 0.08,
+      "integer": false,
+      "path": [
+        "innate",
+        "rambo"
+      ]
+    },
+    "innate.monk": {
+      "base": 0.02,
+      "min": 0.005,
+      "max": 0.08,
+      "integer": false,
+      "path": [
+        "innate",
+        "monk"
+      ]
+    },
+    "progress.weaponDamage": {
+      "base": 0.18,
+      "min": 0.045,
+      "max": 0.72,
+      "integer": false,
+      "path": [
+        "progress",
+        "weaponDamage"
+      ]
+    },
+    "progress.weaponHaste": {
+      "base": 0.05,
+      "min": 0.0125,
+      "max": 0.2,
+      "integer": false,
+      "path": [
+        "progress",
+        "weaponHaste"
+      ]
+    },
+    "progress.meleeSize": {
+      "base": 0.2,
+      "min": 0.05,
+      "max": 0.8,
+      "integer": false,
+      "path": [
+        "progress",
+        "meleeSize"
+      ]
+    },
+    "progress.rangedSize": {
+      "base": 0.06,
+      "min": 0.015,
+      "max": 0.24,
+      "integer": false,
+      "path": [
+        "progress",
+        "rangedSize"
+      ]
+    },
+    "progress.magazine": {
+      "base": 20,
+      "min": 5,
+      "max": 80,
+      "integer": true,
+      "path": [
+        "progress",
+        "magazine"
+      ]
+    },
+    "progress.magazinePerLevel": {
+      "base": 5,
+      "min": 1.25,
+      "max": 20,
+      "integer": true,
+      "path": [
+        "progress",
+        "magazinePerLevel"
+      ]
+    },
+    "progress.reload": {
+      "base": 3.5,
+      "min": 0.875,
+      "max": 14,
+      "integer": false,
+      "path": [
+        "progress",
+        "reload"
+      ]
+    },
+    "progress.shotLimit": {
+      "base": 3,
+      "min": 0.75,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "progress",
+        "shotLimit"
+      ]
+    },
+    "progress.pickup": {
+      "base": 48,
+      "min": 12,
+      "max": 192,
+      "integer": true,
+      "path": [
+        "progress",
+        "pickup"
+      ]
+    },
+    "progress.xpBase": {
+      "base": 12,
+      "min": 3,
+      "max": 48,
+      "integer": true,
+      "path": [
+        "progress",
+        "xpBase"
+      ]
+    },
+    "progress.xpPower": {
+      "base": 1.75,
+      "min": 0.4375,
+      "max": 7,
+      "integer": false,
+      "path": [
+        "progress",
+        "xpPower"
+      ]
+    },
+    "progress.xpFactor": {
+      "base": 6,
+      "min": 1.5,
+      "max": 24,
+      "integer": true,
+      "path": [
+        "progress",
+        "xpFactor"
+      ]
+    },
+    "progress.initialGems": {
+      "base": 25,
+      "min": 6.25,
+      "max": 100,
+      "integer": true,
+      "path": [
+        "progress",
+        "initialGems"
+      ]
+    },
+    "flow.interval": {
+      "base": 0.85,
+      "min": 0.2125,
+      "max": 3.4,
+      "integer": false,
+      "path": [
+        "flow",
+        "interval"
+      ]
+    },
+    "flow.minInterval": {
+      "base": 0.065,
+      "min": 0.01625,
+      "max": 0.26,
+      "integer": false,
+      "path": [
+        "flow",
+        "minInterval"
+      ]
+    },
+    "flow.intervalDecay": {
+      "base": 0.0008,
+      "min": 0.0002,
+      "max": 0.0032,
+      "integer": false,
+      "path": [
+        "flow",
+        "intervalDecay"
+      ]
+    },
+    "flow.budget": {
+      "base": 1.65,
+      "min": 0.4125,
+      "max": 6.6,
+      "integer": false,
+      "path": [
+        "flow",
+        "budget"
+      ]
+    },
+    "flow.budgetGrowth": {
+      "base": 180,
+      "min": 45,
+      "max": 720,
+      "integer": true,
+      "path": [
+        "flow",
+        "budgetGrowth"
+      ]
+    },
+    "flow.introDuration": {
+      "base": 60,
+      "min": 15,
+      "max": 240,
+      "integer": true,
+      "path": [
+        "flow",
+        "introDuration"
+      ]
+    },
+    "flow.rampStart": {
+      "base": 0.55,
+      "min": 0.1375,
+      "max": 2.2,
+      "integer": false,
+      "path": [
+        "flow",
+        "rampStart"
+      ]
+    },
+    "flow.rampHalf": {
+      "base": 0.75,
+      "min": 0.1875,
+      "max": 3,
+      "integer": false,
+      "path": [
+        "flow",
+        "rampHalf"
+      ]
+    },
+    "flow.hpGrowth": {
+      "base": 210,
+      "min": 52.5,
+      "max": 840,
+      "integer": true,
+      "path": [
+        "flow",
+        "hpGrowth"
+      ]
+    },
+    "flow.speedScale": {
+      "base": 0.82,
+      "min": 0.205,
+      "max": 3.28,
+      "integer": false,
+      "path": [
+        "flow",
+        "speedScale"
+      ]
+    },
+    "flow.bonusHp": {
+      "base": 12,
+      "min": 3,
+      "max": 48,
+      "integer": true,
+      "path": [
+        "flow",
+        "bonusHp"
+      ]
+    },
+    "flow.bonusSpawn": {
+      "base": 10,
+      "min": 2.5,
+      "max": 40,
+      "integer": true,
+      "path": [
+        "flow",
+        "bonusSpawn"
+      ]
+    },
+    "flow.bonusBudget": {
+      "base": 3,
+      "min": 0.75,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "flow",
+        "bonusBudget"
+      ]
+    },
+    "flow.bonusSpeedCap": {
+      "base": 5,
+      "min": 1.25,
+      "max": 20,
+      "integer": true,
+      "path": [
+        "flow",
+        "bonusSpeedCap"
+      ]
+    },
+    "flow.bonusScore": {
+      "base": 2,
+      "min": 0.5,
+      "max": 8,
+      "integer": true,
+      "path": [
+        "flow",
+        "bonusScore"
+      ]
+    },
+    "flow.xpGrowth": {
+      "base": 300,
+      "min": 75,
+      "max": 1200,
+      "integer": true,
+      "path": [
+        "flow",
+        "xpGrowth"
+      ]
+    },
+    "flow.maxEnemies": {
+      "base": 600,
+      "min": 100,
+      "max": 600,
+      "integer": true,
+      "path": [
+        "flow",
+        "maxEnemies"
+      ]
+    },
+    "combat.invulnerability": {
+      "base": 0.5,
+      "min": 0.1,
+      "max": 3,
+      "integer": false,
+      "path": [
+        "combat",
+        "invulnerability"
+      ]
+    },
+    "combat.guard": {
+      "base": 0.3333333333333333,
+      "min": 0.1,
+      "max": 3,
+      "integer": false,
+      "path": [
+        "combat",
+        "guard"
+      ]
+    },
+    "combat.guardRadius": {
+      "base": 115,
+      "min": 28.75,
+      "max": 460,
+      "integer": true,
+      "path": [
+        "combat",
+        "guardRadius"
+      ]
+    },
+    "combat.guardPush": {
+      "base": 12,
+      "min": 3,
+      "max": 48,
+      "integer": true,
+      "path": [
+        "combat",
+        "guardPush"
+      ]
+    },
+    "combat.reviveGuard": {
+      "base": 2,
+      "min": 0.1,
+      "max": 3,
+      "integer": true,
+      "path": [
+        "combat",
+        "reviveGuard"
+      ]
+    },
+    "combat.wormChance": {
+      "base": 0.005,
+      "min": 0,
+      "max": 0.95,
+      "integer": false,
+      "path": [
+        "combat",
+        "wormChance"
+      ]
+    },
+    "combat.magnetChance": {
+      "base": 0.005,
+      "min": 0,
+      "max": 0.95,
+      "integer": false,
+      "path": [
+        "combat",
+        "magnetChance"
+      ]
+    },
+    "combat.heal": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": true,
+      "path": [
+        "combat",
+        "heal"
+      ]
+    },
+    "combat.projectileScale": {
+      "base": 0.9,
+      "min": 0.225,
+      "max": 3.6,
+      "integer": false,
+      "path": [
+        "combat",
+        "projectileScale"
+      ]
+    },
+    "combat.bulletLife": {
+      "base": 4,
+      "min": 1,
+      "max": 16,
+      "integer": true,
+      "path": [
+        "combat",
+        "bulletLife"
+      ]
+    },
+    "combat.magnetPull": {
+      "base": 750,
+      "min": 187.5,
+      "max": 3000,
+      "integer": true,
+      "path": [
+        "combat",
+        "magnetPull"
+      ]
+    },
+    "combat.gemPull": {
+      "base": 420,
+      "min": 105,
+      "max": 1680,
+      "integer": true,
+      "path": [
+        "combat",
+        "gemPull"
+      ]
+    },
+    "melee.beakRange": {
+      "base": 74,
+      "min": 18.5,
+      "max": 296,
+      "integer": true,
+      "path": [
+        "melee",
+        "beakRange"
+      ]
+    },
+    "melee.superRange": {
+      "base": 112,
+      "min": 28,
+      "max": 448,
+      "integer": true,
+      "path": [
+        "melee",
+        "superRange"
+      ]
+    },
+    "melee.superPerShot": {
+      "base": 4,
+      "min": 1,
+      "max": 16,
+      "integer": true,
+      "path": [
+        "melee",
+        "superPerShot"
+      ]
+    },
+    "melee.superSizeCap": {
+      "base": 1.8,
+      "min": 0.45,
+      "max": 7.2,
+      "integer": false,
+      "path": [
+        "melee",
+        "superSizeCap"
+      ]
+    },
+    "melee.beakDuration": {
+      "base": 0.46,
+      "min": 0.115,
+      "max": 1.84,
+      "integer": false,
+      "path": [
+        "melee",
+        "beakDuration"
+      ]
+    },
+    "melee.beakMin": {
+      "base": 0.28,
+      "min": 0.07,
+      "max": 1.12,
+      "integer": false,
+      "path": [
+        "melee",
+        "beakMin"
+      ]
+    },
+    "melee.superDuration": {
+      "base": 0.72,
+      "min": 0.18,
+      "max": 2.88,
+      "integer": false,
+      "path": [
+        "melee",
+        "superDuration"
+      ]
+    },
+    "melee.superMin": {
+      "base": 0.42,
+      "min": 0.105,
+      "max": 1.68,
+      "integer": false,
+      "path": [
+        "melee",
+        "superMin"
+      ]
+    },
+    "melee.superDamage": {
+      "base": 3.5,
+      "min": 0.875,
+      "max": 14,
+      "integer": false,
+      "path": [
+        "melee",
+        "superDamage"
+      ]
+    },
+    "melee.superShotDamage": {
+      "base": 0.5,
+      "min": 0.125,
+      "max": 2,
+      "integer": false,
+      "path": [
+        "melee",
+        "superShotDamage"
+      ]
+    },
+    "melee.superInterval": {
+      "base": 2.2,
+      "min": 0.55,
+      "max": 8.8,
+      "integer": false,
+      "path": [
+        "melee",
+        "superInterval"
+      ]
+    },
+    "melee.seriesGap": {
+      "base": 0.045,
+      "min": 0.01125,
+      "max": 0.18,
+      "integer": false,
+      "path": [
+        "melee",
+        "seriesGap"
+      ]
+    },
+    "melee.seriesRest": {
+      "base": 0.18,
+      "min": 0.045,
+      "max": 0.72,
+      "integer": false,
+      "path": [
+        "melee",
+        "seriesRest"
+      ]
+    },
+    "melee.wingRange": {
+      "base": 95,
+      "min": 23.75,
+      "max": 380,
+      "integer": true,
+      "path": [
+        "melee",
+        "wingRange"
+      ]
+    },
+    "melee.stompRange": {
+      "base": 102,
+      "min": 25.5,
+      "max": 408,
+      "integer": true,
+      "path": [
+        "melee",
+        "stompRange"
+      ]
+    },
+    "melee.stompDamage": {
+      "base": 1.8,
+      "min": 0.45,
+      "max": 7.2,
+      "integer": false,
+      "path": [
+        "melee",
+        "stompDamage"
+      ]
+    },
+    "melee.stompPush": {
+      "base": 22,
+      "min": 5.5,
+      "max": 88,
+      "integer": true,
+      "path": [
+        "melee",
+        "stompPush"
+      ]
+    },
+    "melee.wingDuration": {
+      "base": 0.7,
+      "min": 0.175,
+      "max": 2.8,
+      "integer": false,
+      "path": [
+        "melee",
+        "wingDuration"
+      ]
+    },
+    "melee.stompDuration": {
+      "base": 0.52,
+      "min": 0.13,
+      "max": 2.08,
+      "integer": false,
+      "path": [
+        "melee",
+        "stompDuration"
+      ]
+    },
+    "melee.plumeCount": {
+      "base": 3,
+      "min": 0.75,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "melee",
+        "plumeCount"
+      ]
+    },
+    "melee.plumeDamage": {
+      "base": 0.65,
+      "min": 0.1625,
+      "max": 2.6,
+      "integer": false,
+      "path": [
+        "melee",
+        "plumeDamage"
+      ]
+    },
+    "effects.eggBlast": {
+      "base": 100,
+      "min": 25,
+      "max": 400,
+      "integer": true,
+      "path": [
+        "effects",
+        "eggBlast"
+      ]
+    },
+    "effects.akBlast": {
+      "base": 48,
+      "min": 12,
+      "max": 192,
+      "integer": true,
+      "path": [
+        "effects",
+        "akBlast"
+      ]
+    },
+    "effects.goldEvery": {
+      "base": 3,
+      "min": 0.75,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "effects",
+        "goldEvery"
+      ]
+    },
+    "effects.goldDamage": {
+      "base": 2.6,
+      "min": 0.65,
+      "max": 10.4,
+      "integer": false,
+      "path": [
+        "effects",
+        "goldDamage"
+      ]
+    },
+    "effects.featherBounces": {
+      "base": 4,
+      "min": 1,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "effects",
+        "featherBounces"
+      ]
+    },
+    "effects.eggCount": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": true,
+      "path": [
+        "effects",
+        "eggCount"
+      ]
+    },
+    "effects.akCount": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": true,
+      "path": [
+        "effects",
+        "akCount"
+      ]
+    },
+    "effects.featherCount": {
+      "base": 5,
+      "min": 1.25,
+      "max": 20,
+      "integer": true,
+      "path": [
+        "effects",
+        "featherCount"
+      ]
+    },
+    "effects.eggSpread": {
+      "base": 0.1,
+      "min": 0.025,
+      "max": 0.4,
+      "integer": false,
+      "path": [
+        "effects",
+        "eggSpread"
+      ]
+    },
+    "effects.akSpread": {
+      "base": 0.16,
+      "min": 0.04,
+      "max": 0.64,
+      "integer": false,
+      "path": [
+        "effects",
+        "akSpread"
+      ]
+    },
+    "effects.featherSpread": {
+      "base": 0.17,
+      "min": 0.0425,
+      "max": 0.68,
+      "integer": false,
+      "path": [
+        "effects",
+        "featherSpread"
+      ]
+    },
+    "effects.akScatter": {
+      "base": 0.32,
+      "min": 0.08,
+      "max": 1.28,
+      "integer": false,
+      "path": [
+        "effects",
+        "akScatter"
+      ]
+    },
+    "behaviour.squirrelInterval": {
+      "base": 3.8,
+      "min": 0.95,
+      "max": 15.2,
+      "integer": false,
+      "path": [
+        "behaviour",
+        "squirrelInterval"
+      ]
+    },
+    "behaviour.acornSpeed": {
+      "base": 112.5,
+      "min": 28.125,
+      "max": 450,
+      "integer": false,
+      "path": [
+        "behaviour",
+        "acornSpeed"
+      ]
+    },
+    "behaviour.acornLife": {
+      "base": 6,
+      "min": 1.5,
+      "max": 24,
+      "integer": true,
+      "path": [
+        "behaviour",
+        "acornLife"
+      ]
+    },
+    "behaviour.fleeRange": {
+      "base": 90,
+      "min": 22.5,
+      "max": 360,
+      "integer": true,
+      "path": [
+        "behaviour",
+        "fleeRange"
+      ]
+    },
+    "behaviour.shootRange": {
+      "base": 150,
+      "min": 37.5,
+      "max": 600,
+      "integer": true,
+      "path": [
+        "behaviour",
+        "shootRange"
+      ]
+    },
+    "behaviour.foxCycle": {
+      "base": 2.7,
+      "min": 0.675,
+      "max": 10.8,
+      "integer": false,
+      "path": [
+        "behaviour",
+        "foxCycle"
+      ]
+    },
+    "behaviour.foxWarning": {
+      "base": 1.45,
+      "min": 0.3625,
+      "max": 5.8,
+      "integer": false,
+      "path": [
+        "behaviour",
+        "foxWarning"
+      ]
+    },
+    "behaviour.foxDashAt": {
+      "base": 1.85,
+      "min": 0.4625,
+      "max": 7.4,
+      "integer": false,
+      "path": [
+        "behaviour",
+        "foxDashAt"
+      ]
+    },
+    "behaviour.foxDash": {
+      "base": 3.8,
+      "min": 0.95,
+      "max": 15.2,
+      "integer": false,
+      "path": [
+        "behaviour",
+        "foxDash"
+      ]
+    },
+    "behaviour.foxWalk": {
+      "base": 0.18,
+      "min": 0.045,
+      "max": 0.72,
+      "integer": false,
+      "path": [
+        "behaviour",
+        "foxWalk"
+      ]
+    },
+    "behaviour.foxPrepare": {
+      "base": 0.05,
+      "min": 0.0125,
+      "max": 0.2,
+      "integer": false,
+      "path": [
+        "behaviour",
+        "foxPrepare"
+      ]
+    },
+    "growth.hpLinear": {
+      "base": 0.35,
+      "min": 0.0875,
+      "max": 1.4,
+      "integer": false,
+      "path": [
+        "growth",
+        "hpLinear"
+      ]
+    },
+    "growth.hpCubic": {
+      "base": 3.4,
+      "min": 0.85,
+      "max": 13.6,
+      "integer": false,
+      "path": [
+        "growth",
+        "hpCubic"
+      ]
+    },
+    "growth.hpExponent": {
+      "base": 3,
+      "min": 0.75,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "growth",
+        "hpExponent"
+      ]
+    },
+    "growth.lateStart": {
+      "base": 300,
+      "min": 75,
+      "max": 1200,
+      "integer": true,
+      "path": [
+        "growth",
+        "lateStart"
+      ]
+    },
+    "growth.lateEnd": {
+      "base": 600,
+      "min": 150,
+      "max": 2400,
+      "integer": true,
+      "path": [
+        "growth",
+        "lateEnd"
+      ]
+    },
+    "seedDrops.mediumChance": {
+      "base": 0.05,
+      "min": 0,
+      "max": 0.95,
+      "integer": false,
+      "path": [
+        "seedDrops",
+        "mediumChance"
+      ]
+    },
+    "seedDrops.largeChance": {
+      "base": 0.002,
+      "min": 0,
+      "max": 0.95,
+      "integer": false,
+      "path": [
+        "seedDrops",
+        "largeChance"
+      ]
+    },
+    "seedDrops.mediumValue": {
+      "base": 3,
+      "min": 0.75,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "seedDrops",
+        "mediumValue"
+      ]
+    },
+    "seedDrops.largeValue": {
+      "base": 25,
+      "min": 6.25,
+      "max": 100,
+      "integer": true,
+      "path": [
+        "seedDrops",
+        "largeValue"
+      ]
+    },
+    "seedDrops.lateLargeValue": {
+      "base": 15,
+      "min": 3.75,
+      "max": 60,
+      "integer": true,
+      "path": [
+        "seedDrops",
+        "lateLargeValue"
+      ]
+    },
+    "seedDrops.transitionStart": {
+      "base": 300,
+      "min": 75,
+      "max": 1200,
+      "integer": true,
+      "path": [
+        "seedDrops",
+        "transitionStart"
+      ]
+    },
+    "seedDrops.transitionEnd": {
+      "base": 420,
+      "min": 105,
+      "max": 1680,
+      "integer": true,
+      "path": [
+        "seedDrops",
+        "transitionEnd"
+      ]
+    },
+    "seedDrops.lateLargeChance": {
+      "base": 0.22,
+      "min": 0,
+      "max": 0.95,
+      "integer": false,
+      "path": [
+        "seedDrops",
+        "lateLargeChance"
+      ]
+    },
+    "seedDrops.heavyPromotionChance": {
+      "base": 0.35,
+      "min": 0,
+      "max": 0.95,
+      "integer": false,
+      "path": [
+        "seedDrops",
+        "heavyPromotionChance"
+      ]
+    },
+    "newCombat.eggSplash": {
+      "base": 1.35,
+      "min": 0.3375,
+      "max": 5.4,
+      "integer": false,
+      "path": [
+        "newCombat",
+        "eggSplash"
+      ]
+    },
+    "newCombat.eggPush": {
+      "base": 10,
+      "min": 2.5,
+      "max": 40,
+      "integer": true,
+      "path": [
+        "newCombat",
+        "eggPush"
+      ]
+    },
+    "newCombat.remoteStack": {
+      "base": 0.8,
+      "min": 0.2,
+      "max": 3.2,
+      "integer": false,
+      "path": [
+        "newCombat",
+        "remoteStack"
+      ]
+    },
+    "newCombat.returnRadius": {
+      "base": 250,
+      "min": 62.5,
+      "max": 1000,
+      "integer": true,
+      "path": [
+        "newCombat",
+        "returnRadius"
+      ]
+    },
+    "newCombat.returnSpeed": {
+      "base": 270,
+      "min": 67.5,
+      "max": 1080,
+      "integer": true,
+      "path": [
+        "newCombat",
+        "returnSpeed"
+      ]
+    },
+    "newCombat.returnDamage": {
+      "base": 1.35,
+      "min": 0.3375,
+      "max": 5.4,
+      "integer": false,
+      "path": [
+        "newCombat",
+        "returnDamage"
+      ]
+    },
+    "newCombat.bounceDamage": {
+      "base": 2.2,
+      "min": 0.55,
+      "max": 8.8,
+      "integer": false,
+      "path": [
+        "newCombat",
+        "bounceDamage"
+      ]
+    },
+    "newCombat.returnExtra": {
+      "base": 4,
+      "min": 1,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "newCombat",
+        "returnExtra"
+      ]
+    },
+    "newWeapons.bombFuse": {
+      "base": 1.1,
+      "min": 0.275,
+      "max": 4.4,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "bombFuse"
+      ]
+    },
+    "newWeapons.bombRadius": {
+      "base": 110,
+      "min": 27.5,
+      "max": 440,
+      "integer": true,
+      "path": [
+        "newWeapons",
+        "bombRadius"
+      ]
+    },
+    "newWeapons.clusterCount": {
+      "base": 3,
+      "min": 0.75,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "newWeapons",
+        "clusterCount"
+      ]
+    },
+    "newWeapons.clusterRadius": {
+      "base": 62,
+      "min": 15.5,
+      "max": 248,
+      "integer": true,
+      "path": [
+        "newWeapons",
+        "clusterRadius"
+      ]
+    },
+    "newWeapons.clusterDamage": {
+      "base": 0.55,
+      "min": 0.1375,
+      "max": 2.2,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "clusterDamage"
+      ]
+    },
+    "newWeapons.emberDuration": {
+      "base": 3,
+      "min": 0.75,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "newWeapons",
+        "emberDuration"
+      ]
+    },
+    "newWeapons.emberDps": {
+      "base": 0.45,
+      "min": 0.1125,
+      "max": 1.8,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "emberDps"
+      ]
+    },
+    "newWeapons.dustRadius": {
+      "base": 100,
+      "min": 25,
+      "max": 400,
+      "integer": true,
+      "path": [
+        "newWeapons",
+        "dustRadius"
+      ]
+    },
+    "newWeapons.dustDuration": {
+      "base": 3.4,
+      "min": 0.85,
+      "max": 13.6,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "dustDuration"
+      ]
+    },
+    "newWeapons.dustTick": {
+      "base": 0.5,
+      "min": 0.125,
+      "max": 2,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "dustTick"
+      ]
+    },
+    "newWeapons.dustSlow": {
+      "base": 0.25,
+      "min": 0,
+      "max": 0.95,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "dustSlow"
+      ]
+    },
+    "newWeapons.stormRadius": {
+      "base": 145,
+      "min": 36.25,
+      "max": 580,
+      "integer": true,
+      "path": [
+        "newWeapons",
+        "stormRadius"
+      ]
+    },
+    "newWeapons.stormSlow": {
+      "base": 0.4,
+      "min": 0,
+      "max": 0.95,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "stormSlow"
+      ]
+    },
+    "newWeapons.stormDuration": {
+      "base": 4.6,
+      "min": 1.15,
+      "max": 18.4,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "stormDuration"
+      ]
+    },
+    "newWeapons.stormDamage": {
+      "base": 1.65,
+      "min": 0.4125,
+      "max": 6.6,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "stormDamage"
+      ]
+    },
+    "newWeapons.trailDuration": {
+      "base": 6,
+      "min": 1.5,
+      "max": 24,
+      "integer": true,
+      "path": [
+        "newWeapons",
+        "trailDuration"
+      ]
+    },
+    "newWeapons.trailDamage": {
+      "base": 1.3,
+      "min": 0.325,
+      "max": 5.2,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "trailDamage"
+      ]
+    },
+    "newWeapons.orbitCount": {
+      "base": 2,
+      "min": 0.5,
+      "max": 8,
+      "integer": true,
+      "path": [
+        "newWeapons",
+        "orbitCount"
+      ]
+    },
+    "newWeapons.orbitRadius": {
+      "base": 84,
+      "min": 21,
+      "max": 336,
+      "integer": true,
+      "path": [
+        "newWeapons",
+        "orbitRadius"
+      ]
+    },
+    "newWeapons.orbitSpeed": {
+      "base": 1.8,
+      "min": 0.45,
+      "max": 7.2,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "orbitSpeed"
+      ]
+    },
+    "newWeapons.orbitDuration": {
+      "base": 5,
+      "min": 1.25,
+      "max": 20,
+      "integer": true,
+      "path": [
+        "newWeapons",
+        "orbitDuration"
+      ]
+    },
+    "newWeapons.orbitCooldown": {
+      "base": 2.5,
+      "min": 0.625,
+      "max": 10,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "orbitCooldown"
+      ]
+    },
+    "newWeapons.orbitLevelDamage": {
+      "base": 0.07,
+      "min": 0.0175,
+      "max": 0.28,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "orbitLevelDamage"
+      ]
+    },
+    "newWeapons.orbitGuardDamage": {
+      "base": 2.4,
+      "min": 0.6,
+      "max": 9.6,
+      "integer": false,
+      "path": [
+        "newWeapons",
+        "orbitGuardDamage"
+      ]
+    },
+    "newWeapons.orbitPush": {
+      "base": 8,
+      "min": 2,
+      "max": 32,
+      "integer": true,
+      "path": [
+        "newWeapons",
+        "orbitPush"
+      ]
+    },
+    "bosses.guineaAt": {
+      "base": 300,
+      "min": 300,
+      "max": 300,
+      "integer": true,
+      "path": [
+        "bosses",
+        "guineaAt"
+      ]
+    },
+    "bosses.turkeyAt": {
+      "base": 600,
+      "min": 600,
+      "max": 600,
+      "integer": true,
+      "path": [
+        "bosses",
+        "turkeyAt"
+      ]
+    },
+    "bosses.guineaCrowd": {
+      "base": 0.4,
+      "min": 0,
+      "max": 0.95,
+      "integer": false,
+      "path": [
+        "bosses",
+        "guineaCrowd"
+      ]
+    },
+    "bosses.turkeyCrowd": {
+      "base": 0.18,
+      "min": 0,
+      "max": 0.95,
+      "integer": false,
+      "path": [
+        "bosses",
+        "turkeyCrowd"
+      ]
+    },
+    "bosses.guineaWindup": {
+      "base": 0.95,
+      "min": 0.2375,
+      "max": 3.8,
+      "integer": false,
+      "path": [
+        "bosses",
+        "guineaWindup"
+      ]
+    },
+    "bosses.guineaWingRange": {
+      "base": 171,
+      "min": 42.75,
+      "max": 684,
+      "integer": true,
+      "path": [
+        "bosses",
+        "guineaWingRange"
+      ]
+    },
+    "bosses.guineaWingSpread": {
+      "base": 0.95,
+      "min": 0.2375,
+      "max": 3.8,
+      "integer": false,
+      "path": [
+        "bosses",
+        "guineaWingSpread"
+      ]
+    },
+    "bosses.guineaChargeSpeed": {
+      "base": 252,
+      "min": 63,
+      "max": 1008,
+      "integer": true,
+      "path": [
+        "bosses",
+        "guineaChargeSpeed"
+      ]
+    },
+    "bosses.guineaChargeDuration": {
+      "base": 0.72,
+      "min": 0.18,
+      "max": 2.88,
+      "integer": false,
+      "path": [
+        "bosses",
+        "guineaChargeDuration"
+      ]
+    },
+    "bosses.guineaChargeWidth": {
+      "base": 33.3,
+      "min": 8.325,
+      "max": 133.2,
+      "integer": false,
+      "path": [
+        "bosses",
+        "guineaChargeWidth"
+      ]
+    },
+    "bosses.guineaStompRadius": {
+      "base": 155.7,
+      "min": 38.925,
+      "max": 622.8,
+      "integer": false,
+      "path": [
+        "bosses",
+        "guineaStompRadius"
+      ]
+    },
+    "bosses.guineaEngage": {
+      "base": 350,
+      "min": 87.5,
+      "max": 1400,
+      "integer": true,
+      "path": [
+        "bosses",
+        "guineaEngage"
+      ]
+    },
+    "bosses.turkeyEngage": {
+      "base": 430,
+      "min": 107.5,
+      "max": 1720,
+      "integer": true,
+      "path": [
+        "bosses",
+        "turkeyEngage"
+      ]
+    },
+    "bosses.turkeyWindup": {
+      "base": 1.2,
+      "min": 0.3,
+      "max": 4.8,
+      "integer": false,
+      "path": [
+        "bosses",
+        "turkeyWindup"
+      ]
+    },
+    "bosses.bossRecovery": {
+      "base": 1.1,
+      "min": 0.275,
+      "max": 4.4,
+      "integer": false,
+      "path": [
+        "bosses",
+        "bossRecovery"
+      ]
+    },
+    "bosses.wingRange": {
+      "base": 291.5,
+      "min": 72.875,
+      "max": 1166,
+      "integer": false,
+      "path": [
+        "bosses",
+        "wingRange"
+      ]
+    },
+    "bosses.wingSpread": {
+      "base": 1.25,
+      "min": 0.3125,
+      "max": 5,
+      "integer": false,
+      "path": [
+        "bosses",
+        "wingSpread"
+      ]
+    },
+    "bosses.stompRadius": {
+      "base": 266.2,
+      "min": 66.55,
+      "max": 1064.8,
+      "integer": false,
+      "path": [
+        "bosses",
+        "stompRadius"
+      ]
+    },
+    "bosses.chargeSpeed": {
+      "base": 336,
+      "min": 84,
+      "max": 1344,
+      "integer": true,
+      "path": [
+        "bosses",
+        "chargeSpeed"
+      ]
+    },
+    "bosses.chargeDuration": {
+      "base": 1.21,
+      "min": 0.3025,
+      "max": 4.84,
+      "integer": false,
+      "path": [
+        "bosses",
+        "chargeDuration"
+      ]
+    },
+    "bosses.turkeyPeckStart": {
+      "base": 0.85,
+      "min": 0.2125,
+      "max": 3.4,
+      "integer": false,
+      "path": [
+        "bosses",
+        "turkeyPeckStart"
+      ]
+    },
+    "bosses.turkeyPeckReach": {
+      "base": 1.3,
+      "min": 0.325,
+      "max": 5.2,
+      "integer": false,
+      "path": [
+        "bosses",
+        "turkeyPeckReach"
+      ]
+    },
+    "bosses.turkeyPeckWidth": {
+      "base": 0.15,
+      "min": 0.0375,
+      "max": 0.6,
+      "integer": false,
+      "path": [
+        "bosses",
+        "turkeyPeckWidth"
+      ]
+    },
+    "bosses.peckCount": {
+      "base": 4,
+      "min": 1,
+      "max": 16,
+      "integer": true,
+      "path": [
+        "bosses",
+        "peckCount"
+      ]
+    },
+    "bosses.peckGap": {
+      "base": 0.35,
+      "min": 0.0875,
+      "max": 1.4,
+      "integer": false,
+      "path": [
+        "bosses",
+        "peckGap"
+      ]
+    },
+    "bosses.gooseRange": {
+      "base": 105,
+      "min": 26.25,
+      "max": 420,
+      "integer": true,
+      "path": [
+        "bosses",
+        "gooseRange"
+      ]
+    },
+    "bosses.gooseWidth": {
+      "base": 25,
+      "min": 6.25,
+      "max": 100,
+      "integer": true,
+      "path": [
+        "bosses",
+        "gooseWidth"
+      ]
+    },
+    "bosses.gooseWindup": {
+      "base": 0.75,
+      "min": 0.1875,
+      "max": 3,
+      "integer": false,
+      "path": [
+        "bosses",
+        "gooseWindup"
+      ]
+    },
+    "bosses.gooseRecovery": {
+      "base": 1.4,
+      "min": 0.35,
+      "max": 5.6,
+      "integer": false,
+      "path": [
+        "bosses",
+        "gooseRecovery"
+      ]
+    },
+    "weights.rat": {
+      "base": 5,
+      "min": 1.25,
+      "max": 20,
+      "integer": true,
+      "path": [
+        "weights",
+        "rat"
+      ]
+    },
+    "weights.duck": {
+      "base": 2,
+      "min": 0.5,
+      "max": 8,
+      "integer": true,
+      "path": [
+        "weights",
+        "duck"
+      ]
+    },
+    "weights.goose": {
+      "base": 1.5,
+      "min": 0.375,
+      "max": 6,
+      "integer": false,
+      "path": [
+        "weights",
+        "goose"
+      ]
+    },
+    "weights.fox": {
+      "base": 2,
+      "min": 0.5,
+      "max": 8,
+      "integer": true,
+      "path": [
+        "weights",
+        "fox"
+      ]
+    },
+    "weights.squirrel": {
+      "base": 1.1,
+      "min": 0.275,
+      "max": 4.4,
+      "integer": false,
+      "path": [
+        "weights",
+        "squirrel"
+      ]
+    },
+    "weights.wolf": {
+      "base": 1.2,
+      "min": 0.3,
+      "max": 4.8,
+      "integer": false,
+      "path": [
+        "weights",
+        "wolf"
+      ]
+    },
+    "weights.bear": {
+      "base": 0.5,
+      "min": 0.125,
+      "max": 2,
+      "integer": false,
+      "path": [
+        "weights",
+        "bear"
+      ]
+    },
+    "weights.foxLate": {
+      "base": 4,
+      "min": 1,
+      "max": 16,
+      "integer": true,
+      "path": [
+        "weights",
+        "foxLate"
+      ]
+    },
+    "weights.wolfLate": {
+      "base": 2,
+      "min": 0.5,
+      "max": 8,
+      "integer": true,
+      "path": [
+        "weights",
+        "wolfLate"
+      ]
+    },
+    "weights.foxLateAt": {
+      "base": 240,
+      "min": 60,
+      "max": 960,
+      "integer": true,
+      "path": [
+        "weights",
+        "foxLateAt"
+      ]
+    },
+    "weights.wolfLateAt": {
+      "base": 360,
+      "min": 90,
+      "max": 1440,
+      "integer": true,
+      "path": [
+        "weights",
+        "wolfLateAt"
+      ]
+    },
+    "costs.rat": {
+      "base": 1,
+      "min": 0.25,
+      "max": 4,
+      "integer": true,
+      "path": [
+        "costs",
+        "rat"
+      ]
+    },
+    "costs.duck": {
+      "base": 1.4,
+      "min": 0.35,
+      "max": 5.6,
+      "integer": false,
+      "path": [
+        "costs",
+        "duck"
+      ]
+    },
+    "costs.goose": {
+      "base": 3,
+      "min": 0.75,
+      "max": 12,
+      "integer": true,
+      "path": [
+        "costs",
+        "goose"
+      ]
+    },
+    "costs.fox": {
+      "base": 2,
+      "min": 0.5,
+      "max": 8,
+      "integer": true,
+      "path": [
+        "costs",
+        "fox"
+      ]
+    },
+    "costs.squirrel": {
+      "base": 2.5,
+      "min": 0.625,
+      "max": 10,
+      "integer": false,
+      "path": [
+        "costs",
+        "squirrel"
+      ]
+    },
+    "costs.wolf": {
+      "base": 4,
+      "min": 1,
+      "max": 16,
+      "integer": true,
+      "path": [
+        "costs",
+        "wolf"
+      ]
+    },
+    "costs.bear": {
+      "base": 7,
+      "min": 1.75,
+      "max": 28,
+      "integer": true,
+      "path": [
+        "costs",
+        "bear"
+      ]
+    },
+    "costs.foxLate": {
+      "base": 1.2,
+      "min": 0.3,
+      "max": 4.8,
+      "integer": false,
+      "path": [
+        "costs",
+        "foxLate"
+      ]
+    },
+    "costs.wolfLate": {
+      "base": 2,
+      "min": 0.5,
+      "max": 8,
+      "integer": true,
+      "path": [
+        "costs",
+        "wolfLate"
+      ]
+    },
+    "stages.0.start": {
+      "base": 0,
+      "min": 0,
+      "max": 0,
+      "integer": true,
+      "path": [
+        "stages",
+        "0",
+        "start"
+      ]
+    },
+    "stages.1.start": {
+      "base": 65,
+      "min": 16.25,
+      "max": 260,
+      "integer": true,
+      "path": [
+        "stages",
+        "1",
+        "start"
+      ]
+    },
+    "stages.2.start": {
+      "base": 110,
+      "min": 27.5,
+      "max": 440,
+      "integer": true,
+      "path": [
+        "stages",
+        "2",
+        "start"
+      ]
+    },
+    "stages.3.start": {
+      "base": 165,
+      "min": 41.25,
+      "max": 660,
+      "integer": true,
+      "path": [
+        "stages",
+        "3",
+        "start"
+      ]
+    },
+    "stages.4.start": {
+      "base": 220,
+      "min": 55,
+      "max": 880,
+      "integer": true,
+      "path": [
+        "stages",
+        "4",
+        "start"
+      ]
+    },
+    "stages.5.start": {
+      "base": 270,
+      "min": 67.5,
+      "max": 1080,
+      "integer": true,
+      "path": [
+        "stages",
+        "5",
+        "start"
+      ]
+    },
+    "stages.6.start": {
+      "base": 420,
+      "min": 105,
+      "max": 1680,
+      "integer": true,
+      "path": [
+        "stages",
+        "6",
+        "start"
+      ]
+    }
+  }
+}

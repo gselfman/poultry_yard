@@ -1,0 +1,184 @@
+[
+  {
+    "event": "enemy-squeak",
+    "file": "audio/v05-enemy-squeak.mp3",
+    "label": "Мыши и белки · принятый писк",
+    "author": "Breviceps",
+    "source": "https://freesound.org/people/Breviceps/sounds/445958/",
+    "license": "CC0-1.0",
+    "note": "Принят владельцем. Сохранён без изменений. Только для мелких зверей.",
+    "status": "owner_approved",
+    "group": "voices"
+  },
+  {
+    "event": "beast-bear",
+    "label": "Медведь · тот же голос ниже",
+    "file": "audio/v06-beast-bear.mp3",
+    "source": "https://freesound.org/people/qubodup/sounds/829503/",
+    "author": "qubodup",
+    "license": "CC0-1.0",
+    "note": "Принят владельцем. Тот же источник с понижением тона на три полутона. Это обработка записи собаки, не запись медведя.",
+    "group": "voices",
+    "status": "owner_approved",
+    "duration": 0.444,
+    "edit": {
+      "start": 0,
+      "length": 0.397,
+      "gain": 0.58,
+      "pitch": 0.841
+    },
+    "sha256": "99565b0eecb35029b9053ed7e224419b574555392b9d5bd918859d3750db05ae"
+  },
+  {
+    "event": "duck-death",
+    "label": "Утка · короткий кряк",
+    "file": "audio/v06-duck-death.mp3",
+    "source": "https://freesound.org/people/OwennewO/sounds/719105/",
+    "author": "OwennewO",
+    "license": "CC0-1.0",
+    "note": "Принят владельцем. Настоящая короткая запись утки. Для гибели, не для каждого шага.",
+    "group": "voices",
+    "status": "owner_approved",
+    "duration": 0.235,
+    "edit": {
+      "start": 0.06,
+      "length": 0.19,
+      "gain": 5,
+      "pitch": 1
+    },
+    "sha256": "e4a51b84ca84b283810ac4642b537dd7f345a33f9fdbc919707e5885373e6d1f"
+  },
+  {
+    "event": "turkey-warning",
+    "label": "Индюк · начало разбега",
+    "file": "audio/v06-turkey-warning.mp3",
+    "source": "https://freesound.org/people/JarredGibb/sounds/233123/",
+    "author": "JarredGibb",
+    "license": "CC0-1.0",
+    "note": "Принят для активации разбега Индюка. Один раз в начале атаки.",
+    "group": "voices",
+    "status": "owner_approved",
+    "duration": 1.071,
+    "edit": {
+      "start": 0,
+      "length": 1.03,
+      "gain": 0.9,
+      "pitch": 1
+    },
+    "sha256": "c9fc922b6d8199d6312cc562efce70e4864cac584167c2806f6c819413e891b6"
+  },
+  {
+    "event": "beak-hit",
+    "label": "Клюв · сухой короткий тычок",
+    "file": "audio/v08-beak-hit.mp3",
+    "source": "https://freesound.org/people/mealwyrm/sounds/495814/",
+    "author": "mealwyrm",
+    "license": "CC0-1.0",
+    "note": "Принят. Версия v08 на 3 дБ громче.",
+    "group": "weapons",
+    "status": "owner_approved",
+    "duration": 0.209,
+    "edit": {
+      "start": 0.015,
+      "length": 0.17,
+      "gain": 5,
+      "pitch": 1
+    },
+    "sha256": "789d69672662367848386e437f429b4858d32daf53ebe0134af18c74d8a23b49"
+  },
+  {
+    "event": "feather-swish",
+    "label": "Перья · воздушный взмах",
+    "file": "audio/v06-feather-swish.mp3",
+    "source": "https://freesound.org/people/DJT4NN3R/sounds/449996/",
+    "author": "DJT4NN3R",
+    "license": "CC0-1.0",
+    "note": "Принят. Один звук на выпуск перьев за атаку. Также для эволюции крыльев, выпускающей перья.",
+    "group": "weapons",
+    "status": "owner_approved",
+    "duration": 0.522,
+    "edit": {
+      "start": 0.06,
+      "length": 0.48,
+      "gain": 3,
+      "pitch": 1
+    },
+    "sha256": "db0d976f3096e694ff4744358010c3b0a2adb1a49e514f56f2a6dc169ab65b99"
+  },
+  {
+    "event": "martial-wings",
+    "label": "Крылья и лапки · взмах",
+    "file": "audio/v06-martial-wings.mp3",
+    "source": "https://freesound.org/people/_stubb/sounds/389634/",
+    "author": "_stubb",
+    "license": "CC0-1.0",
+    "note": "Принят владельцем. Фоли взмаха из записи ткани. Подходит для проверки удара крыльями; не голос зверя.",
+    "group": "weapons",
+    "status": "owner_approved",
+    "duration": 0.627,
+    "edit": {
+      "start": 0.12,
+      "length": 0.58,
+      "gain": 2,
+      "pitch": 1
+    },
+    "sha256": "f51e22ed1912e485cda4d3280f833b03621f49b5dfa6e8e9b1f53ee066e081d8"
+  },
+  {
+    "event": "ak-shot",
+    "label": "Калаш · один выстрел",
+    "file": "audio/v06-ak-shot.mp3",
+    "source": "https://freesound.org/people/SuperPhat/sounds/414826/",
+    "author": "SuperPhat",
+    "license": "CC0-1.0",
+    "note": "Принят владельцем. Короткий выстрел из слоя пистолета и AK, созданного автором. Предлагается тихо и с ограничением частоты.",
+    "group": "weapons",
+    "status": "owner_approved",
+    "duration": 0.392,
+    "edit": {
+      "start": 0,
+      "length": 0.34,
+      "gain": 0.28,
+      "pitch": 1
+    },
+    "sha256": "606c304f5e476b027eae40349c2ce0bea2e8aa9f3fe7f782b2bb3358d1e59de4"
+  },
+  {
+    "event": "level-up",
+    "label": "Новый уровень · сигнал",
+    "file": "audio/v06-level-up.mp3",
+    "source": "https://freesound.org/people/qubodup/sounds/442943/",
+    "author": "qubodup",
+    "license": "CC0-1.0",
+    "note": "Принят владельцем. Короткий музыкальный сигнал интерфейса; это эффект, не фоновая музыка.",
+    "group": "ui",
+    "status": "owner_approved",
+    "duration": 1.332,
+    "edit": {
+      "start": 0,
+      "length": 1.3,
+      "gain": 0.27,
+      "pitch": 1
+    },
+    "sha256": "7298dbdf64eb42f0f39f8007780e2e8de3d745b321e431ecee9f1f414f05c12f"
+  },
+  {
+    "event": "turkey-wing",
+    "label": "Индюк · тяжёлый взмах",
+    "file": "audio/v06-turkey-wing.mp3",
+    "source": "https://freesound.org/people/_stubb/sounds/389634/",
+    "author": "_stubb",
+    "license": "CC0-1.0",
+    "note": "Принят владельцем. Тот же фоли взмаха с понижением тона, для атаки босса. Его голос остаётся отдельным предупреждением.",
+    "group": "boss",
+    "status": "owner_approved",
+    "duration": 0.679,
+    "edit": {
+      "start": 0.12,
+      "length": 0.65,
+      "gain": 2.5,
+      "pitch": 0.8
+    },
+    "sha256": "11ffd8512b6325a2aaddad49caeeceb56fef773e95b9a93494893b8704098aa3"
+  }
+]
