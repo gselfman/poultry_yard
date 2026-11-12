@@ -1,0 +1,6 @@
+// Broad phase only: exact collision and original enemy order remain in engine.js.
+export class CollisionIndex {
+ constructor(cell=160){this.cell=cell;this.buckets=new Map();this.pool=[];this.candidates=[];this.maxRadius=0;this.dirty=true;}
+ rebuild(enemies){for(const bucket of this.buckets.values()){bucket.length=0;this.pool.push(bucket);}this.buckets.clear();this.maxRadius=0;this.enemies=enemies;for(let i=0;i<enemies.length;i++){const e=enemies[i];if(e.hp<=0)continue;this.maxRadius=Math.max(this.maxRadius,e.type==='turkey'?e.r*1.5:e.r);const key=Math.floor(e.x/this.cell)+Math.floor(e.y/this.cell)*100000;let bucket=this.buckets.get(key);if(!bucket){bucket=this.pool.pop()||[];this.buckets.set(key,bucket);}bucket.push(i);}this.dirty=false;}
+ query(b,enemies){if(this.dirty||this.enemies!==enemies)this.rebuild(enemies);const r=this.maxRadius+b.r,c=this.cell,minX=Math.floor((Math.min(b.px,b.x)-r)/c),maxX=Math.floor((Math.max(b.px,b.x)+r)/c),minY=Math.floor((Math.min(b.py,b.y)-r)/c),maxY=Math.floor((Math.max(b.py,b.y)+r)/c);const out=this.candidates;out.length=0;for(let y=minY;y<=maxY;y++)for(let x=minX;x<=maxX;x++){const bucket=this.buckets.get(x+y*100000);if(bucket)for(const i of bucket)out.push(i);}out.sort((a,b)=>a-b);return out;}
+}
