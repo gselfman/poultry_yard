@@ -1,0 +1,2 @@
+export const combatArt={};for(const id of ['egg-white','egg-gold','feather','bullet','acorn','beak','beak-super','beak-remote','wing-left','wing-right','talon','shell-left','shell-right']){const image=new Image();image.src=`assets/combat/${id}.webp`;combatArt[id]=image;}
+export function drawCombat(ctx,id,x,y,w,h=w){const im=combatArt[id];if(!im?.complete||!im.naturalWidth)return false;ctx.drawImage(im,x-w/2,y-h/2,w,h);return true;}

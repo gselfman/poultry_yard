@@ -1,0 +1,16 @@
+name: Poultry difficulty laboratory
+on:
+  pull_request:
+    paths: ['experiments/difficulty-v2/**', '.github/workflows/difficulty-lab.yml']
+  push:
+    paths: ['experiments/difficulty-v2/**', '.github/workflows/difficulty-lab.yml']
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node --test experiments/difficulty-v2/tests/*.test.mjs
+      - run: node releases/2026-11-12/verify.mjs
