@@ -5,6 +5,6 @@ export function eventStatus(s){
  const left=end=>Math.max(0,Math.ceil(end-s.time))+'с',parts=['II · ДИКИЙ ДВОР',w.night?'НОЧЬ':'ДЕНЬ'];
  if(w.rainUntil>s.time)parts.push('ДОЖДЬ '+left(w.rainUntil)+' · лужи −'+Math.round((1-s.eventRules.rain.slow)*100)+'%');
  if(w.huntUntil>s.time)parts.push('ОХОТА '+left(w.huntUntil));
- const b=w.nuclear;if(b?.status==='armed')parts.push('УДАР '+left(b.fuseAt));else if(b?.status==='landed'&&Math.hypot(b.x-s.player.x,b.y-s.player.y)<=s.eventRules.nuclear.chargeRadius)parts.push('СТОЙ РЯДОМ · '+Math.floor(b.charge)+'/'+s.eventRules.nuclear.charge+'с');
+ const b=w.nuclear;if(b?.status==='armed')parts.push('УДАР '+left(b.fuseAt));else if(b?.status==='landed'&&Math.hypot(b.x-s.player.x,b.y-s.player.y)<=s.eventRules.nuclear.chargeRadius)parts.push('ЗАРЯДКА В ЗОНЕ · '+Math.floor(b.charge)+'/'+s.eventRules.nuclear.charge+'с');else if(b?.status==='landed'&&b.charge>0)parts.push('РАЗРЯДКА · '+Math.ceil(b.charge)+'/'+s.eventRules.nuclear.charge+'с');
  if(worldCombatSuppressed(s))parts.push(s.time<w.nuclearFlashUntil?'ВСПЫШКА':'ЗАТИШЬЕ '+left(w.suppressUntil));return parts.join(' · ');
 }

@@ -3,7 +3,7 @@
 import {createGame,step,choose,evolve,reroll,revive,declineRevive} from './engine.js';
 import {purchaseQuote} from './run-rules.js';
 import {continueBonus,finishRun} from './rewards.js';
-export const ENGINE_PROTOCOL='poultry-lab-difficulty-v2-20261113';
+export const ENGINE_PROTOCOL='poultry-lab-difficulty-v3-20261113';
 export const TICK_RATE=60;
 export function seededRandom(seed){if(!Number.isInteger(seed)||seed<0||seed>0xffffffff)throw new Error('uint32 seed required');let state=seed>>>0;const rng=()=>((state=(Math.imul(state,1664525)+1013904223)>>>0)/4294967296);rng.getState=()=>state;return rng;}
 export function createReplay({seed,character='ryaba',geBalance=0,difficulty='hard',eventRules={}}){if(!Number.isSafeInteger(geBalance)||geBalance<0)throw new Error('Invalid GE balance');const state=createGame(character,seededRandom(seed),{difficulty,eventRules});state.ge=geBalance;return {state,tick:0,input:{x:0,y:0},settled:false};}
