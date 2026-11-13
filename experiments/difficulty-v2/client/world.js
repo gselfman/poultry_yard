@@ -1,3 +1,4 @@
+import {PROP_TYPES,PROP_SPECS} from './environment-props.js';
 // Deterministic scenery: no combat RNG consumed, wide clear routes between obstacles.
 export function makeWorldObjects(width,height){
  const obstacles=[],decor=[];
@@ -5,7 +6,8 @@ export function makeWorldObjects(width,height){
  for(let row=0;row<Math.floor(height/660)-1;row++)for(let col=0;col<Math.floor(width/650)-1;col++){
   const id=row*100+col,x=650+col*650+(hash(id)-.5)*170,y=680+row*660+(hash(id+80)-.5)*160;
   if(id%2===1||Math.hypot(x-width/2,y-height/2)<470)continue;
-  obstacles.push({id,type:id%3===0?'pond':'rock',x,y,r:id%3===0?105+hash(id+3)*30:60+hash(id+7)*25});
+  const type=PROP_TYPES[Math.floor(id/2)%PROP_TYPES.length],spec=PROP_SPECS[type];
+  obstacles.push({id,type,variant:1+Math.floor(hash(id+210)*3),x,y,r:spec.radius+hash(id+7)*spec.variation});
  }
  for(let i=0;i<700;i++){const x=70+hash(i+200)* (width-140),y=80+hash(i+1200)*(height-160);if(obstacles.some(o=>Math.hypot(o.x-x,o.y-y)<o.r+32))continue;decor.push({id:i,x,y,variant:1+i%12,size:18+hash(i+400)*35,angle:(hash(i+600)-.5)*1.4});}
  return {obstacles,decor};

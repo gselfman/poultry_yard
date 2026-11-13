@@ -1,15 +1,17 @@
+import {PROP_SPECS,propIndex} from './environment-props.js';
 import {drawCombat} from './combat-art.js';
 import {WORLD} from './engine.js';
 const ready=i=>i.complete&&i.naturalWidth;
 export const sceneryArt={};for(let i=1;i<=12;i++){const im=new Image();im.src=`assets/design/S10-${String(i).padStart(2,'0')}-trim.png`;sceneryArt[i]=im;}
+export const environmentImages=Object.fromEntries(Array.from({length:12},(_,i)=>{const im=new Image();im.src=new URL('./assets/environment/normal-'+String(i+1).padStart(2,'0')+'.webp',import.meta.url).href;return [i+1,im];}));
 const pickupArt={};for(let i=5;i<=12;i++){const im=new Image();im.src=`assets/design/S07-${String(i).padStart(2,'0')}-trim.png`;pickupArt[i]=im;}
 function image(ctx,im,x,y,w,h=w){if(!ready(im))return false;const k=Math.min(w/im.naturalWidth,h/im.naturalHeight);ctx.drawImage(im,x-im.naturalWidth*k/2,y-im.naturalHeight*k/2,im.naturalWidth*k,im.naturalHeight*k);return true;}
 export function landscape(ctx,s,view){
  const visible=(x,y,r)=>x+r>view.x&&x-r<view.x+view.w&&y+r>view.y&&y-r<view.y+view.h;
  for(const d of s?.decor||[]){if(!visible(d.x,d.y,d.size))continue;ctx.save();ctx.globalAlpha=.38;ctx.translate(d.x,d.y);ctx.rotate(d.angle);image(ctx,sceneryArt[d.variant],0,0,d.size);ctx.restore();}
- for(const o of s?.obstacles||[]){if(!visible(o.x,o.y,o.r+15))continue;ctx.save();ctx.translate(o.x,o.y);
- if(o.type==='pond'){const g=ctx.createRadialGradient(-o.r*.25,-o.r*.3,8,0,0,o.r);g.addColorStop(0,'#759d89');g.addColorStop(.65,'#456b61');g.addColorStop(1,'#25453d');ctx.fillStyle='#716b45';ctx.beginPath();ctx.arc(0,0,o.r+5,0,Math.PI*2);ctx.fill();ctx.fillStyle=g;ctx.beginPath();ctx.arc(0,0,o.r,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#b7c4a875';ctx.lineWidth=3;ctx.beginPath();ctx.arc(-o.r*.1,-o.r*.05,o.r*.72,3.5,5.3);ctx.stroke();ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(o.r*.2,o.r*.25,o.r*.28,.2,2.4);ctx.stroke();}
- else{ctx.fillStyle='#3c412b';ctx.beginPath();ctx.arc(0,0,o.r,0,Math.PI*2);ctx.fill();image(ctx,sceneryArt[10],0,0,o.r*2,o.r*2);}
+ for(const o of s?.obstacles||[]){if(!visible(o.x,o.y,o.r*1.5))continue;ctx.save();ctx.translate(o.x,o.y);
+ const spec=PROP_SPECS[o.type],im=spec?environmentImages[propIndex(o)]:sceneryArt[10];
+ image(ctx,im,0,0,o.r*(spec?.drawScale||2.45),o.r*(spec?.drawScale||2.45));
  ctx.restore();}
  fence(ctx,view);
 }

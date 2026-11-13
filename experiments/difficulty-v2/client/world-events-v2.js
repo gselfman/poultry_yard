@@ -1,3 +1,4 @@
+import {PUDDLE_ASPECT,inPuddle} from './event-visual-timing.js';
 // Phase events. Every probability is rolled once, never on every minute/frame.
 export const DIFFICULTIES=Object.freeze({easy:Object.freeze({id:'easy',name:'Обычный двор',hp:.9,speed:.9,wolfSpeed:.83,events:false}),hard:Object.freeze({id:'hard',name:'Дикий двор',hp:1,speed:1,wolfSpeed:1,events:true})});
 export const EVENT_RULES=Object.freeze({
@@ -41,12 +42,12 @@ export function eventSpawnProfile(s,p){
 }
 export function worldCombatSuppressed(s){return s.difficulty==='hard'&&(s.worldEvents?.suppressUntil||0)>s.time;}
 export function worldSpawnsPaused(s){return worldCombatSuppressed(s)||s.testFlags?.noSpawns===true;}
-export function playerWeatherScale(s){return s.worldEvents?.puddles.some(p=>Math.hypot(s.player.x-p.x,s.player.y-p.y)<p.r+s.player.r*.5)?s.eventRules.rain.slow:1;}
+export function playerWeatherScale(s){return s.worldEvents?.puddles.some(p=>inPuddle(p,s.player))?s.eventRules.rain.slow:1;}
 export function queuePreviewEvent(s,id){if(DIFFICULTIES[s.difficulty]?.events&&Object.hasOwn(EVENT_RULES,id)){s.worldEvents.previewQueue.push(id);return true;}return false;}
 function startRain(s,{world,resolve}){
  const w=s.worldEvents,r=s.eventRules.rain;w.rainStartedAt=s.time;w.rainUntil=s.time+r.duration;w.puddles=[];s.weather='rain';s.spawnCredit=0;
  const n=r.puddles,cols=Math.ceil(Math.sqrt(n*world.width/world.height)),rows=Math.ceil(n/cols),margin=world.fenceInset+r.radius+12,dx=(world.width-margin*2)/cols,dy=(world.height-margin*2)/rows;
- for(let i=0;i<n;i++)for(let attempt=0;attempt<24;attempt++){const p={x:margin+(i%cols+.2+s.random()*.6)*dx,y:margin+(Math.floor(i/cols)+.2+s.random()*.6)*dy,r:r.radius};resolve(p,s.obstacles);if(p.x<margin||p.x>world.width-margin||p.y<margin||p.y>world.height-margin||w.puddles.some(o=>Math.hypot(o.x-p.x,o.y-p.y)<r.radius*3))continue;w.puddles.push(p);break;}
+ for(let i=0;i<n;i++)for(let attempt=0;attempt<24;attempt++){const p={x:margin+(i%cols+.2+s.random()*.6)*dx,y:margin+(Math.floor(i/cols)+.2+s.random()*.6)*dy,r:r.radius*(i%8<4?.65:1),variant:i%8+1};p.ry=p.r*PUDDLE_ASPECT[i%8];resolve(p,s.obstacles);if(p.x<margin||p.x>world.width-margin||p.y<margin||p.y>world.height-margin||w.puddles.some(o=>Math.hypot(o.x-p.x,o.y-p.y)<r.radius*3))continue;w.puddles.push(p);break;}
  s.events.push('event:rain');
 }
 function startHunt(s){const w=s.worldEvents,r=s.eventRules.hunt;if(w.huntUntil>s.time)return;w.huntStartedAt=s.time;w.huntUntil=s.time+r.duration;w.huntWolvesRemaining=r.wolves;w.huntWolfIndex=0;w.huntNextWolf=s.time+1;w.huntFoxesRemaining=r.foxes;w.huntFoxAt=s.time+r.foxDelay;w.huntNextFox=w.huntFoxAt;s.spawnCredit=0;s.stats.environment.hunts++;s.events.push('event:hunt');}

@@ -1,0 +1,581 @@
+{
+  "version": 1,
+  "props": [
+    {
+      "file": "normal-01.webp",
+      "index": 0,
+      "width": 301,
+      "height": 212,
+      "edgePixels": 0
+    },
+    {
+      "file": "normal-02.webp",
+      "index": 1,
+      "width": 228,
+      "height": 237,
+      "edgePixels": 0
+    },
+    {
+      "file": "normal-03.webp",
+      "index": 2,
+      "width": 260,
+      "height": 221,
+      "edgePixels": 0
+    },
+    {
+      "file": "normal-04.webp",
+      "index": 3,
+      "width": 280,
+      "height": 225,
+      "edgePixels": 0
+    },
+    {
+      "file": "normal-05.webp",
+      "index": 4,
+      "width": 259,
+      "height": 233,
+      "edgePixels": 0
+    },
+    {
+      "file": "normal-06.webp",
+      "index": 5,
+      "width": 289,
+      "height": 201,
+      "edgePixels": 0
+    },
+    {
+      "file": "normal-07.webp",
+      "index": 6,
+      "width": 286,
+      "height": 235,
+      "edgePixels": 0
+    },
+    {
+      "file": "normal-08.webp",
+      "index": 7,
+      "width": 265,
+      "height": 215,
+      "edgePixels": 0
+    },
+    {
+      "file": "normal-09.webp",
+      "index": 8,
+      "width": 286,
+      "height": 208,
+      "edgePixels": 0
+    },
+    {
+      "file": "normal-10.webp",
+      "index": 9,
+      "width": 280,
+      "height": 155,
+      "edgePixels": 0
+    },
+    {
+      "file": "normal-11.webp",
+      "index": 10,
+      "width": 231,
+      "height": 201,
+      "edgePixels": 0
+    },
+    {
+      "file": "normal-12.webp",
+      "index": 11,
+      "width": 263,
+      "height": 190,
+      "edgePixels": 0
+    },
+    {
+      "file": "ruined-01.webp",
+      "index": 0,
+      "width": 280,
+      "height": 182,
+      "edgePixels": 0
+    },
+    {
+      "file": "ruined-02.webp",
+      "index": 1,
+      "width": 214,
+      "height": 221,
+      "edgePixels": 0
+    },
+    {
+      "file": "ruined-03.webp",
+      "index": 2,
+      "width": 245,
+      "height": 215,
+      "edgePixels": 17
+    },
+    {
+      "file": "ruined-04.webp",
+      "index": 3,
+      "width": 311,
+      "height": 212,
+      "edgePixels": 0
+    },
+    {
+      "file": "ruined-05.webp",
+      "index": 4,
+      "width": 280,
+      "height": 225,
+      "edgePixels": 0
+    },
+    {
+      "file": "ruined-06.webp",
+      "index": 5,
+      "width": 321,
+      "height": 203,
+      "edgePixels": 0
+    },
+    {
+      "file": "ruined-07.webp",
+      "index": 6,
+      "width": 291,
+      "height": 207,
+      "edgePixels": 0
+    },
+    {
+      "file": "ruined-08.webp",
+      "index": 7,
+      "width": 281,
+      "height": 183,
+      "edgePixels": 0
+    },
+    {
+      "file": "ruined-09.webp",
+      "index": 8,
+      "width": 300,
+      "height": 177,
+      "edgePixels": 0
+    },
+    {
+      "file": "ruined-10.webp",
+      "index": 9,
+      "width": 294,
+      "height": 188,
+      "edgePixels": 0
+    },
+    {
+      "file": "ruined-11.webp",
+      "index": 10,
+      "width": 223,
+      "height": 211,
+      "edgePixels": 0
+    },
+    {
+      "file": "ruined-12.webp",
+      "index": 11,
+      "width": 284,
+      "height": 198,
+      "edgePixels": 0
+    }
+  ],
+  "decals": [
+    {
+      "file": "ash-01.webp",
+      "index": 0,
+      "width": 410,
+      "height": 378,
+      "edgePixels": 0
+    },
+    {
+      "file": "ash-02.webp",
+      "index": 1,
+      "width": 405,
+      "height": 377,
+      "edgePixels": 0
+    },
+    {
+      "file": "ash-03.webp",
+      "index": 2,
+      "width": 427,
+      "height": 385,
+      "edgePixels": 0
+    },
+    {
+      "file": "ash-04.webp",
+      "index": 3,
+      "width": 357,
+      "height": 367,
+      "edgePixels": 0
+    },
+    {
+      "file": "ash-05.webp",
+      "index": 4,
+      "width": 409,
+      "height": 374,
+      "edgePixels": 0
+    },
+    {
+      "file": "ash-06.webp",
+      "index": 5,
+      "width": 419,
+      "height": 368,
+      "edgePixels": 0
+    }
+  ],
+  "rain": [
+    {
+      "file": "rain-01.webp",
+      "index": 0,
+      "width": 49,
+      "height": 84,
+      "edgePixels": 0
+    },
+    {
+      "file": "rain-02.webp",
+      "index": 1,
+      "width": 73,
+      "height": 143,
+      "edgePixels": 0
+    },
+    {
+      "file": "rain-03.webp",
+      "index": 2,
+      "width": 122,
+      "height": 261,
+      "edgePixels": 0
+    },
+    {
+      "file": "rain-04.webp",
+      "index": 3,
+      "width": 61,
+      "height": 114,
+      "edgePixels": 0
+    },
+    {
+      "file": "rain-05.webp",
+      "index": 4,
+      "width": 88,
+      "height": 65,
+      "edgePixels": 0
+    },
+    {
+      "file": "rain-06.webp",
+      "index": 5,
+      "width": 130,
+      "height": 89,
+      "edgePixels": 0
+    },
+    {
+      "file": "rain-07.webp",
+      "index": 6,
+      "width": 236,
+      "height": 93,
+      "edgePixels": 0
+    },
+    {
+      "file": "rain-08.webp",
+      "index": 7,
+      "width": 132,
+      "height": 29,
+      "edgePixels": 0
+    }
+  ],
+  "puddles": [
+    {
+      "file": "puddle-01.webp",
+      "index": 0,
+      "width": 345,
+      "height": 204,
+      "edgePixels": 0
+    },
+    {
+      "file": "puddle-02.webp",
+      "index": 1,
+      "width": 312,
+      "height": 224,
+      "edgePixels": 0
+    },
+    {
+      "file": "puddle-03.webp",
+      "index": 2,
+      "width": 291,
+      "height": 236,
+      "edgePixels": 0
+    },
+    {
+      "file": "puddle-04.webp",
+      "index": 3,
+      "width": 340,
+      "height": 208,
+      "edgePixels": 0
+    },
+    {
+      "file": "puddle-05.webp",
+      "index": 4,
+      "width": 426,
+      "height": 319,
+      "edgePixels": 0
+    },
+    {
+      "file": "puddle-06.webp",
+      "index": 5,
+      "width": 424,
+      "height": 253,
+      "edgePixels": 0
+    },
+    {
+      "file": "puddle-07.webp",
+      "index": 6,
+      "width": 414,
+      "height": 314,
+      "edgePixels": 0
+    },
+    {
+      "file": "puddle-08.webp",
+      "index": 7,
+      "width": 396,
+      "height": 337,
+      "edgePixels": 0
+    }
+  ],
+  "bomb": [
+    {
+      "file": "bomb-01.webp",
+      "index": 0,
+      "width": 470,
+      "height": 476,
+      "edgePixels": 0
+    },
+    {
+      "file": "bomb-02.webp",
+      "index": 1,
+      "width": 468,
+      "height": 475,
+      "edgePixels": 0
+    },
+    {
+      "file": "bomb-03.webp",
+      "index": 2,
+      "width": 469,
+      "height": 516,
+      "edgePixels": 0
+    },
+    {
+      "file": "bomb-04.webp",
+      "index": 3,
+      "width": 485,
+      "height": 514,
+      "edgePixels": 0
+    }
+  ],
+  "shockwave": [
+    {
+      "file": "shock-01.png",
+      "index": 0,
+      "width": 768,
+      "height": 768,
+      "diameter": 22,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-02.png",
+      "index": 1,
+      "width": 768,
+      "height": 768,
+      "diameter": 45,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-03.png",
+      "index": 2,
+      "width": 768,
+      "height": 768,
+      "diameter": 68,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-04.png",
+      "index": 3,
+      "width": 768,
+      "height": 768,
+      "diameter": 91,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-05.png",
+      "index": 4,
+      "width": 768,
+      "height": 768,
+      "diameter": 114,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-06.png",
+      "index": 5,
+      "width": 768,
+      "height": 768,
+      "diameter": 137,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-07.png",
+      "index": 6,
+      "width": 768,
+      "height": 768,
+      "diameter": 160,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-08.png",
+      "index": 7,
+      "width": 768,
+      "height": 768,
+      "diameter": 183,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-09.png",
+      "index": 8,
+      "width": 768,
+      "height": 768,
+      "diameter": 206,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-10.png",
+      "index": 9,
+      "width": 768,
+      "height": 768,
+      "diameter": 229,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-11.png",
+      "index": 10,
+      "width": 768,
+      "height": 768,
+      "diameter": 252,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-12.png",
+      "index": 11,
+      "width": 768,
+      "height": 768,
+      "diameter": 275,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-13.png",
+      "index": 12,
+      "width": 768,
+      "height": 768,
+      "diameter": 299,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-14.png",
+      "index": 13,
+      "width": 768,
+      "height": 768,
+      "diameter": 322,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-15.png",
+      "index": 14,
+      "width": 768,
+      "height": 768,
+      "diameter": 345,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-16.png",
+      "index": 15,
+      "width": 768,
+      "height": 768,
+      "diameter": 368,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-17.png",
+      "index": 16,
+      "width": 768,
+      "height": 768,
+      "diameter": 391,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-18.png",
+      "index": 17,
+      "width": 768,
+      "height": 768,
+      "diameter": 414,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-19.png",
+      "index": 18,
+      "width": 768,
+      "height": 768,
+      "diameter": 437,
+      "opacity": 1,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-20.png",
+      "index": 19,
+      "width": 768,
+      "height": 768,
+      "diameter": 460,
+      "opacity": 0.8695652173913043,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-21.png",
+      "index": 20,
+      "width": 768,
+      "height": 768,
+      "diameter": 483,
+      "opacity": 0.6521739130434784,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-22.png",
+      "index": 21,
+      "width": 768,
+      "height": 768,
+      "diameter": 506,
+      "opacity": 0.43478260869565244,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-23.png",
+      "index": 22,
+      "width": 768,
+      "height": 768,
+      "diameter": 529,
+      "opacity": 0.21739130434782594,
+      "delayMs": 35
+    },
+    {
+      "file": "shock-24.png",
+      "index": 23,
+      "width": 768,
+      "height": 768,
+      "diameter": 552,
+      "opacity": 0,
+      "delayMs": 35
+    }
+  ]
+}
