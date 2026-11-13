@@ -1,0 +1,3 @@
+// One prepared ground tile. Calm texture contrast without per-frame filters or lower resolution.
+const tiles=new WeakMap(),patterns=new WeakMap();
+export function groundPattern(ctx,image){if(!image.complete||!image.naturalWidth)return null;let tile=tiles.get(image);if(!tile){tile=document.createElement('canvas');tile.width=image.naturalWidth;tile.height=image.naturalHeight;const t=tile.getContext('2d');t.drawImage(image,0,0);t.fillStyle='rgba(38,54,27,.24)';t.fillRect(0,0,tile.width,tile.height);tiles.set(image,tile);}let cache=patterns.get(ctx);if(!cache){cache=new WeakMap();patterns.set(ctx,cache);}let pattern=cache.get(image);if(!pattern){pattern=ctx.createPattern(tile,'repeat');cache.set(image,pattern);}return pattern;}
