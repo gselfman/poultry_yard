@@ -21,6 +21,10 @@ export class Soundscape {
  const death=event.startsWith('death:')?event.slice(6):null;const deathSound=death==='bear'?'beast-bear':death==='duck'?'duck-death':['rat','squirrel'].includes(death)?'enemy-squeak':null;
  const mapped=deathSound||{'fire:ak':'ak-shot','fire:beak':'beak-hit','fire:feather':'feather-swish','fire:egg':'egg-launch','egg-impact':'egg-impact','fire:wing':'player-wing','fire:stomp':'player-stomp','fire:dust':'dust-rustle','fire:super-beak':'super-beak',hurt:'player-hurt',reload:'ak-reload',magnet:'magnet-pickup','pickup:large':'large-xp',level:'level-up'}[event]||(GAME_AUDIO[event]?event:null);if(mapped&&this.sample(mapped)){if(event==='hurt')this.sample('feather-swish');return;}
  this.proceduralEvent=event;switch(event){
+ case 'event:nuclear-landed':this.note(170,.45,.25,'triangle',35);this.hiss(.35,180,.2);break;
+ case 'event:hunt-warning':this.note(160,.8,.16,'triangle',340);this.note(210,1.1,.10,'sine',130,.4);break;
+ case 'event:nuclear-warning':[0,.25,.5].forEach(delay=>this.note(680,.15,.1,'sine',620,delay));break;
+ case 'event:nuclear':this.hiss(1,100,.5);this.note(75,1.3,.35,'sine',25);this.note(2100,3,.085,'sine',1600);break;
  case 'fire:egg':this.note(330,.09,.22,'sine',130);this.hiss(.045,900,.08);break;
  case 'fire:ak':this.hiss(.065,1800,.17);this.note(140,.07,.12,'triangle',45);break;
  case 'fire:beak':this.hiss(.22,1100,.16);this.note(230,.13,.09,'triangle',100);break;
